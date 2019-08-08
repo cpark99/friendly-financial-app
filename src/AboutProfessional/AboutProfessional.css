@@ -1,0 +1,8 @@
+#about-contact-info-container {
+  display: flex;
+  margin-left: 10px;
+}
+
+#contact-info-title {
+  margin-right: 5px;
+}

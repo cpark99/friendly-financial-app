@@ -1,0 +1,28 @@
+main {
+  width: 100%;
+}
+
+section,
+#introduction-container {
+  background: rgb(231, 231, 231);
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+button {
+  height: 40px;
+  min-width: 100px;
+  border: 2px solid black;
+  font-size: 14px;
+  background: white;
+  font-weight: bold;
+}
+
+#introduction-container {
+  padding-top: 45px;
+}
+
+#to-sign-up-form-button {
+  margin-top: 10px;
+}
