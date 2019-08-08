@@ -8,3 +8,43 @@ nav {
   right: 0;
   z-index: 8;
 }
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+#hamburger {
+  width: 40px;
+  float: left;
+  padding-right: 10px;
+}
+
+#nav-logo {
+  margin: 0;
+  padding-left: 6px;
+}
+
+#nav-login-button {
+  margin: 0;
+  padding-right: 5px;
+}
+
+#nav-login-button:link {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-login-button:visited {
+  color: white;
+}
+
+#nav-login-button:hover {
+  color: lightblue;
+}

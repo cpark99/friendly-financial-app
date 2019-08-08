@@ -15,8 +15,17 @@ button {
   min-width: 100px;
   border: 2px solid black;
   font-size: 14px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: grey;
   background: white;
-  font-weight: bold;
+  border: 2px solid grey;
+}
+
+a:hover {
+  color: lightblue;
 }
 
 #introduction-container {

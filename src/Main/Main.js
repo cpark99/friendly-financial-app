@@ -1,11 +1,11 @@
-import React from 'react'
-import './Main.css'
-import Header from '../Header/Header';
-import FinancialTools from '../FinancialTools/FinancialTools';
-import EducationalResources from '../EducationalResources/EducationalResources';
-import AboutProfessional from '../AboutProfessional/AboutProfessional';
-import ScheduleCall from '../ScheduleCall/ScheduleCall';
-import SignUp from '../SignUp/SignUp';
+import React from "react";
+import "./Main.css";
+import Header from "../Header/Header";
+import FinancialTools from "../FinancialTools/FinancialTools";
+import EducationalResources from "../EducationalResources/EducationalResources";
+import AboutProfessional from "../AboutProfessional/AboutProfessional";
+import ScheduleCall from "../ScheduleCall/ScheduleCall";
+import SignUp from "../SignUp/SignUp";
 
 export default function Main() {
   return (
@@ -13,7 +13,9 @@ export default function Main() {
       <div id="introduction-container">
         <Header />
         <h3>Be prepared for life.</h3>
-        <button id="to-sign-up-form-button">Sign up for FREE</button>
+        <a href="#sign-up-section">
+          <button id="to-sign-up-form-button">Sign up for FREE</button>
+        </a>
       </div>
       <FinancialTools />
       <EducationalResources />
@@ -21,5 +23,5 @@ export default function Main() {
       <ScheduleCall />
       <SignUp />
     </main>
-  )
+  );
 }
