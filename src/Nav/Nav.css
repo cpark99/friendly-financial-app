@@ -15,11 +15,6 @@ nav {
   align-items: center;
 }
 
-.nav-item:hover {
-  cursor: pointer;
-  color: lightblue;
-}
-
 #hamburger {
   width: 40px;
   float: left;
@@ -36,15 +31,24 @@ nav {
   padding-right: 5px;
 }
 
-#nav-login-button:link {
-  color: white;
-  text-decoration: none;
-}
-
 #nav-login-button:visited {
   color: white;
 }
 
 #nav-login-button:hover {
   color: lightblue;
+}
+
+.nav-item:link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+.nav-item:visited {
+  color: white;
 }

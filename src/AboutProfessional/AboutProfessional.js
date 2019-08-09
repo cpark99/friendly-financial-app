@@ -13,9 +13,10 @@ export default function AboutProfessional() {
       <div id="about-contact-info-container" className="left-align-container">
         <h4 id="contact-info-title">Contact:</h4>
         <div>
-          <p>(818)731-8616</p>
-          <p>nspark@ft.newyorklife.com</p>
+          <p><a href="tel:+1-818-731-8616">(818) 731-8616</a></p>
+          <p><a href="mailto:nspark@ft.newyorklife.com">nspark@ft.newyorklife.com</a></p>
           <p><a href="https://www.linkedin.com/in/nickparknyl">LinkedIn</a></p>
+          <p><a href="https://www.facebook.com/2.NPark">Facebook</a></p>
         </div>
       </div>
     </section>
