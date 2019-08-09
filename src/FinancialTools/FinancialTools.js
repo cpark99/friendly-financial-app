@@ -3,7 +3,7 @@ import './FinancialTools.css'
 
 export default function FinancialTools() {
   return (
-    <section id="fiancial-tool-section">
+    <section id="financial-tools-section">
       <h2>Financial Tools</h2>
       <h4>Life Insurance Calculator</h4>
       <div id="life-insurance-calculator-intro-text" className="text-container">

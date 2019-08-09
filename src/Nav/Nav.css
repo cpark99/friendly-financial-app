@@ -2,6 +2,9 @@ nav {
   padding: 1% 0;
   background-color: black;
   color: white;
+}
+
+#nav-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +12,7 @@ nav {
   z-index: 8;
 }
 
-#nav-container {
+#nav-bar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +42,21 @@ nav {
   color: lightblue;
 }
 
+#nav-dropdown-menu-container {
+  text-align: left;
+  background: white;
+  width: 200px;
+}
+
+#nav-dropdown-menu-list {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+  border-left: 4px solid rgb(85, 85, 85);
+  border-right: 4px solid rgb(85, 85, 85);
+  border-bottom: 4px solid rgb(85, 85, 85);
+}
+
 .nav-item:link {
   color: white;
   text-decoration: none;
@@ -51,6 +69,28 @@ nav {
 
 .nav-item:visited {
   color: white;
+}
+
+.nav-dropdown-menu-list-item {
+  padding: 5px 0 5px 20px;
+  border-top: 4px solid rgb(85, 85, 85);
+}
+
+.nav-dropdown-menu-list-item:hover {
+  background: lightgrey;
+}
+
+.nav-menu-item-link:link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-menu-item-link:hover {
+  color: rgb(107, 107, 107);
+}
+
+.nav-menu-item-link:visited {
+  color: black;
 }
 
 .hidden {
