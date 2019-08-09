@@ -9,6 +9,11 @@ export default function Nav() {
         <a href="#root" id="nav-logo" class="nav-item">FF</a>
         <a href="" id="nav-login-button" class="nav-item">login</a>
       </div>
+      <div id="nav-dropdown-menu-container">
+        <div id="nav-dropdown-menu">
+          
+        </div>
+      </div>
     </nav>
   )
 }

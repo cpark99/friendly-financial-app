@@ -52,3 +52,7 @@ nav {
 .nav-item:visited {
   color: white;
 }
+
+.hidden {
+  display: none;
+}
