@@ -24,6 +24,10 @@ nav {
   padding-right: 10px;
 }
 
+#hamburger:hover {
+  cursor: pointer;
+}
+
 #nav-logo {
   margin: 0;
   padding-left: 6px;
