@@ -1,5 +1,53 @@
+#educational-resources-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#educational-resources-container ul {
+  margin-top: 0;
+}
+
+#educational-resources-container li {
+  padding-bottom: 5px;
+  color: rgb(97, 97, 97);
+}
+
+#college-planning-list-header {
+  margin: 10px 0;
+  color: black;
+}
+
+#for-questions-text {
+  text-align: center;
+}
+
+#for-questions-text p {
+  font-size: 10px;
+  font-style: italic;
+}
+
 .left-align-container {
   text-align: left;
   padding: 0 20px;
   margin-left: 20px;
+}
+
+.educational-resource {
+  text-decoration: underline;
+  color: blue;
+  font-size: 12px;
+  margin: 0;
+}
+
+.educational-resource:hover {
+  color: rgb(62, 185, 226);
+}
+
+.educational-resource-list-header {
+  margin-bottom: 10px;
+}
+
+.list-of-educational-links a {
+  font-size: 12px;
 }

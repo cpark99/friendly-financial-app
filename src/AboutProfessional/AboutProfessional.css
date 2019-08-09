@@ -1,3 +1,9 @@
+#about-financial-services-professional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #about-contact-info-container {
   display: flex;
   margin-left: 10px;
@@ -5,4 +11,9 @@
 
 #contact-info-title {
   margin-right: 5px;
+}
+
+#about-professional-image {
+  width: 200px;
+  height: 250px;
 }

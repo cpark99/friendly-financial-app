@@ -4,7 +4,7 @@ main {
 
 section,
 #introduction-container {
-  background: rgb(231, 231, 231);
+  background: rgb(241, 241, 241);
   padding-bottom: 30px;
   margin-bottom: 15px;
   width: 100%;
@@ -25,7 +25,7 @@ button:hover {
 }
 
 a:hover {
-  color: lightblue;
+  color: rgb(62, 185, 226);
 }
 
 #introduction-container {

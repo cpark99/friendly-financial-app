@@ -1,0 +1,59 @@
+.modal-frame {
+  width: 95vw;
+  max-height: 93vh;
+  background: lightgrey;
+  border: 1px solid black;
+  position: fixed;
+  top: 6vh;
+  left: 3vw;
+  z-index: 3;
+  padding: 30px 5px 15px;
+}
+
+.close-button {
+  z-index: 4;
+  position: fixed;
+  right: 3vw;
+  top: 5vh;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+.close-button-text {
+  margin: 0;
+}
+
+.close-button-symbol {
+  font-size: 30px;
+  margin-left: 5px;
+  padding-bottom: 5px;
+}
+
+.caption {
+  margin: 10px 10px 0 10px;
+}
+
+.pdf-document {
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 5px;
+}
+
+.resourceTitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  text-align: center;
+}

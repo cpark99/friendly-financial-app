@@ -36,7 +36,7 @@ export default class SignUp extends Component {
             <input type="checkbox" name="request-newsletter-checkbox" id="request-newsletter-checkbox" value="newsletter" checked="true" /><p className="checkbox-text">I agree to receive newsletters</p>
           </div>
           <button id="sign-up-form-button">Sign up</button>
-          <p className="contact-notice privacy-notice">*Emails and calls will <span className="italics">only</span> be for a FREE consultation. You will <span className="italics">only</span> be contacted by the representing certified financial services professional.</p>
+          <p className="contact-notice privacy-notice">*Emails and calls will <span className="italic">only</span> be for a FREE consultation. You will <span className="italic">only</span> be contacted by the representing certified financial services professional.</p>
           <p className="personal-information-notice privacy-notice">*Personal information will NOT be shared with third-parties.</p>
         </form>
       </section>
