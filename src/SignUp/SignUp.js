@@ -24,16 +24,16 @@ export default class SignUp extends Component {
             <input type="tel" name="phone-field" id="phone-field" placeholder="(818)888-8888" required />
           </div>
           <div className="age-verification-field form-checkbox">
-              <input type="checkbox" name="age-verification-checkbox" id="age-verification-checkbox" value="age" checked="true" required /><p className="checkbox-text">I am at least 18 years old</p>
+              <input type="checkbox" name="age-verification-checkbox" id="age-verification-checkbox" value="age" checked={true} required /><p className="checkbox-text">I am at least 18 years old</p>
           </div>
           <div className="email-checkbox form-checkbox">
-            <input type="checkbox" name="request-email-checkbox" id="request-email-checkbox" value="email" checked="true" /><p className="checkbox-text">I agree to receive emails*</p>
+            <input type="checkbox" name="request-email-checkbox" id="request-email-checkbox" value="email" checked={true} /><p className="checkbox-text">I agree to receive emails*</p>
           </div>
           <div className="call-checkbox form-checkbox">
-            <input type="checkbox" name="request-call-checkbox" id="request-call-checkbox" value="call" checked="true" /><p className="checkbox-text">I agree to receive a call* from a professional</p>
+            <input type="checkbox" name="request-call-checkbox" id="request-call-checkbox" value="call" checked={true} /><p className="checkbox-text">I agree to receive a call* from a professional</p>
           </div>
           <div className="newsletter-checkbox form-checkbox">
-            <input type="checkbox" name="request-newsletter-checkbox" id="request-newsletter-checkbox" value="newsletter" checked="true" /><p className="checkbox-text">I agree to receive newsletters</p>
+            <input type="checkbox" name="request-newsletter-checkbox" id="request-newsletter-checkbox" value="newsletter" checked={true} /><p className="checkbox-text">I agree to receive newsletters</p>
           </div>
           <button id="sign-up-form-button">Sign up</button>
           <p className="contact-notice privacy-notice">*Emails and calls will <span className="italic">only</span> be for a FREE consultation. You will <span className="italic">only</span> be contacted by the representing certified financial services professional.</p>

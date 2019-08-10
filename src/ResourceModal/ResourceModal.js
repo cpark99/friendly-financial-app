@@ -16,7 +16,7 @@ export default function ResourceModal(props) {
       <h3 className="resourceTitle">
         {props.title}
       </h3>
-      <embed class="pdf-document" src={props.src} />
+      <embed className="pdf-document" src={props.src} />
       {/* <div className="caption">
         {props.clickedImageName}
       </div> */}

@@ -34,7 +34,7 @@ label {
 .form-checkbox {
   align-self: flex-start;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   text-align: left;
   font-size: 11px;
   margin-left: 88px;

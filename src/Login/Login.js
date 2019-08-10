@@ -6,11 +6,11 @@ export default function Login() {
     <section id="login-container">
       <h2>Login</h2>
       <form>
-        <div class="form-field">
+        <div className="form-field">
           <label for="email-field">Email:</label>
           <input type="email" name="email-field" id="email-field" placeholder="jdoe@gmail.com" required />
         </div>
-        <div class="form-field">
+        <div className="form-field">
           <label for="password">Password:</label>
           <input type="password" name="password-field" id="password-field" required />
         </div>

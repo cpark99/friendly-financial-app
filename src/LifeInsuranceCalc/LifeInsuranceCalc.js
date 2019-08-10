@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import Results from '../LifeCalcResults/LifeCalcResults';
 import ValidationError from '../ValidationError/ValidationError';
 import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
@@ -207,8 +206,8 @@ export default class LifeInsuranceCalc extends Component {
   };
 
   handleFormReset = () => {
-    console.log('resetting');
     this.props.history.go('/life-insurance-calc');
+
   }
 
   handleSaveButtonClick = () => {
