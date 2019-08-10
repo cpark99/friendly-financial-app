@@ -1,5 +1,5 @@
 import React from 'react';
-import './Results.css';
+import './LifeCalcResults.css';
 
 export default function Results(props) {
   return (

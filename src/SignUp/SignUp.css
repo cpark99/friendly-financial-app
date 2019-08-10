@@ -11,10 +11,6 @@ label {
   font-size: 14px;
 }
 
-input {
-  padding-right: 10px;
-}
-
 #sign-up-section {
   display: flex;
   flex-direction: column;

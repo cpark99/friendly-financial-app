@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import Results from '../Results/Results';
+import Results from '../LifeCalcResults/LifeCalcResults';
 import ValidationError from '../ValidationError/ValidationError';
+import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 import './LifeInsuranceCalc.css';
+
+// class ScrollToTopOnMount extends Component {
+//   componentDidMount() {
+//     window.scrollTo(0, 0);
+//   }
+
+//   render() {
+//     return null;
+//   }
+// }
 
 export default class LifeInsuranceCalc extends Component {
   state = {
@@ -204,10 +215,6 @@ export default class LifeInsuranceCalc extends Component {
     this.setState({ showResults: false });
   };
 
-  // componentDidUpdate() {
-  //   window.scrollTo(0,0);
-  // }
-
   render() {
     const nameError = this.validateName();
     const incomeError = this.validateIncome();
@@ -215,6 +222,7 @@ export default class LifeInsuranceCalc extends Component {
     const protectError = this.validateProtect();
     return (
       <section id="life-insurance-calc-section">
+        <ScrollToTopOnMount />
         <h2 id="life-insurance-calc-header">Life Insurance Calculator</h2>
         <form
           id="life-insurance-calc-form"
@@ -222,7 +230,6 @@ export default class LifeInsuranceCalc extends Component {
             this.handleSubmit(e);
           }}
         >
-          {/* <h2 className="form-header">Life Insurance Calculator</h2> */}
           <div className="form-field">
             <label htmlFor="life-name">
               <h3 id="life-calc-initial-field-header" className="field-header">Name:</h3>
@@ -388,6 +395,8 @@ export default class LifeInsuranceCalc extends Component {
             <h2 id="life-result-header">Results:</h2>
             {this.state.amount && <Results name={this.state.name} data={this.state.amount} />}
             {this.state.amountTwo && <Results name={this.state.nameTwo} data={this.state.amountTwo} />}
+            {/* button needs to save Person 1 results to database */}
+            <button id="save-life-calc-results-button">Save Results</button>
           </div>
         )}
       </section>
