@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+#educational-resources-container {
+  width: 300px;
+}
+
 #educational-resources-container ul {
   margin-top: 0;
 }

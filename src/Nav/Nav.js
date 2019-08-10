@@ -80,9 +80,12 @@ export default class Nav extends Component {
           >
             <ul id="nav-dropdown-menu-list">
               {this.checkIfHomePath("#root", "Home")}
-              <a href="/#root" className="nav-menu-item-link">
+              {/* <a href="/#root" className="nav-menu-item-link">
                 <li className="nav-dropdown-menu-list-item">Profile</li>
-              </a>
+              </a> */}
+              <NavLink className="nav-menu-item-link" to={"/profile"}>
+                <li className="nav-dropdown-menu-list-item">Profile</li>
+              </NavLink>
               {this.checkIfHomePath(
                 "#financial-tools-section",
                 "Financial Tools"
