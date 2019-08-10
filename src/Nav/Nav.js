@@ -10,13 +10,13 @@ export default class Nav extends Component {
     };
   }
 
-  handleHomePathCheck = () => {
-    if (this.props.location.pathname === "/") {
-      return "#root"
-    } else {
-      return "/"
-    }
-  }
+  // handleHomePathCheck = () => {
+  //   if (this.props.location.pathname === "/") {
+  //     return "#root"
+  //   } else {
+  //     return "/"
+  //   }
+  // }
 
   handleClick = e => {
     this.setState({
@@ -29,11 +29,11 @@ export default class Nav extends Component {
     }
   }
 
-  checkHomePath = () => {
+  checkIfHomePath = (target, label) => {
     if (this.props.location.pathname === "/") {
-      return <a href="#root" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Home</li></a>
+      return <a href={target} className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">{label}</li></a>
     } else {
-      return <NavLink className="nav-menu-item-link" to={"/"}><li className="nav-dropdown-menu-list-item">Home</li></NavLink>
+      return <NavLink className="nav-menu-item-link" to={"/"}><li className="nav-dropdown-menu-list-item">{label}</li></NavLink>
     }
   }
 
@@ -52,13 +52,14 @@ export default class Nav extends Component {
         <div id="nav-dropdown-menu-container">
           <div id="nav-dropdown-menu" className={this.state.showNavMenu ? "show" : "hidden"}>
             <ul id="nav-dropdown-menu-list">
-              {this.checkHomePath()}
-              <a href="#root" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Profile</li></a>
-              <a href="#financial-tools-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Financial Tools</li></a>
-              <a href="#educational-resources-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Educational Resources</li></a>
-              <a href="#about-financial-services-professional" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">About Professional</li></a>
-              <a href="#schedule-call-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Schedule Call</li></a>
-              <a href="#sign-up-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Sign Up</li></a>
+              {this.checkIfHomePath("#root", "Home")}
+              <a href="/#root" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Profile</li></a>
+              {this.checkIfHomePath("#financial-tools-section", "Financial Tools")}
+              {/* <a href="/#financial-tools-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Financial Tools</li></a> */}
+              <a href="/#educational-resources-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Educational Resources</li></a>
+              <a href="/#about-financial-services-professional" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">About Professional</li></a>
+              <a href="/#schedule-call-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Schedule Call</li></a>
+              <a href="/#sign-up-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Sign Up</li></a>
               {/* <li className="nav-dropdown-menu-list-item">Logout</li> */}
             </ul>
           </div>

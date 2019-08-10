@@ -14,19 +14,22 @@ export default function AboutProfessional() {
       <h5>Nicholas S. Park, MBA</h5>
       <div id="about-professional-text" className="text-container">
         <p>
-          Since our founding in 1845, New York Life has been helping
-          individuals, families, and businesses{" "}
-          <span className="italic">plan</span> for the future. Today, as always,
-          we are <span className="italic">committed</span> to meeting our
-          obligations and hold true to our principles of{" "}
+          Since our founding in 1845, New York Life has been helping{" "}
+          <span className="italic">individuals</span>,{" "}
+          <span className="italic">families</span>, and{" "}
+          <span className="italic">businesses</span> plan for the future. Today,
+          as always, we are <span className="italic">committed</span> to meeting
+          our obligations and hold true to our principles of{" "}
           <span className="italic">humanity</span>,{" "}
           <span className="italic">integrity</span>, and{" "}
           <span className="italic">financial strength</span>.
         </p>
         <p>
-          Whether you're starting a family, enjoying retirement, or whenever you
-          find yourself, we offer products and solutions that can{" "}
-          <span className="italic">help</span> you reach your financial goals.
+          Whether you're <span className="italic">starting</span> a family,{" "}
+          <span className="italic">enjoying</span> retirement, or whenever you{" "}
+          <span className="italic">find</span> yourself, we offer products and
+          solutions that can <span className="italic">help</span> you reach your
+          financial goals.
         </p>
         <p>
           As your New York Life agent, I can work with you to{" "}
@@ -37,11 +40,21 @@ export default function AboutProfessional() {
         </p>
         <p>
           At New York Life, every decision we make, every action we take, has{" "}
-          <span className="italic">one</span> overriding purpose: To be here
+          <span className="italic">one overriding purpose</span>: To be here
           when <span className="italic">you</span>, our policy owners{" "}
-          <span className="italic">need</span> us. That's how we{" "}
-          help you be <span className="italic">good</span> at life.
+          <span className="italic">need</span> us. That's how we help you be{" "}
+          <span className="italic">good</span> at life.
         </p>
+        <p>
+          I can help you ensure a{" "}
+          <span className="italic">sound financial future</span> for you, your
+          family, and your business by providing{" "}
+          <span className="italic">customized</span> recommendations based on
+          individual situation and goals.
+        </p>
+        <div id="contact-info-anchor" />
+        <p id="about-text-author"><span className="italic">-Nicholas S. Park, MBA</span></p>
+        
       </div>
       <div id="about-contact-info-container" className="left-align-container">
         <h4 id="contact-info-title">Contact:</h4>

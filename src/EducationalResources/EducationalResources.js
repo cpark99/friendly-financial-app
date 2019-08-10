@@ -353,7 +353,7 @@ export default class EducationalResources extends Component {
           <div id="for-questions-text">
             <p>
               Any questions or concerns? Contact a{" "}
-              <a href="#about-professional-text">professional</a>.
+              <a href="#about-text-author">professional</a>.
             </p>
           </div>
         </div>
