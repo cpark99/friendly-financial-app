@@ -1,7 +1,7 @@
 {
   "version": 2,
   "alias": "friendlyfinancial-app",
-  "name": "bookmarks-app",
+  "name": "friendlyfinancial-app",
   "routes": [
       {
         "src": "^/static/(.*)",
