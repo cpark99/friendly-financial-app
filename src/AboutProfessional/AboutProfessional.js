@@ -53,7 +53,7 @@ export default function AboutProfessional() {
           individual situation and goals.
         </p>
         <div id="contact-info-anchor" />
-        <p id="about-text-author"><span className="italic">-Nicholas S. Park, MBA</span></p>
+        <p id="about-text-author"><span className="italic bold">-Nicholas S. Park, MBA</span></p>
         
       </div>
       <div id="about-contact-info-container" className="left-align-container">

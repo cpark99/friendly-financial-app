@@ -22,11 +22,6 @@
   text-align: center;
 }
 
-#for-questions-text p {
-  font-size: 10px;
-  font-style: italic;
-}
-
 .left-align-container {
   text-align: left;
   padding: 0 20px;
@@ -54,4 +49,9 @@
 
 .resource-description-text {
   font-size: 12px;
+}
+
+.informative-text {
+  font-size: 10px;
+  font-style: italic;
 }

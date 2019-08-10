@@ -350,7 +350,7 @@ export default class EducationalResources extends Component {
               <a href="">Links</a>
             </li>
           </ul>
-          <div id="for-questions-text">
+          <div id="for-questions-text" className="informative-text">
             <p>
               Any questions or concerns? Contact a{" "}
               <a href="#about-text-author">professional</a>.
