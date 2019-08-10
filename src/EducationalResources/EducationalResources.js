@@ -5,6 +5,7 @@ import financialStrength from "../pdf/Financial Strength.pdf";
 import impactOnCA from "../pdf/Impact on California.pdf";
 import mutualityMeans from "../pdf/Mutuality Means.pdf";
 import thingsFinancialLiteracy from "../pdf/5 Things Financial Literacy.pdf";
+import costOfWaiting from "../pdf/Cost of Waiting.pdf";
 import newBeginnings from "../pdf/New Beginnings Brochure.pdf";
 import collegePlanUCLA from "../pdf/UCLA Sample Planning Station.pdf";
 import collegePlanUSC from "../pdf/USC Sample Planning Station.pdf";
@@ -16,6 +17,7 @@ import whichTermisRight from "../pdf/Which Term is Right For You.pdf";
 import wholeLife from "../pdf/Whole Life Brochure.pdf";
 import wholeLifeDecisionTree from "../pdf/Whole Life Decision Tree.pdf";
 import termPostcard from "../pdf/Term Postcard.pdf";
+import planningStation from "../pdf/Planning Station SAMPLE.pdf";
 import reasonsForLifeInsuranceRetirement from "../pdf/Reasons For Life Insurance in Retirement.pdf";
 import reasonsForRetirementRollovers from "../pdf/Reasons for Retirement Rollovers.pdf";
 import retirementRolloverOptions from "../pdf/Retirement Rollover Options.pdf";
@@ -46,16 +48,22 @@ export default class EducationalResources extends Component {
       <section id="educational-resources-section">
         <h2>Educational Resources</h2>
         <div id="educational-resources-intro-text" className="text-container">
-          <p>Financial strength is built on <span className="italic">integrity</span>.</p>
           <p>
-            Check out these <span className="italic">free</span> financial resources!
+            Financial strength is built on{" "}
+            <span className="italic">integrity</span>.
+          </p>
+          <p>
+            Check out these <span className="italic">free</span> financial
+            resources!
           </p>
         </div>
         <div
           id="educational-resources-container"
           className="left-align-container"
         >
-          <h3 className="educational-resource-list-header">About New York Life:</h3>
+          <h3 className="educational-resource-list-header">
+            About New York Life:
+          </h3>
           <ul className="list-of-educational-resources">
             <li
               onClick={e => {
@@ -66,7 +74,10 @@ export default class EducationalResources extends Component {
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(financialStrength, "Financial Strength");
+                this.handleResourceClick(
+                  financialStrength,
+                  "Financial Strength"
+                );
               }}
             >
               <p className="educational-resource">Financial Strength</p>
@@ -90,27 +101,52 @@ export default class EducationalResources extends Component {
           <ul className="list-of-educational-resources">
             <li
               onClick={e => {
-                this.handleResourceClick(thingsFinancialLiteracy, "5 Things Financial Literacy");
+                this.handleResourceClick(
+                  thingsFinancialLiteracy,
+                  "5 Things Financial Literacy"
+                );
               }}
             >
-              <p className="educational-resource">5 Things Financial Literacy</p>
+              <p className="educational-resource">
+                5 Things Financial Literacy
+              </p>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(newBeginnings, "New Beginnings Brochure");
+                this.handleResourceClick(costOfWaiting, "Cost of Waiting");
+              }}
+            >
+              <p className="educational-resource">Cost of Waiting</p>
+            </li>
+            <li
+              onClick={e => {
+                this.handleResourceClick(
+                  newBeginnings,
+                  "New Beginnings Brochure"
+                );
               }}
             >
               <p className="educational-resource">New Beginnings Brochure</p>
             </li>
             <li>
-              <h3 className="educational-resource-list-header" id="college-planning-list-header">College Planning:</h3>
+              <h3
+                className="educational-resource-list-header"
+                id="college-planning-list-header"
+              >
+                College Planning:
+              </h3>
               <ul className="list-of-educational-resources">
                 <li
                   onClick={e => {
-                    this.handleResourceClick(wellRoundedCollege, "Well Rounded College Funding");
+                    this.handleResourceClick(
+                      wellRoundedCollege,
+                      "Well Rounded College Funding"
+                    );
                   }}
                 >
-                  <p className="educational-resource">Well Rounded College Funding</p>
+                  <p className="educational-resource">
+                    Well Rounded College Funding
+                  </p>
                 </li>
                 <li
                   onClick={e => {
@@ -121,44 +157,79 @@ export default class EducationalResources extends Component {
                 </li>
                 <li
                   onClick={e => {
-                    this.handleResourceClick(collegePlanUCLA, "UCLA Sample Planning Station");
+                    this.handleResourceClick(
+                      collegePlanUCLA,
+                      "UCLA Sample Planning Station"
+                    );
                   }}
                 >
-                  <p className="educational-resource">UCLA Sample Planning Station</p>
+                  <p className="educational-resource">
+                    UCLA Sample Planning Station
+                  </p>
                 </li>
                 <li
                   onClick={e => {
-                    this.handleResourceClick(collegePlanUSC, "USC Sample Planning Station");
+                    this.handleResourceClick(
+                      collegePlanUSC,
+                      "USC Sample Planning Station"
+                    );
                   }}
                 >
-                  <p className="educational-resource">USC Sample Planning Station</p>
+                  <p className="educational-resource">
+                    USC Sample Planning Station
+                  </p>
                 </li>
               </ul>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(taxDiversification, "Tax Diversification Brochure");
+                this.handleResourceClick(
+                  taxDiversification,
+                  "Tax Diversification Brochure"
+                );
               }}
             >
-              <p className="educational-resource">Tax Diversification Brochure</p>
+              <p className="educational-resource">
+                Tax Diversification Brochure
+              </p>
             </li>
           </ul>
-          
+
           <h3 className="educational-resource-list-header">Life Insurance:</h3>
+          <p
+            id="life-insurance-resources-text"
+            className="resource-description-text"
+          >
+            Our full array of products includes whole life, term, universal, and
+            variable universal life. With a variety of products and riders to
+            choose from, we can recommend a{" "}
+            <span className="italic">customized solution</span> for almost{" "}
+            <span className="italic">any</span> need you may have.
+          </p>
           <ul className="list-of-educational-resources">
             <li
               onClick={e => {
-                this.handleResourceClick(lifeFullOfOptions, "Life is Full of Options Brochure");
+                this.handleResourceClick(
+                  lifeFullOfOptions,
+                  "Life is Full of Options Brochure"
+                );
               }}
             >
-              <p className="educational-resource">Life is Full of Options Brochure</p>
+              <p className="educational-resource">
+                Life is Full of Options Brochure
+              </p>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(whichTermisRight, "Which Term is Right For You.pdf");
+                this.handleResourceClick(
+                  whichTermisRight,
+                  "Which Term is Right For You.pdf"
+                );
               }}
             >
-              <p className="educational-resource">Which Term is Right For You</p>
+              <p className="educational-resource">
+                Which Term is Right For You
+              </p>
             </li>
             <li
               onClick={e => {
@@ -169,7 +240,10 @@ export default class EducationalResources extends Component {
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(wholeLifeDecisionTree, "Whole Life Decision Tree");
+                this.handleResourceClick(
+                  wholeLifeDecisionTree,
+                  "Whole Life Decision Tree"
+                );
               }}
             >
               <p className="educational-resource">Whole Life Decision Tree</p>
@@ -183,31 +257,71 @@ export default class EducationalResources extends Component {
             </li>
           </ul>
           <h3 className="educational-resource-list-header">Retirement:</h3>
+          <p
+            id="retirement-resources-text"
+            className="resource-description-text"
+          >
+            We offer fixed and variable deferred annuities for the accumulation
+            stage of retirement, as well as guaranteed future or immediate
+            lifetime income annuities (fixed income annuities) that can help you
+            turn savings into an <span className="italic">income</span> stream
+            that will last a <span className="italic">lifetime</span>. With a
+            registered representative, we can offer mutual funds that may help
+            meet your <span className="italic">long-term</span> financial goals.
+          </p>
           <ul className="list-of-educational-resources">
             <li
               onClick={e => {
-                this.handleResourceClick(reasonsForLifeInsuranceRetirement, "Reasons For Life Insurance in Retirement");
+                this.handleResourceClick(
+                  planningStation,
+                  "Planning Station SAMPLE"
+                );
               }}
             >
-              <p className="educational-resource">Reasons For Life Insurance in Retirement</p>
+              <p className="educational-resource">Planning Station SAMPLE</p>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(reasonsForRetirementRollovers, "Reasons for Retirement Rollovers");
+                this.handleResourceClick(
+                  reasonsForLifeInsuranceRetirement,
+                  "Reasons For Life Insurance in Retirement"
+                );
               }}
             >
-              <p className="educational-resource">Reasons for Retirement Rollovers</p>
+              <p className="educational-resource">
+                Reasons For Life Insurance in Retirement
+              </p>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(retirementRolloverOptions, "Retirement Rollover Options");
+                this.handleResourceClick(
+                  reasonsForRetirementRollovers,
+                  "Reasons for Retirement Rollovers"
+                );
               }}
             >
-              <p className="educational-resource">Retirement Rollover Options</p>
+              <p className="educational-resource">
+                Reasons for Retirement Rollovers
+              </p>
             </li>
             <li
               onClick={e => {
-                this.handleResourceClick(productDesignTree, "Product Decision Tree");
+                this.handleResourceClick(
+                  retirementRolloverOptions,
+                  "Retirement Rollover Options"
+                );
+              }}
+            >
+              <p className="educational-resource">
+                Retirement Rollover Options
+              </p>
+            </li>
+            <li
+              onClick={e => {
+                this.handleResourceClick(
+                  productDesignTree,
+                  "Product Decision Tree"
+                );
               }}
             >
               <p className="educational-resource">Product Decision Tree</p>
@@ -225,7 +339,9 @@ export default class EducationalResources extends Component {
           <h3 className="educational-resource-list-header">Helpful links:</h3>
           <ul className="list-of-educational-links">
             <li>
-              <a href="https://www.newyorklife.com/">https://www.newyorklife.com/</a>
+              <a href="https://www.newyorklife.com/">
+                https://www.newyorklife.com/
+              </a>
             </li>
             <li>
               <a href="">other</a>
@@ -235,7 +351,10 @@ export default class EducationalResources extends Component {
             </li>
           </ul>
           <div id="for-questions-text">
-            <p>Any questions or concerns? Contact a <a href="#about-professional-text">professional</a>.</p>
+            <p>
+              Any questions or concerns? Contact a{" "}
+              <a href="#about-professional-text">professional</a>.
+            </p>
           </div>
         </div>
       </section>
