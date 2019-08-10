@@ -5,6 +5,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import './App.css';
 import Login from '../Login/Login';
+import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 
 export default class App extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends Component {
           <Route path="/" component={Nav} />
           <Route exact path="/" component={Main} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
           <Footer />
         </div>
       </div>

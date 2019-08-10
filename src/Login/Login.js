@@ -16,7 +16,7 @@ export default function Login() {
         </div>
         <button id="login-form-button">Login</button>
       </form>
-      <p>New user? <a href="">Sign up</a></p>
+      <p>New user? <a href="/#sign-up-section">Sign up</a></p>
     </section>
   )
 }

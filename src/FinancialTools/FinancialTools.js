@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import './FinancialTools.css'
 
 export default function FinancialTools() {
@@ -12,7 +13,9 @@ export default function FinancialTools() {
         <p>Keep your family <span className="italic">protected</span>, no matter what happens.</p>
         <p>Try our <span className="italic">free</span> life insurance calculator, to see how much coverage is right for you!</p>
       </div>
-      <button className="life-insurance-calculator-button">Click to Calculate</button>
+      <NavLink to={"/life-insurance-calc"}>
+        <button className="life-insurance-calculator-button">Click to Calculate</button>
+      </NavLink>
     </section>
   )
 }

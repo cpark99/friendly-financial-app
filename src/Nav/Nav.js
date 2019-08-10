@@ -31,9 +31,15 @@ export default class Nav extends Component {
 
   checkIfHomePath = (target, label) => {
     if (this.props.location.pathname === "/") {
-      return <a href={target} className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">{label}</li></a>
+      if (target === "#root") {
+        return <NavLink className="nav-menu-item-link" to={"/"}><li className="nav-dropdown-menu-list-item">{label}</li></NavLink>
+      } else {
+        return <a href={target} className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">{label}</li></a>
+      }
     } else {
-      return <NavLink className="nav-menu-item-link" to={"/"}><li className="nav-dropdown-menu-list-item">{label}</li></NavLink>
+      // const targetPath = "/" + target
+      // return <NavLink className="nav-menu-item-link" to={`/${target}`}><li className="nav-dropdown-menu-list-item">{label}</li></NavLink>
+      return <a href={`/${target}`} className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">{label}</li></a>
     }
   }
 
@@ -56,10 +62,14 @@ export default class Nav extends Component {
               <a href="/#root" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Profile</li></a>
               {this.checkIfHomePath("#financial-tools-section", "Financial Tools")}
               {/* <a href="/#financial-tools-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Financial Tools</li></a> */}
-              <a href="/#educational-resources-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Educational Resources</li></a>
-              <a href="/#about-financial-services-professional" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">About Professional</li></a>
-              <a href="/#schedule-call-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Schedule Call</li></a>
-              <a href="/#sign-up-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Sign Up</li></a>
+              {this.checkIfHomePath("#educational-resources-section", "Educational Resources")}
+              {/* <a href="/#educational-resources-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Educational Resources</li></a> */}
+              {this.checkIfHomePath("#about-financial-services-professional", "About Professional")}
+              {/* <a href="/#about-financial-services-professional" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">About Professional</li></a> */}
+              {this.checkIfHomePath("#schedule-call-section", "Schedule Call")}
+              {/* <a href="/#schedule-call-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Schedule Call</li></a> */}
+              {this.checkIfHomePath("#sign-up-section", "Sign Up")}
+              {/* <a href="/#sign-up-section" className="nav-menu-item-link"><li className="nav-dropdown-menu-list-item">Sign Up</li></a> */}
               {/* <li className="nav-dropdown-menu-list-item">Logout</li> */}
             </ul>
           </div>

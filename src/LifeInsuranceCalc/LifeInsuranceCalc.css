@@ -1,0 +1,119 @@
+#life-insurance-calc-section {
+  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#life-calc-initial-field-header {
+  margin-top: 0;
+}
+
+#life-insurance-calc-form {
+  text-align: left;
+  border: 1px solid black;
+}
+
+#life-insurance-modal {
+  background: lightgrey;
+  border: 1px solid black;
+  position: fixed;
+  top: 20vh;
+  left: 2vw;
+  text-align: center;
+  width: 95vw;
+  padding-bottom: 20px;
+}
+
+#life-calc-close-button {
+  z-index: 4;
+  position: fixed;
+  right: 4vw;
+  top: 20vh;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#life-calc-close-button:hover {
+  cursor: pointer;
+  color: grey;
+}
+
+#life-calc-close-button-text {
+  margin: 0;
+  font-size: 16px;
+}
+
+#life-calc-close-button-symbol {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+#life-result-header {
+  font-size: 24px;
+}
+
+.form-header {
+  text-align: center;
+}
+
+.field-header {
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+
+.field-header-description {
+  margin-top: 5px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.input-area {
+  margin-left: 30px;
+}
+
+.replace-input {
+  width: 40px;
+}
+
+.registration-control {
+  border: 1px solid lightgrey;
+}
+
+.protect-input {
+  width: 40px;
+}
+
+.no-margin-bot {
+  margin-bottom: 0;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.registration-button {
+  height: 30px;
+  width: 90px;
+  font-weight: bold;
+  border: 1px solid grey;
+}
+
+.input-field {
+  margin-bottom: 5px;
+}
+
+.form-submission-note {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
