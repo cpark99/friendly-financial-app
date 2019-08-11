@@ -21,27 +21,33 @@ export default class Nav extends Component {
     }
   };
 
+  closeNavMenu = () => {
+    this.setState({
+      showNavMenu: false
+    });
+  }
+
   checkIfHomePath = (target, label) => {
     if (this.props.location.pathname === "/") {
       return (
-        <a href={target} className="nav-menu-item-link">
+        <a href={target} className="nav-menu-item-link" onClick={e => {this.closeNavMenu()}}>
           <li className="nav-dropdown-menu-list-item">{label}</li>
         </a>
       );
     } else {
-      if (target === "#root") {
-        return (
-          <NavLink className="nav-menu-item-link" to={"/"}>
-            <li className="nav-dropdown-menu-list-item">{label}</li>
-          </NavLink>
-        );
-      } else {
+      // if (target === "#root") {
+      //   return (
+      //     <NavLink className="nav-menu-item-link" to={"/"}>
+      //       <li className="nav-dropdown-menu-list-item">{label}</li>
+      //     </NavLink>
+      //   );
+      // } else {
         return (
           <a href={`/${target}`} className="nav-menu-item-link">
             <li className="nav-dropdown-menu-list-item">{label}</li>
           </a>
         );
-      }
+      // }
     }
   };
 
@@ -64,11 +70,12 @@ export default class Nav extends Component {
                 FF
               </a>
             ) : (
-              <NavLink id="nav-logo" className="nav-item" to={"/"}>
-                FF
-              </NavLink>
+              // <NavLink id="nav-logo" className="nav-item" to={"/"}  onClick={e => {this.closeNavMenu()}}>
+              //   FF
+              // </NavLink>
+              <a href={"/"} id="nav-logo" className="nav-item">FF</a>
             )}
-            <NavLink id="nav-login-button" className="nav-item" to={"/login"}>
+            <NavLink id="nav-login-button" className="nav-item" to={"/login"}  onClick={e => {this.closeNavMenu()}}>
               Login
             </NavLink>
           </div>
@@ -80,12 +87,12 @@ export default class Nav extends Component {
           >
             <ul id="nav-dropdown-menu-list">
               {this.checkIfHomePath("#root", "Home")}
-              {/* <a href="/#root" className="nav-menu-item-link">
+              <a href="/profile" className="nav-menu-item-link">
                 <li className="nav-dropdown-menu-list-item">Profile</li>
-              </a> */}
-              <NavLink className="nav-menu-item-link" to={"/profile"}>
+              </a>
+              {/* <NavLink className="nav-menu-item-link" to={"/profile"}>
                 <li className="nav-dropdown-menu-list-item">Profile</li>
-              </NavLink>
+              </NavLink> */}
               {this.checkIfHomePath(
                 "#financial-tools-section",
                 "Financial Tools"
