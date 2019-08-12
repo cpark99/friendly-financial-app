@@ -42,11 +42,14 @@
   margin: 10px 10px 0 10px;
 }
 
+.pdf-document-container {
+  background: white;
+}
+
 .pdf-document {
   width: 100%;
   min-height: 400px;
   margin-bottom: 5px;
-  background: white;
 }
 
 .resourceTitle {
