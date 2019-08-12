@@ -97,6 +97,9 @@ export default class Nav extends Component {
                 "#financial-tools-section",
                 "Financial Tools"
               )}
+              {/* <NavLink className="nav-menu-item-link" to={{pathname: "/", hash: "#educational-resources-section"}}  onClick={e => {this.closeNavMenu()}}>
+                <li className="nav-dropdown-menu-list-item">Educational Resources</li>
+              </NavLink> */}
               {this.checkIfHomePath(
                 "#educational-resources-section",
                 "Educational Resources"

@@ -1,5 +1,6 @@
 import React from 'react';
 import './ResourceModal.css';
+import { Breakpoint } from 'react-socks';
 
 export default function ResourceModal(props) {
   return (
@@ -21,7 +22,12 @@ export default function ResourceModal(props) {
         {props.clickedImageName}
       </div> */}
       <div className="button-container">
-        <a href={props.src} id="download-pdf-button" download>Download</a>
+        <Breakpoint small down>
+          <a href={props.src} id="download-pdf-button" download>View full PDF</a>
+        </Breakpoint>
+        <Breakpoint medium up>
+          <a href={props.src} id="download-pdf-button" download>Download</a>
+        </Breakpoint>
       </div>
     </div>
   );

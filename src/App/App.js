@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+// import { setDefaultBreakpoints } from 'react-socks';
 import Nav from '../Nav/Nav';
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
@@ -33,6 +34,13 @@ export default class App extends Component {
       addNewUser: this.addNewUser,
       updateLifeInsuranceGoal: this.updateLifeInsuranceGoal
     };
+    // setDefaultBreakpoints([
+    //   { xs: 0 },
+    //   { s: 376 },
+    //   { m: 426 },
+    //   { l: 769 },
+    //   { xl: 1025 }
+    // ]);
     return (
       <div className='App'>
         <div id="container">
