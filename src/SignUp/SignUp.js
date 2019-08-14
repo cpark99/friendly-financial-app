@@ -48,7 +48,7 @@ export default class SignUp extends Component {
           </div>
           <div className="form-field">
             <label htmlFor="phone">Phone:</label>
-            <input type="tel" name="phone" id="phone" placeholder="8888888888" pattern="[0-9]{10}" required />
+            <input type="tel" name="phone" id="phone" placeholder="888-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
           </div>
           <div className="age-verification-field form-checkbox">
               <input type="checkbox" name="age-verification-checkbox" id="age-verification-checkbox" value="age" defaultChecked={true}  /><p className="checkbox-text">I am at least 18 years old</p>
