@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import TokenService from '../services/token-service'
+import TokenService from '../services/token-service'
 // import AuthApiService from '../services/auth-api-service'
 import './Login.css'
 
@@ -9,14 +9,14 @@ export default class Login extends Component {
     history: {
       push: () => {},
     },
-    onLoginSuccess: () => {}
+    // onLoginSuccess: () => {}
   }
 
   state = { error: null }
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
+    const destination = (location.state || {}).from || '/profile'
     history.push(destination)
   }
 
@@ -24,8 +24,9 @@ export default class Login extends Component {
     ev.preventDefault()
     const { email, password } = ev.target
 
-    console.log('login form submitted')
-    console.log({ email, password })
+    TokenService.saveAuthToken(
+      TokenService.makeBasicAuthToken(email.value, password.value)
+    )
 
     email.value = ''
     password.value = ''

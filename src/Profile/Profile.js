@@ -1,19 +1,47 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
+import ProfileContext, { nullProfile } from '../FriendlyFinancialContext';
+import ProfileApiService from '../services/profile-api-service';
 import './Profile.css';
 
 export default class Profile extends Component {
+  static defaultProps = {
+    match: { params: {} },
+  }
+
+  static contextType = ProfileContext
+
+  componentDidMount() {
+    const { profileId } = this.props.match.params
+    this.context.clearError()
+    ProfileApiService.getProfile(profileId)
+      .then(this.context.setArticle)
+      .catch(this.context.setError)
+  }
+
+  componentWillUnmount() {
+    this.context.clearProfile()
+  }
+
   render() {
+    const { error, profile = nullProfile } = this.context
+    let content
+    if (error) {
+      content = (error.error === `Profile doesn't exist`)
+        ? <p className='red-font'>Profile not found</p>
+        : <p className='red-font'>There was an error</p>
+    }
     return (
       <div id="profile-page-container">
         <ScrollToTopOnMount />
+        {content}
         <section id="basic-profile-container" className="profile-section">
           <h2>Profile</h2>
           <div className="profile-content-container">
             <div id="profile-name-container" className="profile-info-container">
               <h5>Name:</h5>
-              <p>Chris Park</p>
+              <p>{profile.name}</p>
             </div>
             <div id="profile-email-container" className="profile-info-container">
               <h5>Email:</h5>

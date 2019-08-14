@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 // import { setDefaultBreakpoints } from 'react-socks';
 import Nav from '../Nav/Nav';
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
@@ -62,8 +64,8 @@ export default class App extends Component {
             <Route path="/" component={Nav} />
             {this.state.hasError && <p className='red-font'>There was an error! Oh no!</p>}
             <Route exact path="/" component={Main} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/profile" component={Profile} />
+            <PublicOnlyRoute exact path="/login" component={Login} />
+            <PrivateRoute exact path="/profile" component={Profile} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
             <Footer />
           </ProfileContext.Provider>
