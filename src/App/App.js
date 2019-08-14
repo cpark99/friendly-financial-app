@@ -7,33 +7,47 @@ import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
 import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 import Profile from '../Profile/Profile';
-import FriendlyFinancialContext from '../FriendlyFinancialContext';
-// import DATA from '../demo-data';
+import ProfileContext from '../FriendlyFinancialContext';
 import './App.css';
 
 export default class App extends Component {
   state = {
-    users: [],
-    profiles: [],
-    loggedIn: false
-  }
-
-  addNewUser = user => {
-    
+    profile: ProfileContext.nullProfile,
+    error: null,
+    hasError: false
   };
 
-  updateLifeInsuranceGoal = value => {
-    
+  static getDerivedStateFromError(error) {
+    console.error(error)
+    return { hasError: true }
+  }
+
+  setError = error => {
+    console.error(error)
+    this.setState({ error })
+  }
+
+  clearError = () => {
+    this.setState({ error: null })
+  }
+
+  setProfile = profile => {
+    this.setState({ profile })
+  }
+
+  clearProfile = () => {
+    this.setProfile(ProfileContext.nullProfile)
   }
 
   render() {
-    const contextValue = {
-      loggedIn: this.state.loggedIn,
-      users: this.state.users,
-      profiles: this.state.profiles,
-      addNewUser: this.addNewUser,
-      updateLifeInsuranceGoal: this.updateLifeInsuranceGoal
-    };
+    const value = {
+      profile: this.state.profile,
+      error: this.state.error,
+      setError: this.setError,
+      clearError: this.clearError,
+      setProfile: this.setProfile,
+      clearProfile: this.clearProfile,
+    }
     // setDefaultBreakpoints([
     //   { xs: 0 },
     //   { s: 376 },
@@ -44,14 +58,15 @@ export default class App extends Component {
     return (
       <div className='App'>
         <div id="container">
-          <FriendlyFinancialContext.Provider value={contextValue}>
+          <ProfileContext.Provider value={value}>
             <Route path="/" component={Nav} />
+            {this.state.hasError && <p className='red-font'>There was an error! Oh no!</p>}
             <Route exact path="/" component={Main} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
             <Footer />
-          </FriendlyFinancialContext.Provider>
+          </ProfileContext.Provider>
         </div>
       </div>
     );

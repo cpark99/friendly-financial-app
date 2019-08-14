@@ -7,7 +7,7 @@ import AboutProfessional from "../AboutProfessional/AboutProfessional";
 import ScheduleCall from "../ScheduleCall/ScheduleCall";
 import SignUp from "../SignUp/SignUp";
 
-export default function Main() {
+export default function Main(props) {
   return (
     <main role="main">
       <div id="introduction-container">
@@ -21,7 +21,7 @@ export default function Main() {
       <EducationalResources />
       <AboutProfessional />
       <ScheduleCall />
-      <SignUp />
+      <SignUp onSubmit={props.history}/>
     </main>
   );
 }

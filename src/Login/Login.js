@@ -1,19 +1,53 @@
 import React, { Component } from 'react'
+// import TokenService from '../services/token-service'
+// import AuthApiService from '../services/auth-api-service'
 import './Login.css'
 
 export default class Login extends Component {
+  static defaultProps = {
+    location: {},
+    history: {
+      push: () => {},
+    },
+    onLoginSuccess: () => {}
+  }
+
+  state = { error: null }
+
+  handleLoginSuccess = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/'
+    history.push(destination)
+  }
+
+  handleSubmitBasicAuth = ev => {
+    ev.preventDefault()
+    const { email, password } = ev.target
+
+    console.log('login form submitted')
+    console.log({ email, password })
+
+    email.value = ''
+    password.value = ''
+    this.handleLoginSuccess()
+  }
+
   render() {
+    const { error } = this.state
     return (
       <section id="login-container">
         <h2>Login</h2>
-        <form>
+        <div role='alert'>
+          {error && <p className='red-font'>{error}</p>}
+        </div>
+        <form onSubmit={this.handleSubmitBasicAuth}>
           <div className="form-field">
-            <label for="email-field">Email:</label>
-            <input type="email" name="email-field" id="email-field" placeholder="jdoe@gmail.com" required />
+            <label htmlFor="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="jdoe@gmail.com" required />
           </div>
           <div className="form-field">
-            <label for="password">Password:</label>
-            <input type="password" name="password-field" id="password-field" required />
+            <label htmlFor="password">Password:</label>
+            <input type="password" name="password" id="password" required />
           </div>
           <button id="login-form-button">Login</button>
         </form>

@@ -344,10 +344,10 @@ export default class EducationalResources extends Component {
               </a>
             </li>
             <li>
-              <a href="">other</a>
+              <a href="/">other</a>
             </li>
             <li>
-              <a href="">Links</a>
+              <a href="/">Links</a>
             </li>
           </ul>
           <div id="for-questions-text" className="informative-text">
