@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TokenService from '../services/token-service'
-// import AuthApiService from '../services/auth-api-service'
+import AuthApiService from '../services/auth-api-service'
 import './Login.css'
 
 export default class Login extends Component {
@@ -8,8 +8,7 @@ export default class Login extends Component {
     location: {},
     history: {
       push: () => {},
-    },
-    // onLoginSuccess: () => {}
+    }
   }
 
   state = { error: null }
@@ -18,6 +17,26 @@ export default class Login extends Component {
     const { location, history } = this.props
     const destination = (location.state || {}).from || '/profile'
     history.push(destination)
+  }
+
+  handleSubmitJwtAuth = ev => {
+    ev.preventDefault()
+    this.setState({ error: null })
+    const { email, password } = ev.target
+    
+    AuthApiService.postLogin({
+      email: email.value,
+      password: password.value,
+    })
+      .then(res => {
+        email.value = ''
+        password.value = ''
+        TokenService.saveAuthToken(res.authToken)
+        this.handleLoginSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
   }
 
   handleSubmitBasicAuth = ev => {
@@ -41,7 +60,7 @@ export default class Login extends Component {
         <div role='alert'>
           {error && <p className='red-font'>{error}</p>}
         </div>
-        <form onSubmit={this.handleSubmitBasicAuth}>
+        <form onSubmit={this.handleSubmitJwtAuth}>
           <div className="form-field">
             <label htmlFor="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="jdoe@gmail.com" required />

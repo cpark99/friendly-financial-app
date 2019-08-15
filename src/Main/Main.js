@@ -1,11 +1,12 @@
 import React from "react";
-import "./Main.css";
+import TokenService from "../services/token-service";
 import Header from "../Header/Header";
 import FinancialTools from "../FinancialTools/FinancialTools";
 import EducationalResources from "../EducationalResources/EducationalResources";
 import AboutProfessional from "../AboutProfessional/AboutProfessional";
 import ScheduleCall from "../ScheduleCall/ScheduleCall";
 import SignUp from "../SignUp/SignUp";
+import "./Main.css";
 
 export default function Main(props) {
   return (
@@ -21,7 +22,11 @@ export default function Main(props) {
       <EducationalResources />
       <AboutProfessional />
       <ScheduleCall />
-      <SignUp onSubmit={props.history}/>
+      {TokenService.hasAuthToken() ? (
+        <></>
+      ) : (
+        <SignUp onSubmit={props.history} />
+      )}
     </main>
   );
 }

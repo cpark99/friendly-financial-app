@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./Nav.css";
 import TokenService from "../services/token-service";
+import "./Nav.css";
 
 export default class Nav extends Component {
   constructor(props) {
@@ -9,6 +9,11 @@ export default class Nav extends Component {
     this.state = {
       showNavMenu: false
     };
+  }
+
+  handleLogoutClick = () => {
+    TokenService.clearAuthToken()
+    this.closeNavMenu()
   }
 
   handleClick = e => {
@@ -77,7 +82,7 @@ export default class Nav extends Component {
               <a href={"/"} id="nav-logo" className="nav-item">FF</a>
             )}
             {TokenService.hasAuthToken()
-          ? <NavLink id="nav-login-button" className="nav-item" to={"/login"}  onClick={e => {this.closeNavMenu()}}>
+          ? <NavLink id="nav-login-button" className="nav-item" to={"/login"}  onClick={e => {this.handleLogoutClick()}}>
               Logout
             </NavLink>
           : <NavLink id="nav-login-button" className="nav-item" to={"/login"}  onClick={e => {this.closeNavMenu()}}>
