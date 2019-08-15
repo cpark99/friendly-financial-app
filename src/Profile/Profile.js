@@ -41,7 +41,7 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-name-container" className="profile-info-container">
               <h5>Name:</h5>
-              <p>{profile.name}</p>
+              <p>{profile.name || '(demo)'}</p>
             </div>
             <div id="profile-email-container" className="profile-info-container">
               <h5>Email:</h5>

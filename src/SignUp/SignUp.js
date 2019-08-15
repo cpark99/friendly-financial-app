@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import AuthApiService from '../services/auth-api-service'
 import './SignUp.css';
+import ProfileApiService from '../services/profile-api-service';
 
 export default class SignUp extends Component {
   state = { error: null }
@@ -8,21 +10,43 @@ export default class SignUp extends Component {
     return this.props.onSubmit.push('/login')
   }
 
+  handleProfileSubmit = (name, email, phone, get_email, get_call, get_newsletter) => {
+
+    ProfileApiService.postProfile({
+        name: name.value,
+        email: email.value,
+        phone: phone.value,
+        life_insurance_goal: '',
+        get_email: get_email.value === 'false' ? false : true,
+        get_call: get_call.value === 'false' ? false : true,
+        get_newsletter: get_newsletter.value === 'false' ? false : true
+      })
+        .then(profile => {
+          name.value = ''
+          email.value = ''
+          phone.value = ''
+          this.handleRegistrationSuccess()
+        })
+        .catch(res => {
+          // this.setState({ error: res.error })
+        })
+  }
+
   handleSubmit = ev => {
     ev.preventDefault()
-    const { name, password, email, phone, get_email, get_call, get_newsletter } = ev.target
-    console.log('registration form submitted')
-    console.log({ name, password, email, phone, get_email, get_call, get_newsletter })
+    const { password, email, name, phone, get_email, get_call, get_newsletter } = ev.target
 
-    name.value = ''
-    password.value = ''
-    email.value = ''
-    phone.value = ''
-    // life_insurance_goal.value = ''
-    get_email.value = true
-    get_call.value = true
-    get_newsletter.value = true
-    this.handleRegistrationSuccess()
+    this.setState({ error: null })
+      AuthApiService.postUser({
+        email: email.value,
+        password: password.value,
+      })
+        .then(user => {
+          this.handleProfileSubmit(name, email, phone, get_email, get_call, get_newsletter)
+        })
+        .catch(res => {
+          this.setState({ error: res.error })
+        })
   }
 
   render() {
