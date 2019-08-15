@@ -16,7 +16,7 @@ const ProfileApiService = {
   getProfile(profileId) {
     return fetch(`${config.API_ENDPOINT}/profiles/${profileId}`, {
       headers: {
-        'authorization': `basic ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
     })
       .then(res =>
@@ -30,7 +30,7 @@ const ProfileApiService = {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        'authorization': `basic ${TokenService.getAuthToken()}`,
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
         email: email,
