@@ -1,19 +1,19 @@
 import React from 'react'
 
-export const nullProfile = {
+export const nullUser = {
   tags: [],
 }
 
-const ProfileContext = React.createContext({
-  profile: nullProfile,
+const UserContext = React.createContext({
+  user: nullUser,
   error: null,
   setError: () => {},
   clearError: () => { },
-  setProfile: () => {},
-  clearProfile: () => {}
+  setUser: () => {},
+  clearUser: () => {}
 })
 
-export default ProfileContext
+export default UserContext
 
 // export class ProfileProvider extends Component {
 //   state = {

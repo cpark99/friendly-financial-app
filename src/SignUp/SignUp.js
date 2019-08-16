@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AuthApiService from '../services/auth-api-service'
 import './SignUp.css';
-import ProfileApiService from '../services/profile-api-service';
 
 export default class SignUp extends Component {
   state = { error: null }
@@ -10,27 +9,27 @@ export default class SignUp extends Component {
     return this.props.onSubmit.push('/login')
   }
 
-  handleProfileSubmit = (name, email, phone, get_email, get_call, get_newsletter) => {
+  // handleProfileSubmit = (name, email, phone, get_email, get_call, get_newsletter) => {
 
-    ProfileApiService.postProfile({
-        name: name.value,
-        email: email.value,
-        phone: phone.value,
-        life_insurance_goal: '',
-        get_email: get_email.value === 'false' ? false : true,
-        get_call: get_call.value === 'false' ? false : true,
-        get_newsletter: get_newsletter.value === 'false' ? false : true
-      })
-        .then(profile => {
-          name.value = ''
-          email.value = ''
-          phone.value = ''
-          this.handleRegistrationSuccess()
-        })
-        .catch(res => {
-          // this.setState({ error: res.error })
-        })
-  }
+  //   ProfileApiService.postProfile({
+  //       name: name.value,
+  //       email: email.value,
+  //       phone: phone.value,
+  //       life_insurance_goal: '',
+  //       get_email: get_email.value === 'false' ? false : true,
+  //       get_call: get_call.value === 'false' ? false : true,
+  //       get_newsletter: get_newsletter.value === 'false' ? false : true
+  //     })
+  //       .then(profile => {
+  //         name.value = ''
+  //         email.value = ''
+  //         phone.value = ''
+  //         this.handleRegistrationSuccess()
+  //       })
+  //       .catch(res => {
+  //         // this.setState({ error: res.error })
+  //       })
+  // }
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -40,9 +39,15 @@ export default class SignUp extends Component {
       AuthApiService.postUser({
         email: email.value,
         password: password.value,
+        name: name.value,
+        phone: phone.value,
+        life_insurance_goal: '',
+        get_email: get_email.value === 'false' ? false : true,
+        get_call: get_call.value === 'false' ? false : true,
+        get_newsletter: get_newsletter.value === 'false' ? false : true
       })
         .then(user => {
-          this.handleProfileSubmit(name, email, phone, get_email, get_call, get_newsletter)
+          this.handleRegistrationSuccess()
         })
         .catch(res => {
           this.setState({ error: res.error })

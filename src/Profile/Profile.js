@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from "react-router-dom";
 import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
-import ProfileContext, { nullProfile } from '../FriendlyFinancialContext';
-import ProfileApiService from '../services/profile-api-service';
+import UserContext, { nullUser } from '../FriendlyFinancialContext';
+import UserApiService from '../services/user-api-service';
 import './Profile.css';
 
 export default class Profile extends Component {
@@ -10,26 +10,28 @@ export default class Profile extends Component {
     match: { params: {} },
   }
 
-  static contextType = ProfileContext
+  static contextType = UserContext
 
   componentDidMount() {
-    const { profileId } = this.props.match.params
+    const { userId } = this.props.match.params
+    console.log(this.props)
+    console.log(`userId: ${userId}`)
     this.context.clearError()
-    ProfileApiService.getProfile(profileId)
-      .then(this.context.setProfile)
+    UserApiService.getUser(userId)
+      .then(this.context.setUser)
       .catch(this.context.setError)
   }
 
   componentWillUnmount() {
-    this.context.clearProfile()
+    this.context.clearUser()
   }
 
   render() {
-    const { error, profile = nullProfile } = this.context
+    const { error, user = nullUser } = this.context
     let content
     if (error) {
-      content = (error.error === `Profile doesn't exist`)
-        ? <p className='red-font'>Profile not found</p>
+      content = (error.error === `User doesn't exist`)
+        ? <p className='red-font'>User not found</p>
         : <p className='red-font'>There was an error</p>
     }
     return (
@@ -41,15 +43,15 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-name-container" className="profile-info-container">
               <h5>Name:</h5>
-              <p>{profile.name || 'NA'}</p>
+              <p>{user.name || 'NA'}</p>
             </div>
             <div id="profile-email-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>{profile.email || 'NA'}</p>
+              <p>{user.email || 'NA'}</p>
             </div>
             <div id="profile-phone-container" className="profile-info-container">
               <h5>Phone:</h5>
-              <p id="profile-phone-number">{profile.phone || 'NA'}</p>
+              <p id="profile-phone-number">{user.phone || 'NA'}</p>
             </div>
           </div>
         </section>
@@ -58,7 +60,7 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-life-insurance-container" className="profile-info-container">
               <h5>Life Insurance Coverage:</h5>
-              <p>{profile.life_insurance_goal || 'NA'}</p>
+              <p>{user.life_insurance_goal || '(unset)'}</p>
             </div>
           </div>
           <NavLink to={"/life-insurance-calc"}>
@@ -78,15 +80,15 @@ export default class Profile extends Component {
           <div id="profile-preferences-content" className="profile-content-container">
             <div id="profile-email-preference-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>{profile.get_email === true ? 'Yes' : 'No'}</p>
+              <p>{user.get_email === false ? 'No' : 'Yes'}</p>
             </div>
             <div id="profile-phone-preference-container" className="profile-info-container">
               <h5>Call:</h5>
-              <p>{profile.get_call === true ? 'Yes' : 'No'}</p>
+              <p>{user.get_call === false ? 'No' : 'Yes'}</p>
             </div>
             <div id="profile-newsletter-preference-container" className="profile-info-container">
               <h5>Newsletter:</h5>
-              <p>{profile.get_newsletter === true ? 'Yes' : 'No'}</p>
+              <p>{user.get_newsletter === false ? 'No' : 'Yes'}</p>
             </div>
           </div>
         </section>

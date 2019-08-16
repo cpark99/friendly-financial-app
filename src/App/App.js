@@ -9,12 +9,12 @@ import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
 import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 import Profile from '../Profile/Profile';
-import ProfileContext from '../FriendlyFinancialContext';
+import UserContext from '../FriendlyFinancialContext';
 import './App.css';
 
 export default class App extends Component {
   state = {
-    profile: ProfileContext.nullProfile,
+    user: UserContext.nullUser,
     error: null,
     hasError: false
   };
@@ -33,22 +33,22 @@ export default class App extends Component {
     this.setState({ error: null })
   }
 
-  setProfile = profile => {
-    this.setState({ profile })
+  setUser = user => {
+    this.setState({ user })
   }
 
-  clearProfile = () => {
-    this.setProfile(ProfileContext.nullProfile)
+  clearUser = () => {
+    this.setUser(UserContext.nullUser)
   }
 
   render() {
     const value = {
-      profile: this.state.profile,
+      user: this.state.user,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setProfile: this.setProfile,
-      clearProfile: this.clearProfile,
+      setUser: this.setUser,
+      clearUser: this.clearUser,
     }
     // setDefaultBreakpoints([
     //   { xs: 0 },
@@ -60,7 +60,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <div id="container">
-          <ProfileContext.Provider value={value}>
+          <UserContext.Provider value={value}>
             <Route path="/" component={Nav} />
             {this.state.hasError && <p className='red-font'>There was an error! Oh no!</p>}
             <Route exact path="/" component={Main} />
@@ -68,7 +68,7 @@ export default class App extends Component {
             <PrivateRoute exact path="/profile" component={Profile} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
             <Footer />
-          </ProfileContext.Provider>
+          </UserContext.Provider>
         </div>
       </div>
     );
