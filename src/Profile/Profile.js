@@ -16,7 +16,7 @@ export default class Profile extends Component {
     const { profileId } = this.props.match.params
     this.context.clearError()
     ProfileApiService.getProfile(profileId)
-      .then(this.context.setArticle)
+      .then(this.context.setProfile)
       .catch(this.context.setError)
   }
 
@@ -41,15 +41,15 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-name-container" className="profile-info-container">
               <h5>Name:</h5>
-              <p>{profile.name || '(demo)'}</p>
+              <p>{profile.name || 'NA'}</p>
             </div>
             <div id="profile-email-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>cpwebdeveloper99@gmail.com</p>
+              <p>{profile.email || 'NA'}</p>
             </div>
             <div id="profile-phone-container" className="profile-info-container">
               <h5>Phone:</h5>
-              <p id="profile-phone-number">(888)888-8888</p>
+              <p id="profile-phone-number">{profile.phone || 'NA'}</p>
             </div>
           </div>
         </section>
@@ -58,7 +58,7 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-life-insurance-container" className="profile-info-container">
               <h5>Life Insurance Coverage:</h5>
-              <p>$500,000</p>
+              <p>{profile.life_insurance_goal || 'NA'}</p>
             </div>
           </div>
           <NavLink to={"/life-insurance-calc"}>
@@ -78,15 +78,15 @@ export default class Profile extends Component {
           <div id="profile-preferences-content" className="profile-content-container">
             <div id="profile-email-preference-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>Yes</p>
+              <p>{profile.get_email === true ? 'Yes' : 'No'}</p>
             </div>
             <div id="profile-phone-preference-container" className="profile-info-container">
               <h5>Call:</h5>
-              <p>Yes</p>
+              <p>{profile.get_call === true ? 'Yes' : 'No'}</p>
             </div>
             <div id="profile-newsletter-preference-container" className="profile-info-container">
               <h5>Newsletter:</h5>
-              <p>Yes</p>
+              <p>{profile.get_newsletter === true ? 'Yes' : 'No'}</p>
             </div>
           </div>
         </section>
