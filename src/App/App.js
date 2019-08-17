@@ -24,6 +24,10 @@ export default class App extends Component {
     hasError: false
   };
 
+  componentDidMount() {
+    document.addEventListener("touchstart", function(){}, true);
+  }
+
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
