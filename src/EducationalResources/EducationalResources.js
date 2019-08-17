@@ -46,7 +46,7 @@ export default class EducationalResources extends Component {
 
   render() {
     return (
-      <section id="educational-resources-section">
+      <section id="educational-resources-section" className="content">
         <ScrollToTopOnMount />
         <h2>Educational Resources</h2>
         <div id="educational-resources-intro-text" className="text-container">

@@ -69,16 +69,29 @@ export default class Nav extends Component {
             >
               &#9776;
             </div>
-            <NavLink
-              id="nav-logo"
-              className="nav-item"
-              to={"/"}
-              onClick={e => {
-                this.closeNavMenu();
-              }}
-            >
-              FF
-            </NavLink>
+            {this.props.location.pathname === "/" ? (
+              <a
+                href="#root"
+                id="nav-logo"
+                className="nav-item"
+                onClick={e => {
+                  this.closeNavMenu();
+                }}
+              >
+                FF
+              </a>
+            ) : (
+              <NavLink
+                id="nav-logo"
+                className="nav-item"
+                to={"/"}
+                onClick={e => {
+                  this.closeNavMenu();
+                }}
+              >
+                FF
+              </NavLink>
+            )}
             {TokenService.hasAuthToken() ? (
               <NavLink
                 id="nav-login-button"
@@ -110,15 +123,27 @@ export default class Nav extends Component {
             className={this.state.showNavMenu ? "show" : "hidden"}
           >
             <ul id="nav-dropdown-menu-list">
-              <NavLink
-                className="nav-menu-item-link"
-                to={"/"}
-                onClick={e => {
-                  this.closeNavMenu();
-                }}
-              >
-                <li className="nav-dropdown-menu-list-item">Home</li>
-              </NavLink>
+              {this.props.location.pathname === "/" ? (
+                <a
+                  href="#root"
+                  className="nav-menu-item-link"
+                  onClick={e => {
+                    this.closeNavMenu();
+                  }}
+                >
+                  <li className="nav-dropdown-menu-list-item">Home</li>
+                </a>
+              ) : (
+                <NavLink
+                  className="nav-menu-item-link"
+                  to={"/"}
+                  onClick={e => {
+                    this.closeNavMenu();
+                  }}
+                >
+                  <li className="nav-dropdown-menu-list-item">Home</li>
+                </NavLink>
+              )}
               <NavLink
                 className="nav-menu-item-link"
                 to={"/about"}

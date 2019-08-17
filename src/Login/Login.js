@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import './Login.css'
+import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 
 export default class Login extends Component {
   static defaultProps = {
@@ -56,7 +57,8 @@ export default class Login extends Component {
   render() {
     const { error } = this.state
     return (
-      <section id="login-container">
+      <section id="login-container" className="content">
+        <ScrollToTopOnMount />
         <h2>Login</h2>
         <div role='alert'>
           {error && <p className='red-font'>{error}</p>}

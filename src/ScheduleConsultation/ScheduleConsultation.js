@@ -6,7 +6,7 @@ import "./ScheduleConsultation.css";
 export default class ScheduleConsultation extends Component {
   render() {
     return (
-      <section id="schedule-call-section" className="flex-column-center">
+      <section id="schedule-call-section" className="flex-column-center content">
         <ScrollToTopOnMount />
         <h2>Schedule a Consultation</h2>
         <div id="schedule-call-text" className="text-container">

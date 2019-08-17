@@ -8,9 +8,9 @@ export default class SignUp extends Component {
 
   checkIfHomepage = () => {
     if (this.props.history.location.pathname === "/") {
-      return "home-page-only"
+      return "home-page-only content"
     } else {
-      return "not-home-page"
+      return "not-home-page content"
     }
   }
 

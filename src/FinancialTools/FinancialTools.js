@@ -5,7 +5,7 @@ import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 
 export default function FinancialTools() {
   return (
-    <section id="financial-tools-section">
+    <section id="financial-tools-section" className="content">
       <ScrollToTopOnMount />
       <h2>Financial Tools</h2>
       <h4>Life Insurance Calculator</h4>

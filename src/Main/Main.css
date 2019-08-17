@@ -9,6 +9,7 @@ section,
   padding-bottom: 30px;
   margin-bottom: 15px;
   width: 100%;
+  min-height: 96vh;
 }
 
 button {
@@ -53,6 +54,10 @@ a:hover {
   margin-top: 15px;
 }
 
+#main-flex-container {
+  width: 95vw;
+}
+
 .flex-column-center {
   display: flex;
   flex-direction: column;
@@ -61,4 +66,39 @@ a:hover {
 
 .homepage-button {
   width: 250px;
+}
+
+@media (min-width: 375px) 
+and (min-height: 812px) {
+  #introduction-container {
+    padding-top: 55px;
+  }
+}
+
+@media (min-width: 568px)  
+and (orientation: landscape) {
+  #main-flex-container {
+    flex-direction: row-reverse;
+    align-items: initial;
+  }
+
+  .flex-responsive-mobile-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: initial;
+  }
+}
+
+@media (min-width: 1000px) {
+  #main-flex-container {
+    flex-direction: row-reverse;
+    align-items: initial;
+  }
+
+  .flex-responsive-mobile-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }

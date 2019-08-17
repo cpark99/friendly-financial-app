@@ -36,7 +36,7 @@ export default class Profile extends Component {
         : <p className='red-font'>There was an error</p>
     }
     return (
-      <div id="profile-page-container">
+      <div id="profile-page-container"  className="content">
         <ScrollToTopOnMount />
         {content}
         <section id="basic-profile-container" className="profile-section">

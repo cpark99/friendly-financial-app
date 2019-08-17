@@ -8,19 +8,23 @@
 }
 
 #schedule-buttons-container h5 {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
 #schedule-buttons-container p {
   margin-bottom: 10px;
 }
 
-#schedule-call-button {
-  margin-top: 39px;
+#schedule-meeting-container h5 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .schedule-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   margin-top: 20px;
   padding: 0 10px 20px 10px;
   width: 90%;
@@ -42,14 +46,29 @@
   align-items: center;
 }
 
-@media (min-width: 568px) {
-  .flex-responsive-mobile-desktop {
-    display: flex;
+@media (min-width: 568px) 
+and (orientation: landscape) {
+  #schedule-buttons-container {
     flex-direction: row;
-    justify-content: space-evenly;
+  }
+
+  .schedule-button-container {
+    width: 45%;
+  }
+}
+
+@media (min-width: 812px) {
+  #schedule-buttons-container {
     align-items: initial;
   }
 
+  #schedule-call-container, 
+  #schedule-meeting-container {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 1000px) {
   .schedule-button-container {
     width: 45%;
   }

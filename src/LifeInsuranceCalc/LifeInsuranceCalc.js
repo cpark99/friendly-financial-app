@@ -220,7 +220,7 @@ export default class LifeInsuranceCalc extends Component {
     const replaceError = this.validateReplace();
     const protectError = this.validateProtect();
     return (
-      <section id="life-insurance-calc-section">
+      <section id="life-insurance-calc-section" className="content">
         <ScrollToTopOnMount />
         <h2 id="life-insurance-calc-header">Life Insurance Calculator</h2>
         <form

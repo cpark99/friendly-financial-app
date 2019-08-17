@@ -5,7 +5,7 @@ import "./AboutProfessional.css";
 
 export default function AboutProfessional() {
   return (
-    <section id="about-financial-services-professional">
+    <section id="about-financial-services-professional" className="content">
       <ScrollToTopOnMount />
       <h2>Meet Your Certified Professional</h2>
       <Headshot />
