@@ -11,6 +11,11 @@ import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 import Profile from '../Profile/Profile';
 import UserContext from '../FriendlyFinancialContext';
 import './App.css';
+import SignUp from '../SignUp/SignUp';
+import EducationalResources from '../EducationalResources/EducationalResources';
+import FinancialTools from '../FinancialTools/FinancialTools';
+import ScheduleConsultation from '../ScheduleConsultation/ScheduleConsultation';
+import AboutProfessional from '../AboutProfessional/AboutProfessional';
 
 export default class App extends Component {
   state = {
@@ -65,8 +70,13 @@ export default class App extends Component {
             {this.state.hasError && <p className='red-font'>There was an error! Oh no!</p>}
             <Route exact path="/" component={Main} />
             <PublicOnlyRoute exact path="/login" component={Login} />
+            <PublicOnlyRoute exact path="/signup" component={SignUp} />
             <PrivateRoute exact path="/profile" component={Profile} />
+            <Route exact path="/about" component={AboutProfessional} />
+            <Route exact path="/schedule" component={ScheduleConsultation} />
+            <Route exact path="/financial-tools" component={FinancialTools} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
+            <Route exact path="/educational-resources" component={EducationalResources} />
             <Footer />
           </UserContext.Provider>
         </div>

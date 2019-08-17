@@ -5,6 +5,7 @@ main {
 section,
 #introduction-container {
   background: rgb(241, 241, 241);
+  padding-top: 35px;
   padding-bottom: 30px;
   margin-bottom: 15px;
   width: 100%;
@@ -35,4 +36,29 @@ a:hover {
 
 #to-sign-up-form-button {
   margin-top: 10px;
+}
+
+#homepage-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#to-financial-tools-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#introduction-text {
+  margin-top: 15px;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage-button {
+  width: 250px;
 }

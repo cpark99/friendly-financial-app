@@ -23,6 +23,7 @@ import reasonsForRetirementRollovers from "../pdf/Reasons for Retirement Rollove
 import retirementRolloverOptions from "../pdf/Retirement Rollover Options.pdf";
 import productDesignTree from "../pdf/Product Decision Tree.pdf";
 import "./EducationalResources.css";
+import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 
 export default class EducationalResources extends Component {
   state = {
@@ -46,6 +47,7 @@ export default class EducationalResources extends Component {
   render() {
     return (
       <section id="educational-resources-section">
+        <ScrollToTopOnMount />
         <h2>Educational Resources</h2>
         <div id="educational-resources-intro-text" className="text-container">
           <p>

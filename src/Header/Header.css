@@ -1,7 +1,14 @@
 header {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 h1 {
   padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 26px;
+}
+
+h5 {
+  margin-top: 10px;
 }

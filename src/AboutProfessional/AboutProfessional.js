@@ -1,16 +1,14 @@
 import React from "react";
-import headshot from "../img/headshot-np.jpg";
+import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
+import Headshot from "../Utils/Headshot";
 import "./AboutProfessional.css";
 
 export default function AboutProfessional() {
   return (
     <section id="about-financial-services-professional">
+      <ScrollToTopOnMount />
       <h2>Meet Your Certified Professional</h2>
-      <img
-        src={headshot}
-        id="about-professional-image"
-        alt="headshot for Nicholas S. Park, MBA, certified financial services professional"
-      />
+      <Headshot />
       <h5>Nicholas S. Park, MBA</h5>
       <div id="about-professional-text" className="text-container">
         <p>

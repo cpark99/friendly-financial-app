@@ -4,6 +4,7 @@ import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 import UserContext, { nullUser } from '../FriendlyFinancialContext';
 import UserApiService from '../services/user-api-service';
 import './Profile.css';
+import ScheduleConsultationButtons from '../ScheduleConsultationButtons/ScheduleConsultationButtons';
 
 export default class Profile extends Component {
   static defaultProps = {
@@ -69,11 +70,8 @@ export default class Profile extends Component {
         </section>
         <section className="profile-section">
           <h3 className="profile-section-header">Schedule Appointment</h3>
-          <p id="schedule-info">Set a meeting or phone call with:</p>
-          <h5>Nicholas S. Park, MBA</h5>
-          <div className="schedule-meeting-call-calendar-container calendar-container">
-            <div className="calendly-inline-widget" data-url="https://calendly.com/cpwebdeveloper99/30min" id="schedule-call-calendar-widget"></div>
-          </div>
+          
+          <ScheduleConsultationButtons />
         </section>
         <section className="profile-section">
           <h3 className="profile-section-header">Preferences</h3>

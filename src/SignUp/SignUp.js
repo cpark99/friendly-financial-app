@@ -1,35 +1,22 @@
 import React, { Component } from 'react';
 import AuthApiService from '../services/auth-api-service'
 import './SignUp.css';
+import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 
 export default class SignUp extends Component {
   state = { error: null }
 
+  checkIfHomepage = () => {
+    if (this.props.history.location.pathname === "/") {
+      return "home-page-only"
+    } else {
+      return "not-home-page"
+    }
+  }
+
   handleRegistrationSuccess = user => {
     return this.props.onSubmit.push('/login')
   }
-
-  // handleProfileSubmit = (name, email, phone, get_email, get_call, get_newsletter) => {
-
-  //   ProfileApiService.postProfile({
-  //       name: name.value,
-  //       email: email.value,
-  //       phone: phone.value,
-  //       life_insurance_goal: '',
-  //       get_email: get_email.value === 'false' ? false : true,
-  //       get_call: get_call.value === 'false' ? false : true,
-  //       get_newsletter: get_newsletter.value === 'false' ? false : true
-  //     })
-  //       .then(profile => {
-  //         name.value = ''
-  //         email.value = ''
-  //         phone.value = ''
-  //         this.handleRegistrationSuccess()
-  //       })
-  //       .catch(res => {
-  //         // this.setState({ error: res.error })
-  //       })
-  // }
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -57,7 +44,8 @@ export default class SignUp extends Component {
   render() {
     const { error } = this.state
     return (
-      <section id="sign-up-section">
+      <section id="sign-up-section" className={this.checkIfHomepage()}>
+        <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
         <div role='alert'>
           {error && <p className='red-font'>{error}</p>}

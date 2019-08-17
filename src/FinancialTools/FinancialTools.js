@@ -1,10 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './FinancialTools.css'
+import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 
 export default function FinancialTools() {
   return (
     <section id="financial-tools-section">
+      <ScrollToTopOnMount />
       <h2>Financial Tools</h2>
       <h4>Life Insurance Calculator</h4>
       <div id="life-insurance-calculator-intro-text" className="text-container">
