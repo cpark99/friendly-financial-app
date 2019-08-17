@@ -69,6 +69,10 @@ and (orientation: landscape) {
 }
 
 @media (min-width: 1000px) {
+  #schedule-buttons-container {
+    margin-top: 50px;
+  }
+  
   .schedule-button-container {
     width: 45%;
   }

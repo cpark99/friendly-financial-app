@@ -17,41 +17,6 @@ h5 {
   margin-right: 5px;
 }
 
-#about-professional-image {
-  width: 200px;
-}
-
 .bold {
   font-weight: bold;
-}
-
-@media (min-width: 375px) 
-and (orientation: portrait) {
-  #about-professional-image {
-    width: 220px;
-  }
-
-  .homepage-button {
-    width: 260px;
-  }
-}
-
-@media (min-width: 375px) 
-and (min-height: 812px) {
-  #about-professional-image {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 414px) 
-and (orientation: portrait) {
-  #about-professional-image {
-    width: 240px;
-    margin-bottom: 15px;
-  }
-
-  .homepage-button {
-    width: 280px;
-  }
 }

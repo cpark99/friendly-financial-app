@@ -22,7 +22,7 @@ export default class ScheduleConsultationButtons extends Component {
             <p>Schedule a FREE:</p>
             <h5>PHONE INTRODUCTION</h5>
             <p>Get to know a certified financial advisor, and start planning. Get prepared for life!</p>
-            <a href="https://calendly.com/nparknyl/phone">
+            <a href="https://calendly.com/nparknyl/phone" target="_blank" rel="noopener noreferrer">
               <button id="schedule-call-button" className="schedule-consultation-button">Click to Schedule</button>
             </a>
           </div>
@@ -30,7 +30,7 @@ export default class ScheduleConsultationButtons extends Component {
             <p>Schedule a FREE:</p>
             <h5>1-ON-1 MEETING</h5>
             <p>Get started on your own personalized plan, designed to reach all your financial goals!</p>
-            <a href="https://calendly.com/nparknyl/1on1">
+            <a href="https://calendly.com/nparknyl/1on1" target="_blank" rel="noopener noreferrer">
               <button id="schedule-meeting-button" className="schedule-consultation-button">Click to Schedule</button>
             </a>
           </div>
