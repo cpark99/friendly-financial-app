@@ -57,7 +57,7 @@ export default class Login extends Component {
   render() {
     const { error } = this.state
     return (
-      <section id="login-container" className="content">
+      <section id="login-container" className="content flex-column-center">
         <ScrollToTopOnMount />
         <h2>Login</h2>
         <div role='alert'>

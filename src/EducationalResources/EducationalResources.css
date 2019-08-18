@@ -73,3 +73,43 @@
     font-size: 16px;
   }
 }
+
+@media (min-width: 768px) {
+  #educational-resources-container {
+    width: initial;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #educational-resources-container h3 {
+    font-size: 22px;
+  } 
+
+  .tablet-column-left,
+  .flex-tablet-column-right {
+    width: 40%;
+  }
+
+  .informative-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #educational-resources-container h3 {
+    font-size: 24px;
+  } 
+
+  .tablet-column-left {
+    width: 65%;
+    display: flex;
+  }
+
+  .flex-tablet-column-right {
+    width: 25%;
+  }
+
+  .flex-desktop-column {
+    width: 45%;
+  }
+}

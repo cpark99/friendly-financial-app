@@ -58,3 +58,91 @@
 .button-container {
   text-align: center;
 }
+
+@media (min-width: 375px) {
+  .pdf-document {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 375px) 
+and (min-height: 800px) {
+  .pdf-document {
+    min-height: 480px;
+  }
+}
+
+@media (min-width: 375px) 
+and (orientation: landscape) {
+  .modal-frame {
+    max-height: 87vh;
+    top: 12vh;
+  }
+
+  .close-button {
+    top: 11vh;
+  }
+
+  .pdf-document {
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 414px) {
+  .pdf-document {
+    min-height: 480px;
+  }
+}
+
+@media (min-width: 568px) 
+and (orientation: landscape) {
+  .pdf-document {
+    min-height: 180px;
+  }
+}
+
+  @media (min-width: 667px) 
+  and (orientation: landscape) {
+  .pdf-document {
+    min-height: 225px;
+  }
+}
+
+@media (min-width: 736px) 
+and (orientation: landscape) {
+  .pdf-document {
+    min-height: 255px;
+  }
+}
+
+@media (min-width: 768px) 
+and (orientation: portrait) {
+  .pdf-document {
+    min-height: 760px;
+  }
+}
+
+@media (min-width: 1000px) 
+and (orientation: landscape) {
+  .modal-frame {
+    top: 9vh;
+    left: 5vw;
+    width: 90vw;
+  }
+
+  .close-button {
+    top: 8vh;
+    right: 5vw;
+  }
+
+  .pdf-document {
+    min-height: 560px;
+  }
+}
+
+@media (min-width: 1200px) 
+and (orientation: landscape) {
+  .pdf-document {
+    min-height: 570px;
+  }
+}
