@@ -17,6 +17,11 @@ label {
   align-items: center;
 }
 
+#sign-up-section-text {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
 #sign-up-form-button {
   align-self: center;
   margin-top: 20px;

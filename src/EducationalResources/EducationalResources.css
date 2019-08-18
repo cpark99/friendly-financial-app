@@ -17,6 +17,15 @@
   color: rgb(97, 97, 97);
 }
 
+#educational-resources-intro-text p {
+  margin-top: 5px;
+}
+
+#educational-resources-intro-text p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 #college-planning-list-header {
   margin: 10px 0;
   color: black;

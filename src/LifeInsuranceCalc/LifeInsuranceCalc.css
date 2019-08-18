@@ -1,5 +1,4 @@
 #life-insurance-calc-section {
-  padding-top: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,4 +114,40 @@
   font-size: 12px;
   margin-top: 30px;
   margin-bottom: 0px;
+}
+
+@media (min-width: 375px) {
+  #life-insurance-calc-form {
+    width: 300px;
+  }
+}
+
+@media (min-width: 414px) {
+  #life-insurance-calc-form {
+    width: 320px;
+  }
+}
+
+@media (min-width: 568px) {
+  #life-insurance-calc-form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 667px) {
+  #life-insurance-calc-form {
+    width: 440px;
+  }
+}
+
+@media (min-width: 768px) {
+  #life-insurance-calc-form {
+    width: 520px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #life-insurance-calc-form {
+    width: 580px;
+  }
 }

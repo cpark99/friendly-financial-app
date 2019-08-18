@@ -51,12 +51,11 @@ export default class EducationalResources extends Component {
         <h2>Educational Resources</h2>
         <div id="educational-resources-intro-text" className="text-container">
           <p>
-            Financial strength is built on{" "}
+            Financial <span className="italic">strength</span> is built on{" "}
             <span className="italic">integrity</span>.
           </p>
           <p>
-            Check out these <span className="italic">free</span> financial
-            resources!
+            Check out these FREE financial resources!
           </p>
         </div>
         <div

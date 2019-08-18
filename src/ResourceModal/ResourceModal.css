@@ -8,6 +8,7 @@
   left: 3vw;
   z-index: 3;
   padding: 30px 5px 15px;
+  overflow-y: scroll;
 }
 
 .close-button {
@@ -61,14 +62,14 @@
 
 @media (min-width: 375px) {
   .pdf-document {
-    min-height: 450px;
+    min-height: 440px;
   }
 }
 
 @media (min-width: 375px) 
 and (min-height: 800px) {
   .pdf-document {
-    min-height: 480px;
+    min-height: 470px;
   }
 }
 
@@ -84,41 +85,41 @@ and (orientation: landscape) {
   }
 
   .pdf-document {
-    min-height: 180px;
+    min-height: 170px;
   }
 }
 
 @media (min-width: 414px) {
   .pdf-document {
-    min-height: 480px;
+    min-height: 470px;
   }
 }
 
 @media (min-width: 568px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 180px;
+    min-height: 170px;
   }
 }
 
   @media (min-width: 667px) 
   and (orientation: landscape) {
   .pdf-document {
-    min-height: 225px;
+    min-height: 215px;
   }
 }
 
 @media (min-width: 736px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 255px;
+    min-height: 245px;
   }
 }
 
 @media (min-width: 768px) 
 and (orientation: portrait) {
   .pdf-document {
-    min-height: 760px;
+    min-height: 750px;
   }
 }
 
@@ -136,13 +137,13 @@ and (orientation: landscape) {
   }
 
   .pdf-document {
-    min-height: 560px;
+    min-height: 550px;
   }
 }
 
 @media (min-width: 1200px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 570px;
+    min-height: 560px;
   }
 }
