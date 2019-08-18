@@ -61,7 +61,7 @@ export default class Nav extends Component {
       <div id="nav-container">
         <nav role="navigation">
           <div id="nav-bar-container">
-            <Breakpoint large down>
+            {/* <Breakpoint large down> */}
               <div
                 id="hamburger"
                 className="nav-item"
@@ -71,7 +71,7 @@ export default class Nav extends Component {
               >
                 &#9776;
               </div>
-            </Breakpoint>
+            {/* </Breakpoint> */}
             {this.props.location.pathname === "/" ? (
               <a
                 href="#root"
