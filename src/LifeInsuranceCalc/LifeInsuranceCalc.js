@@ -396,7 +396,7 @@ export default class LifeInsuranceCalc extends Component {
             <h2 id="life-result-header">Results:</h2>
             {this.state.amount && <Results name={this.state.name} data={this.state.amount} />}
             {this.state.amountTwo && <Results name={this.state.nameTwo} data={this.state.amountTwo} />}
-            {TokenService.hasAuthToken() ? <></> : <SignUp history={this.props.history} />}
+            {/* {TokenService.hasAuthToken() ? <></> : <SignUp history={this.props.history} />} */}
             {/* button needs to save Person 1 results to database */}
             <button id="reset-life-calc-results-button" onClick={e => {this.handleFormReset();}}>Reset</button>
             <button id="save-life-calc-results-button" onClick={e => {this.handleSaveButtonClick();}}>Save Results</button>
