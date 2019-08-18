@@ -12,17 +12,22 @@ section,
   min-height: 96vh;
 }
 
+p {
+  line-height: 25px;
+}
+
 button {
   height: 40px;
   min-width: 100px;
   border: 2px solid black;
   font-size: 14px;
   font-weight: bold;
+  background: white;
 }
 
 button:hover {
   cursor: pointer;
-  color: grey;
+  color: rgb(2, 97, 174);
   background: white;
   border: 2px solid grey;
 }
@@ -37,6 +42,7 @@ a:hover {
 
 #about-professional-image {
   width: 200px;
+  margin: 3px 3px 0 3px;
 }
 
 #to-sign-up-form-button {
@@ -77,6 +83,18 @@ a:hover {
   width: 250px;
 }
 
+.headshot-container {
+  width: max-content;
+}
+
+.white-border {
+  border: 2px solid white;
+}
+
+.blue-border {
+  border: 2px solid rgb(2, 97, 174);
+}
+
 @media (min-width: 375px) 
 and (orientation: portrait) {
   #about-professional-image {
@@ -94,7 +112,7 @@ and (min-height: 812px) {
     padding-top: 55px;
   }
 
-  #about-professional-image {
+  .headshot-container {
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -104,6 +122,9 @@ and (min-height: 812px) {
 and (orientation: portrait) {
   #about-professional-image {
     width: 240px;
+  }
+
+  .headshot-container {
     margin-bottom: 15px;
   }
 
@@ -172,7 +193,6 @@ and (orientation: landscape) {
 and (orientation: portrait) {
   #about-professional-image {
     width: 270px;
-    margin-bottom: 35px;
   }
 
   #introduction-text-container p {
@@ -194,6 +214,10 @@ and (orientation: portrait) {
   #to-financial-tools-button {
     margin-left: 30px;
     margin-right: 30px;
+  }
+
+  .headshot-container {
+    margin-bottom: 35px;
   }
 }
 
@@ -223,6 +247,10 @@ and (orientation: portrait) {
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  .headshot-container {
+    margin-top: 40px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -230,11 +258,13 @@ and (orientation: portrait) {
     width: 340px;
   }
 
-  #homepage-buttons-container button {
-    /* width: 300px;
+  /* #homepage-buttons-container button {
+    width: 300px;
     height: 43px;
-    font-size: 16px; */
-  }
+    font-size: 16px;
+  } */
 
-  
+  .headshot-container {
+    margin-top: 30px;
+  }
 }

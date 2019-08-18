@@ -23,7 +23,6 @@ export default function Main(props) {
             className="flex-object-vertical-horizontal"
           >
             <h3 id="introduction-text">Your financial friend.</h3>
-            
             <div id="homepage-buttons-container">
               <NavLink to="/schedule">
                 <button

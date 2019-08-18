@@ -1,7 +1,8 @@
 nav {
   padding: 1% 0;
-  background-color: black;
+  background-color: rgb(2, 97, 174);
   color: white;
+  border-bottom: 1px solid black;
 }
 
 #nav-container {
@@ -57,9 +58,9 @@ nav {
   list-style: none;
   margin-top: 0;
   padding-left: 0;
-  border-left: 4px solid rgb(85, 85, 85);
-  border-right: 4px solid rgb(85, 85, 85);
-  border-bottom: 4px solid rgb(85, 85, 85);
+  border-left: 4px solid rgb(0, 67, 121);
+  border-right: 4px solid rgb(0, 67, 121);
+  border-bottom: 4px solid rgb(0, 67, 121);
 }
 
 .nav-item:link {
@@ -78,7 +79,7 @@ nav {
 
 .nav-dropdown-menu-list-item {
   padding: 5px 0 5px 20px;
-  border-top: 4px solid rgb(85, 85, 85);
+  border-top: 4px solid rgb(0, 67, 121);
 }
 
 .nav-dropdown-menu-list-item:hover {

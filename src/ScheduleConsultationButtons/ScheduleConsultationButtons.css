@@ -29,11 +29,13 @@
   padding: 0 10px 20px 10px;
   width: 90%;
   border: 1px solid black;
+  background: white;
 }
 
 .schedule-button-container button {
   margin-top: 20px;
   width: 200px;
+  background: rgb(241, 241, 241);
 }
 
 .schedule-page-only h5 {

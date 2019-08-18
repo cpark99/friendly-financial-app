@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-// import { setDefaultBreakpoints } from 'react-socks';
+import { setDefaultBreakpoints } from 'react-socks';
 import Nav from '../Nav/Nav';
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
@@ -59,13 +59,14 @@ export default class App extends Component {
       setUser: this.setUser,
       clearUser: this.clearUser,
     }
-    // setDefaultBreakpoints([
-    //   { xs: 0 },
-    //   { s: 376 },
-    //   { m: 426 },
-    //   { l: 769 },
-    //   { xl: 1025 }
-    // ]);
+    setDefaultBreakpoints([
+      { xsmall: 0 }, // all mobile devices
+      { small: 576 }, // mobile devices (not sure which one's this big)
+      { medium: 768 }, // ipad, ipad pro, ipad mini, etc
+      { large: 992 }, // smaller laptops
+      { tabletLandscape: 1000 },
+      { xlarge: 1200 } // laptops and desktops
+    ]);
     return (
       <div className='App'>
         <div id="container">
