@@ -31,12 +31,12 @@ nav {
 
 #nav-logo {
   margin: 0;
-  padding-left: 6px;
+  padding-right: 10px;
   font-weight: bold;
 }
 
 #nav-login-button {
-  margin: 0;
+  margin: 0 0 0 10px;
   padding-right: 5px;
 }
 
@@ -44,19 +44,18 @@ nav {
   color: white;
 }
 
-#nav-login-button:hover {
-  color: lightblue;
-}
-
 #nav-dropdown-menu-container {
   text-align: left;
   background: white;
   width: 200px;
+  position: absolute;
+  right: 0;
+  top: 42px;
 }
 
 #nav-dropdown-menu-list {
   list-style: none;
-  margin-top: 0;
+  margin: 0;
   padding-left: 0;
   border-left: 4px solid rgb(0, 67, 121);
   border-right: 4px solid rgb(0, 67, 121);
@@ -70,7 +69,7 @@ nav {
 
 .nav-item:hover {
   cursor: pointer;
-  color: lightblue;
+  color: rgb(107, 107, 107)
 }
 
 .nav-item:visited {
@@ -105,4 +104,65 @@ nav {
 
 .show {
   display: block;
+}
+
+@media (min-width: 1200px) {
+  #nav-dropdown-menu-container {
+    width: max-content;
+    position: absolute;
+    background: none;
+    top: 16px;
+  }
+
+  #nav-dropdown-menu {
+    display: block;
+  }
+
+  #nav-logo {
+    font-size: 24px;
+    padding-left: 30px
+  }
+  
+  #nav-dropdown-menu-list {
+    display: flex;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  #nav-login-button {
+    margin: 0;
+  }
+  
+  .nav-item:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    color: rgb(107, 107, 107)
+  }
+  
+  .nav-dropdown-menu-list-item {
+    padding-right: 10px;
+    border-top: none;
+    font-weight: bold;
+  }
+  
+  .nav-dropdown-menu-list-item:hover {
+    background: none;
+  }
+  
+  .nav-menu-item-link:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-menu-item-link:hover {
+    color: rgb(107, 107, 107);
+  }
+  
+  .nav-menu-item-link:visited {
+    color: white;
+  }
 }

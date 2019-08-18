@@ -35,6 +35,9 @@
 .schedule-button-container button {
   margin-top: 20px;
   width: 200px;
+}
+
+.gray-button {
   background: rgb(241, 241, 241);
 }
 

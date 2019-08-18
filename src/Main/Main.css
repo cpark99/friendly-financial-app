@@ -49,6 +49,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 #introduction-text-container p {
@@ -69,8 +70,7 @@ a:hover {
 }
 
 #signup-contact-buttons-container {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 .flex-column-center {
@@ -262,7 +262,7 @@ and (orientation: portrait) {
   }
 
   .headshot-container {
-    margin-top: 40px;
+    margin-top: 0;
   }
 }
 

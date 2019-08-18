@@ -49,10 +49,18 @@ export default function Main(props) {
                 </button>
               </NavLink>
             </div>
-              <div id="signup-contact-buttons-container" className="flex-center">
-                <a href="#sign-up-section">
+              
+            <div className="text-container">
+              <p>
+                As your New York Life agent, I can work with you to identify your
+                goals, understand your needs, and offer insurance and financial
+                products that can help you achieve peace of mind.
+              </p>
+            </div>
+            <div id="signup-contact-buttons-container" className="flex-center">
+                {!TokenService.hasAuthToken() && <a href="#sign-up-section">
                   <button id="to-sign-up-form-button" className="small-button">Sign up</button>
-                </a>
+                </a>}
                 <NavLink to="/contact">
                   <button
                     id="to-contact-button" 
@@ -62,13 +70,6 @@ export default function Main(props) {
                   </button>
                 </NavLink>
               </div>
-            <div className="text-container">
-              <p>
-                As your New York Life agent, I can work with you to identify your
-                goals, understand your needs, and offer insurance and financial
-                products that can help you achieve peace of mind.
-              </p>
-            </div>
           </div>
         </div>
       </div>

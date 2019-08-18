@@ -79,7 +79,7 @@ export default class SignUp extends Component {
           <div className="newsletter-checkbox form-checkbox">
             <input type="checkbox" name="get_newsletter" id="get_newsletter" value="get_newsletter" defaultChecked={true} /><p className="checkbox-text">I agree to receive newsletters</p>
           </div>
-          <button id="sign-up-form-button" type="submit">Sign up</button>
+          {this.props.history.location.pathname === "/" && <button id="sign-up-form-button" type="submit">Sign up</button>}
           <p className="contact-notice privacy-notice">*Emails and calls will <span className="italic">only</span> be for a FREE consultation. You will <span className="italic">only</span> be contacted by the representing certified financial services professional.</p>
           <p className="personal-information-notice privacy-notice">*Personal information will NOT be shared with third-parties. By clicking "Sign up", you agree to information stored solely for the purpose of this app.</p>
         </form>
