@@ -7,7 +7,7 @@ export default function Contact() {
     <section id="contact-section" className="content flex-column-center">
       <ScrollToTopOnMount />
       <h2>Contact</h2>
-      <div id="about-contact-info-container" className="left-align-container">
+      <div id="contact-info-container" className="left-align-container">
         <div>
           <p><span className="bold">Phone:</span>{" "}
             <a href="tel:+1-818-731-8616">(818) 731-8616</a>

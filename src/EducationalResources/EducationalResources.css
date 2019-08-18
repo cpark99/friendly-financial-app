@@ -35,7 +35,7 @@
 .educational-resource {
   text-decoration: underline;
   color: blue;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -58,4 +58,18 @@
 .informative-text {
   font-size: 10px;
   font-style: italic;
+}
+
+@media (min-width: 414px) {
+  #educational-resources-container h3 {
+    font-size: 20px;
+  }
+
+  #educational-resources-container p {
+    font-size: 14px;
+  }
+
+  .educational-resource {
+    font-size: 16px;
+  }
 }

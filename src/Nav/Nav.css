@@ -106,6 +106,10 @@ nav {
   display: block;
 }
 
+.active {
+  color: lightblue;
+}
+
 @media (min-width: 1200px) {
   #nav-dropdown-menu-container {
     width: max-content;
