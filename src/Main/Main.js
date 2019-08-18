@@ -48,10 +48,20 @@ export default function Main(props) {
                   Educational Resources
                 </button>
               </NavLink>
-              {/* <a href="#sign-up-section">
-                <button id="to-sign-up-form-button">Sign up</button>
-              </a> */}
             </div>
+              <div id="signup-contact-buttons-container" className="flex-center">
+                <a href="#sign-up-section">
+                  <button id="to-sign-up-form-button" className="small-button">Sign up</button>
+                </a>
+                <NavLink to="/contact">
+                  <button
+                    id="to-contact-button" 
+                    className="small-button"
+                  >
+                    Contact
+                  </button>
+                </NavLink>
+              </div>
             <div className="text-container">
               <p>
                 As your New York Life agent, I can work with you to identify your

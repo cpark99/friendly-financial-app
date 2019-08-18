@@ -16,6 +16,7 @@ import EducationalResources from '../EducationalResources/EducationalResources';
 import FinancialTools from '../FinancialTools/FinancialTools';
 import ScheduleConsultation from '../ScheduleConsultation/ScheduleConsultation';
 import AboutProfessional from '../AboutProfessional/AboutProfessional';
+import Contact from '../Contact/Contact';
 
 export default class App extends Component {
   state = {
@@ -78,6 +79,7 @@ export default class App extends Component {
             <PublicOnlyRoute exact path="/signup" component={SignUp} />
             <PrivateRoute exact path="/profile" component={Profile} />
             <Route exact path="/about" component={AboutProfessional} />
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/schedule" component={ScheduleConsultation} />
             <Route exact path="/financial-tools" component={FinancialTools} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />

@@ -6,13 +6,13 @@ import ScrollToTopOnMount from '../ScrollToTopOnMount/ScrollToTopOnMount';
 export default class SignUp extends Component {
   state = { error: null }
 
-  checkIfHomepage = () => {
-    if (this.props.history.location.pathname === "/") {
-      return "home-page-only content"
-    } else {
-      return "not-home-page content"
-    }
-  }
+  // checkIfHomepage = () => {
+  //   if (this.props.history.location.pathname === "/") {
+  //     return "home-page-only content"
+  //   } else {
+  //     return "not-home-page content"
+  //   }
+  // }
 
   handleRegistrationSuccess = user => {
     return this.props.onSubmit.push('/login')
@@ -44,7 +44,7 @@ export default class SignUp extends Component {
   render() {
     const { error } = this.state
     return (
-      <section id="sign-up-section" className={this.checkIfHomepage()}>
+      <section id="sign-up-section">
         <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
         <div role='alert'>
