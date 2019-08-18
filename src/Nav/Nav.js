@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { Breakpoint } from 'react-socks';
 import TokenService from "../services/token-service";
 import "./Nav.css";
 
@@ -60,15 +61,17 @@ export default class Nav extends Component {
       <div id="nav-container">
         <nav role="navigation">
           <div id="nav-bar-container">
-            <div
-              id="hamburger"
-              className="nav-item"
-              onClick={() => {
-                this.handleClick();
-              }}
-            >
-              &#9776;
-            </div>
+            <Breakpoint large down>
+              <div
+                id="hamburger"
+                className="nav-item"
+                onClick={() => {
+                  this.handleClick();
+                }}
+              >
+                &#9776;
+              </div>
+            </Breakpoint>
             {this.props.location.pathname === "/" ? (
               <a
                 href="#root"

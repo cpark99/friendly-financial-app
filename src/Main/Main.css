@@ -69,7 +69,6 @@ a:hover {
 }
 
 #signup-contact-buttons-container {
-  width: 250px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -196,6 +195,10 @@ and (orientation: landscape) {
 
   #introduction-text {
     font-size: 28px;
+  }
+
+  #signup-contact-buttons-container {
+    width: 250px;
   }
 }
 
