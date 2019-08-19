@@ -7,6 +7,9 @@ export default class SignUp extends Component {
   state = { error: null };
 
   handleRegistrationSuccess = user => {
+    if (this.props.history.location.pathname === "/life-insurance-calc") {
+      return this.props.history.push("/login");
+    }
     return this.props.onSubmit.push("/login");
   };
 
@@ -22,13 +25,19 @@ export default class SignUp extends Component {
       get_newsletter
     } = ev.target;
 
+    let life_insurance_goal = "";
+
+    if (this.props.history.location.pathname === "/life-insurance-calc") {
+      life_insurance_goal = this.props.lifeInsuranceGoal;
+    }
+
     this.setState({ error: null });
     AuthApiService.postUser({
       email: email.value,
       password: password.value,
       name: name.value,
       phone: phone.value,
-      life_insurance_goal: "",
+      life_insurance_goal: life_insurance_goal,
       get_email: get_email.value === "false" ? false : true,
       get_call: get_call.value === "false" ? false : true,
       get_newsletter: get_newsletter.value === "false" ? false : true
@@ -49,11 +58,11 @@ export default class SignUp extends Component {
         <h2>Create a Free Account</h2>
         <div className="text-container">
           <p id="sign-up-section-text">
-            Sign up to <span className="italic">stay connected</span> with a
+            Sign up to stay <span className="italic">connected</span> with a
             financial services professional, while keeping track of your
             financial goals (<span className="italic">ie. life insurance</span>
             ). Stay up to date on the latest trends and policies, keeping you{" "}
-            <span className="italic">prepared for life</span>.
+            <span className="italic">prepared</span> for life.
           </p>
         </div>
         <div role="alert">{error && <p className="red-font">{error}</p>}</div>
@@ -135,9 +144,13 @@ export default class SignUp extends Component {
             />
             <p className="checkbox-text">I agree to receive newsletters</p>
           </div>
-          {this.props.history.location.pathname === "/" && (
+          {this.props.history.location.pathname === "/" ? (
             <button id="sign-up-form-button" type="submit">
               Sign up
+            </button>
+          ) : (
+            <button id="sign-up-form-button" type="submit">
+              Save Results
             </button>
           )}
           <p className="contact-notice privacy-notice">
