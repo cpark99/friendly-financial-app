@@ -1,8 +1,9 @@
 nav {
-  padding: 1% 0;
+  padding: 4px 0;
   background-color: rgb(2, 97, 174);
   color: white;
   border-bottom: 1px solid black;
+  height: 27px;
 }
 
 #nav-container {
@@ -69,7 +70,7 @@ nav {
 
 .nav-item:hover {
   cursor: pointer;
-  color: rgb(107, 107, 107)
+  color: lightgray;
 }
 
 .nav-item:visited {
@@ -79,15 +80,17 @@ nav {
 .nav-dropdown-menu-list-item {
   padding: 5px 0 5px 20px;
   border-top: 4px solid rgb(0, 67, 121);
+  background: gray;
 }
 
 .nav-dropdown-menu-list-item:hover {
-  background: lightgrey;
+  background: white;
+  color: black;
 }
 
 .nav-menu-item-link:link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .nav-menu-item-link:hover {
@@ -111,11 +114,15 @@ nav {
 }
 
 @media (min-width: 1200px) {
+  nav {
+    height: 41px;
+  }
+
   #nav-dropdown-menu-container {
     width: max-content;
     position: absolute;
     background: none;
-    top: 16px;
+    top: 8px;
   }
 
   #nav-dropdown-menu {
@@ -144,26 +151,28 @@ nav {
   }
 
   .nav-item:hover {
-    color: rgb(107, 107, 107)
+    color: lightgray;
   }
   
   .nav-dropdown-menu-list-item {
     padding-right: 10px;
     border-top: none;
     font-weight: bold;
+    background: none;
   }
   
   .nav-dropdown-menu-list-item:hover {
     background: none;
+    color: lightgray;
+  }
+
+  .nav-menu-item-link {
+    height: 30px
   }
   
   .nav-menu-item-link:link {
     text-decoration: none;
     color: white;
-  }
-  
-  .nav-menu-item-link:hover {
-    color: rgb(107, 107, 107);
   }
   
   .nav-menu-item-link:visited {

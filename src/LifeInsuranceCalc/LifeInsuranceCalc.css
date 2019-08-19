@@ -17,18 +17,20 @@
   background: lightgrey;
   border: 1px solid black;
   position: fixed;
-  top: 20vh;
+  top: 6vh;
   left: 2vw;
   text-align: center;
   width: 95vw;
   padding-bottom: 20px;
+  max-height: 88vh;
+  overflow-y: scroll;
 }
 
 #life-calc-close-button {
   z-index: 4;
   position: fixed;
   right: 4vw;
-  top: 20vh;
+  top: 6vh;
   color: black;
   font-weight: bold;
   font-size: 18px;
