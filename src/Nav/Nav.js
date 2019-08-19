@@ -192,6 +192,15 @@ export default class Nav extends Component {
                       Educational Resources
                     </li>
                   </NavLink>
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/contact"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">Contact</li>
+                  </NavLink>
                   {TokenService.hasAuthToken() && (
                     <NavLink
                       className="nav-menu-item-link"
@@ -203,15 +212,6 @@ export default class Nav extends Component {
                       <li className="nav-dropdown-menu-list-item">Profile</li>
                     </NavLink>
                   )}
-                  <NavLink
-                    className="nav-menu-item-link"
-                    to={"/contact"}
-                    onClick={e => {
-                      this.closeNavMenu();
-                    }}
-                  >
-                    <li className="nav-dropdown-menu-list-item">Contact</li>
-                  </NavLink>
                   {!TokenService.hasAuthToken() && (
                     <NavLink
                       className="nav-menu-item-link"
