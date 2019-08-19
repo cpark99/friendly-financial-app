@@ -21,6 +21,7 @@ import Contact from '../Contact/Contact';
 export default class App extends Component {
   state = {
     user: UserContext.nullUser,
+    user_id: "",
     error: null,
     hasError: false
   };
@@ -51,14 +52,20 @@ export default class App extends Component {
     this.setUser(UserContext.nullUser)
   }
 
+  setUserId = (user_id) => {
+    this.setState({ user_id: user_id })
+  }
+
   render() {
     const value = {
       user: this.state.user,
+      user_id: this.state.user_id,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setUser: this.setUser,
       clearUser: this.clearUser,
+      setUserId: this.setUserId
     }
     setDefaultBreakpoints([
       { xsmall: 0 }, // all mobile devices

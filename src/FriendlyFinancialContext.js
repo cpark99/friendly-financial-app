@@ -6,11 +6,13 @@ export const nullUser = {
 
 const UserContext = React.createContext({
   user: nullUser,
+  user_id: "",
   error: null,
   setError: () => {},
   clearError: () => { },
   setUser: () => {},
-  clearUser: () => {}
+  clearUser: () => {},
+  setUserId: () => {}
 })
 
 export default UserContext
