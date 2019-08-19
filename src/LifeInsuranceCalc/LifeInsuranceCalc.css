@@ -17,7 +17,7 @@
   background: lightgrey;
   border: 1px solid black;
   position: fixed;
-  top: 6vh;
+  top: 32px;
   left: 2vw;
   text-align: center;
   width: 95vw;
@@ -30,7 +30,7 @@
   z-index: 4;
   position: fixed;
   right: 4vw;
-  top: 6vh;
+  top: 32px;
   color: black;
   font-weight: bold;
   font-size: 18px;
@@ -151,5 +151,15 @@
 @media (min-width: 1000px) {
   #life-insurance-calc-form {
     width: 580px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #life-insurance-modal {
+    top: 50px;
+  }
+  
+  #life-calc-close-button {
+    top: 50px;
   }
 }
