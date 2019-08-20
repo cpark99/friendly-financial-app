@@ -13,8 +13,6 @@ export default class Profile extends Component {
   static contextType = UserContext;
 
   componentDidMount() {
-    console.log(this.props);
-    console.log(`context: ${this.context}`)
     this.context.clearError();
     UserApiService.getUser(this.context.user_id)
       .then(this.context.setUser)
