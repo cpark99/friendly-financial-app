@@ -9,8 +9,9 @@ export default class SignUp extends Component {
   handleRegistrationSuccess = user => {
     if (this.props.history.location.pathname === "/life-insurance-calc") {
       return this.props.history.push("/login");
+    } else {
+    return this.props.history.push("/login");
     }
-    return this.props.onSubmit.push("/login");
   };
 
   handleSubmit = ev => {

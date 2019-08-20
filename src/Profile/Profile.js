@@ -13,13 +13,8 @@ export default class Profile extends Component {
   static contextType = UserContext;
 
   componentDidMount() {
-    let userId = this.props.match.params;
     console.log(this.props);
-    console.log(`userId: ${userId}`);
     console.log(`context: ${this.context}`)
-    console.log(`context.user_id: ${this.context.user_id}`)
-    // userId = this.context.userId;
-    // console.log(`2: ${userId}`);
     this.context.clearError();
     UserApiService.getUser(this.context.user_id)
       .then(this.context.setUser)
@@ -27,7 +22,7 @@ export default class Profile extends Component {
   }
 
   componentWillUnmount() {
-    this.context.clearUser();
+    // this.context.clearUser();
   }
 
   render() {

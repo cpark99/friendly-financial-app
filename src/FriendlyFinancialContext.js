@@ -12,7 +12,8 @@ const UserContext = React.createContext({
   clearError: () => { },
   setUser: () => {},
   clearUser: () => {},
-  setUserId: () => {}
+  setUserId: () => {},
+  updateUser: () => {}
 })
 
 export default UserContext

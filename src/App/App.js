@@ -26,15 +26,15 @@ export default class App extends Component {
     hasError: false
   };
 
-  componentDidMount() {
-    document.addEventListener("touchstart", function(){}, true);
-  }
-
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
   }
 
+  componentDidMount() {
+    document.addEventListener("touchstart", function(){}, true);
+  }
+  
   setError = error => {
     console.error(error)
     this.setState({ error })
@@ -56,6 +56,10 @@ export default class App extends Component {
     this.setState({ user_id: user_id })
   }
 
+  updateUser = () => {
+
+  }
+
   render() {
     const value = {
       user: this.state.user,
@@ -65,7 +69,8 @@ export default class App extends Component {
       clearError: this.clearError,
       setUser: this.setUser,
       clearUser: this.clearUser,
-      setUserId: this.setUserId
+      setUserId: this.setUserId,
+      updateUser: this.updateUser,
     }
     setDefaultBreakpoints([
       { xsmall: 0 }, // all mobile devices
