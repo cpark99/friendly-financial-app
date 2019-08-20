@@ -5,9 +5,15 @@ main {
 section,
 #introduction-container {
   background: rgb(241, 241, 241);
+  padding-top: 35px;
   padding-bottom: 30px;
   margin-bottom: 15px;
   width: 100%;
+  min-height: 96vh;
+}
+
+p {
+  line-height: 25px;
 }
 
 button {
@@ -16,11 +22,12 @@ button {
   border: 2px solid black;
   font-size: 14px;
   font-weight: bold;
+  background: white;
 }
 
 button:hover {
   cursor: pointer;
-  color: grey;
+  color: rgb(2, 97, 174);
   background: white;
   border: 2px solid grey;
 }
@@ -33,6 +40,250 @@ a:hover {
   padding-top: 45px;
 }
 
-#to-sign-up-form-button {
+#about-professional-image {
+  width: 200px;
+  margin: 3px 3px 0 3px;
+}
+
+#homepage-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#introduction-text-container p {
+  max-width: 270px;
+}
+
+#to-financial-tools-button {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#introduction-text {
+  margin-top: 15px;
+}
+
+#main-flex-container {
+  width: 95vw;
+}
+
+#signup-contact-buttons-container {
+  margin-top: 10px;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage-button {
+  width: 250px;
+}
+
+.headshot-container {
+  width: max-content;
+}
+
+.white-border {
+  border: 2px solid white;
+}
+
+.blue-border {
+  border: 2px solid rgb(2, 97, 174);
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 375px) 
+and (orientation: portrait) {
+  #about-professional-image {
+    width: 220px;
+  }
+
+  .homepage-button {
+    width: 260px;
+  }
+}
+
+@media (min-width: 375px) 
+and (min-height: 812px) {
+  #introduction-container {
+    padding-top: 55px;
+  }
+
+  .headshot-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 414px) 
+and (orientation: portrait) {
+  #about-professional-image {
+    width: 240px;
+  }
+
+  .headshot-container {
+    margin-bottom: 15px;
+  }
+
+  .homepage-button {
+    width: 280px;
+  }
+}
+
+@media (min-width: 568px)  
+and (orientation: landscape) {
+  #main-flex-container {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  #introduction-text {
+    margin-top: 0;
+  }
+
+  #about-professional-image {
+    width: 210px;
+  }
+
+  .flex-responsive-mobile-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: initial;
+  }
+
+  .headshot-container {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 568px) {
+  h2 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 736px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 55px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  #introduction-container {
+    padding-top: 85px;
+  }
+
+  #introduction-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #introduction-text {
+    font-size: 28px;
+  }
+
+  #signup-contact-buttons-container {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) 
+and (orientation: portrait) {
+  #about-professional-image {
+    width: 270px;
+  }
+
+  #introduction-text-container p {
+    max-width: initial;
+  }
+
+  #introduction-text {
+    margin-bottom: 40px;
+  }
+
+  #homepage-buttons-container {
+    flex-direction: row;
+  }
+
+  #homepage-buttons-container button {
+    width: 180px;
+  }
+
+  #to-financial-tools-button {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .headshot-container {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #main-flex-container {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 35px;
+  }
+
+  #about-professional-image {
+    width: 290px;
+  }
+
+  #homepage-buttons-container button {
+    width: 350px;
+    height: 45px;
+    font-size: 17px;
+  }
+
+  #introduction-text-container p {
+    max-width: 360px;
+  }
+
+  .flex-responsive-mobile-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .headshot-container {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    padding-top: 75px;
+  }
+
+  #about-professional-image {
+    width: 340px;
+  }
 }

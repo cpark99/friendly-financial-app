@@ -1,5 +1,4 @@
 #life-insurance-calc-section {
-  padding-top: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,18 +17,20 @@
   background: lightgrey;
   border: 1px solid black;
   position: fixed;
-  top: 20vh;
+  top: 32px;
   left: 2vw;
   text-align: center;
   width: 95vw;
   padding-bottom: 20px;
+  max-height: 88vh;
+  overflow-y: scroll;
 }
 
 #life-calc-close-button {
   z-index: 4;
   position: fixed;
   right: 4vw;
-  top: 20vh;
+  top: 32px;
   color: black;
   font-weight: bold;
   font-size: 18px;
@@ -115,4 +116,50 @@
   font-size: 12px;
   margin-top: 30px;
   margin-bottom: 0px;
+}
+
+@media (min-width: 375px) {
+  #life-insurance-calc-form {
+    width: 300px;
+  }
+}
+
+@media (min-width: 414px) {
+  #life-insurance-calc-form {
+    width: 320px;
+  }
+}
+
+@media (min-width: 568px) {
+  #life-insurance-calc-form {
+    width: 400px;
+  }
+}
+
+@media (min-width: 667px) {
+  #life-insurance-calc-form {
+    width: 440px;
+  }
+}
+
+@media (min-width: 768px) {
+  #life-insurance-calc-form {
+    width: 520px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #life-insurance-calc-form {
+    width: 580px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #life-insurance-modal {
+    top: 50px;
+  }
+  
+  #life-calc-close-button {
+    top: 50px;
+  }
 }

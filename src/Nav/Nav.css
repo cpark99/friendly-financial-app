@@ -1,7 +1,9 @@
 nav {
-  padding: 1% 0;
-  background-color: black;
+  padding: 4px 0;
+  background-color: rgb(2, 97, 174);
   color: white;
+  border-bottom: 1px solid black;
+  height: 27px;
 }
 
 #nav-container {
@@ -30,12 +32,12 @@ nav {
 
 #nav-logo {
   margin: 0;
-  padding-left: 6px;
+  padding-right: 10px;
   font-weight: bold;
 }
 
 #nav-login-button {
-  margin: 0;
+  margin: 0 0 0 10px;
   padding-right: 5px;
 }
 
@@ -43,23 +45,22 @@ nav {
   color: white;
 }
 
-#nav-login-button:hover {
-  color: lightblue;
-}
-
 #nav-dropdown-menu-container {
   text-align: left;
   background: white;
   width: 200px;
+  position: absolute;
+  right: 0;
+  top: 27px;
 }
 
 #nav-dropdown-menu-list {
   list-style: none;
-  margin-top: 0;
+  margin: 0;
   padding-left: 0;
-  border-left: 4px solid rgb(85, 85, 85);
-  border-right: 4px solid rgb(85, 85, 85);
-  border-bottom: 4px solid rgb(85, 85, 85);
+  border-left: 4px solid rgb(0, 67, 121);
+  border-right: 4px solid rgb(0, 67, 121);
+  border-bottom: 4px solid rgb(0, 67, 121);
 }
 
 .nav-item:link {
@@ -69,7 +70,7 @@ nav {
 
 .nav-item:hover {
   cursor: pointer;
-  color: lightblue;
+  color: lightgray;
 }
 
 .nav-item:visited {
@@ -78,16 +79,18 @@ nav {
 
 .nav-dropdown-menu-list-item {
   padding: 5px 0 5px 20px;
-  border-top: 4px solid rgb(85, 85, 85);
+  border-top: 4px solid rgb(0, 67, 121);
+  background: gray;
 }
 
 .nav-dropdown-menu-list-item:hover {
-  background: lightgrey;
+  background: white;
+  color: black;
 }
 
 .nav-menu-item-link:link {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .nav-menu-item-link:hover {
@@ -104,4 +107,75 @@ nav {
 
 .show {
   display: block;
+}
+
+.active {
+  color: lightblue;
+}
+
+@media (min-width: 1200px) {
+  nav {
+    height: 41px;
+  }
+
+  #nav-dropdown-menu-container {
+    width: max-content;
+    position: absolute;
+    background: none;
+    top: 8px;
+  }
+
+  #nav-dropdown-menu {
+    display: block;
+  }
+
+  #nav-logo {
+    font-size: 24px;
+    padding-left: 30px
+  }
+  
+  #nav-dropdown-menu-list {
+    display: flex;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  #nav-login-button {
+    margin: 0;
+  }
+  
+  .nav-item:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-item:hover {
+    color: lightgray;
+  }
+  
+  .nav-dropdown-menu-list-item {
+    padding-right: 10px;
+    border-top: none;
+    font-weight: bold;
+    background: none;
+  }
+  
+  .nav-dropdown-menu-list-item:hover {
+    background: none;
+    color: lightgray;
+  }
+
+  .nav-menu-item-link {
+    height: 30px
+  }
+  
+  .nav-menu-item-link:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-menu-item-link:visited {
+    color: white;
+  }
 }

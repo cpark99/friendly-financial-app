@@ -7,9 +7,21 @@ h4 {
   margin-top: 16px;
 }
 
+#life-insurance-calculator-tool-section {
+  border: 1px solid black;
+  background: white;
+  padding: 20px 0;
+  max-width: 90vw;
+}
+
+#life-insurance-calculator-intro-text {
+  margin-bottom: 30px;
+}
+
 .text-container {
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 500px;
 }
 
 .italic {

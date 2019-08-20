@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { Breakpoint } from "react-socks";
+import TokenService from "../services/token-service";
 import "./Nav.css";
 
 export default class Nav extends Component {
@@ -9,6 +11,11 @@ export default class Nav extends Component {
       showNavMenu: false
     };
   }
+
+  handleLogoutClick = () => {
+    TokenService.clearAuthToken();
+    this.closeNavMenu();
+  };
 
   handleClick = e => {
     this.setState({
@@ -25,29 +32,27 @@ export default class Nav extends Component {
     this.setState({
       showNavMenu: false
     });
-  }
+  };
 
   checkIfHomePath = (target, label) => {
     if (this.props.location.pathname === "/") {
       return (
-        <a href={target} className="nav-menu-item-link" onClick={e => {this.closeNavMenu()}}>
+        <a
+          href={target}
+          className="nav-menu-item-link"
+          onClick={e => {
+            this.closeNavMenu();
+          }}
+        >
           <li className="nav-dropdown-menu-list-item">{label}</li>
         </a>
       );
     } else {
-      // if (target === "#root") {
-      //   return (
-      //     <NavLink className="nav-menu-item-link" to={"/"}>
-      //       <li className="nav-dropdown-menu-list-item">{label}</li>
-      //     </NavLink>
-      //   );
-      // } else {
-        return (
-          <a href={`/${target}`} className="nav-menu-item-link">
-            <li className="nav-dropdown-menu-list-item">{label}</li>
-          </a>
-        );
-      // }
+      return (
+        <a href={`/${target}`} className="nav-menu-item-link">
+          <li className="nav-dropdown-menu-list-item">{label}</li>
+        </a>
+      );
     }
   };
 
@@ -56,64 +61,198 @@ export default class Nav extends Component {
       <div id="nav-container">
         <nav role="navigation">
           <div id="nav-bar-container">
-            <div
-              id="hamburger"
-              className="nav-item"
-              onClick={() => {
-                this.handleClick();
-              }}
-            >
-              &#9776;
-            </div>
+            <Breakpoint tabletLandscape down>
+              {TokenService.hasAuthToken() ? (
+                <NavLink
+                  id="nav-login-button"
+                  className="nav-item"
+                  to={"/"}
+                  onClick={e => {
+                    this.handleLogoutClick();
+                  }}
+                >
+                  Logout
+                </NavLink>
+              ) : (
+                <NavLink
+                  id="nav-login-button"
+                  className="nav-item"
+                  to={"/login"}
+                  onClick={e => {
+                    this.closeNavMenu();
+                  }}
+                >
+                  Login
+                </NavLink>
+              )}
+            </Breakpoint>
             {this.props.location.pathname === "/" ? (
-              <a href="#root" id="nav-logo" className="nav-item">
-                FF
+              <a
+                href="#root"
+                id="nav-logo"
+                className="nav-item"
+                onClick={e => {
+                  this.closeNavMenu();
+                }}
+              >
+                Friendly Financial
               </a>
             ) : (
-              // <NavLink id="nav-logo" className="nav-item" to={"/"}  onClick={e => {this.closeNavMenu()}}>
-              //   FF
-              // </NavLink>
-              <a href={"/"} id="nav-logo" className="nav-item">FF</a>
+              <NavLink
+                id="nav-logo"
+                className="nav-item"
+                to={"/"}
+                onClick={e => {
+                  this.closeNavMenu();
+                }}
+              >
+                Friendly Financial
+              </NavLink>
             )}
-            <NavLink id="nav-login-button" className="nav-item" to={"/login"}  onClick={e => {this.closeNavMenu()}}>
-              Login
-            </NavLink>
+            <Breakpoint tabletLandscape down>
+              <div
+                id="hamburger"
+                className="nav-item"
+                onClick={() => {
+                  this.handleClick();
+                }}
+              >
+                &#9776;
+              </div>
+            </Breakpoint>
+            <div id="nav-dropdown-menu-container">
+              <div
+                id="nav-dropdown-menu"
+                className={this.state.showNavMenu ? "show" : "hidden"}
+              >
+                <ul id="nav-dropdown-menu-list">
+                  <Breakpoint tabletLandscape down>
+                    {this.props.location.pathname === "/" ? (
+                      <a
+                        href="#root"
+                        className="nav-menu-item-link"
+                        onClick={e => {
+                          this.closeNavMenu();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Home</li>
+                      </a>
+                    ) : (
+                      <NavLink
+                        className="nav-menu-item-link"
+                        to={"/"}
+                        onClick={e => {
+                          this.closeNavMenu();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Home</li>
+                      </NavLink>
+                    )}
+                  </Breakpoint>
+
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/about"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">About</li>
+                  </NavLink>
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/schedule"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">
+                      Schedule Consultation
+                    </li>
+                  </NavLink>
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/financial-tools"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">
+                      Financial Tools
+                    </li>
+                  </NavLink>
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/educational-resources"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">
+                      Educational Resources
+                    </li>
+                  </NavLink>
+                  <NavLink
+                    className="nav-menu-item-link"
+                    to={"/contact"}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    <li className="nav-dropdown-menu-list-item">Contact</li>
+                  </NavLink>
+                  {TokenService.hasAuthToken() && (
+                    <NavLink
+                      className="nav-menu-item-link"
+                      to={"/profile"}
+                      onClick={e => {
+                        this.closeNavMenu();
+                      }}
+                    >
+                      <li className="nav-dropdown-menu-list-item">Profile</li>
+                    </NavLink>
+                  )}
+                  {!TokenService.hasAuthToken() && (
+                    <NavLink
+                      className="nav-menu-item-link"
+                      to={"/signup"}
+                      onClick={e => {
+                        this.closeNavMenu();
+                      }}
+                    >
+                      <li className="nav-dropdown-menu-list-item">Sign Up</li>
+                    </NavLink>
+                  )}
+                  <Breakpoint xlarge up>
+                    {TokenService.hasAuthToken() ? (
+                      <NavLink
+                        id="nav-login-button"
+                        className="nav-menu-item-link"
+                        to={"/"}
+                        onClick={e => {
+                          this.handleLogoutClick();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Logout</li>
+                      </NavLink>
+                    ) : (
+                      <NavLink
+                        id="nav-login-button"
+                        className="nav-menu-item-link"
+                        to={"/login"}
+                        onClick={e => {
+                          this.closeNavMenu();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Login</li>
+                      </NavLink>
+                    )}
+                  </Breakpoint>
+                </ul>
+              </div>
+            </div>
           </div>
         </nav>
-        <div id="nav-dropdown-menu-container">
-          <div
-            id="nav-dropdown-menu"
-            className={this.state.showNavMenu ? "show" : "hidden"}
-          >
-            <ul id="nav-dropdown-menu-list">
-              {this.checkIfHomePath("#root", "Home")}
-              <a href="/profile" className="nav-menu-item-link">
-                <li className="nav-dropdown-menu-list-item">Profile</li>
-              </a>
-              {/* <NavLink className="nav-menu-item-link" to={"/profile"}>
-                <li className="nav-dropdown-menu-list-item">Profile</li>
-              </NavLink> */}
-              {this.checkIfHomePath(
-                "#financial-tools-section",
-                "Financial Tools"
-              )}
-              {/* <NavLink className="nav-menu-item-link" to={{pathname: "/", hash: "#educational-resources-section"}}  onClick={e => {this.closeNavMenu()}}>
-                <li className="nav-dropdown-menu-list-item">Educational Resources</li>
-              </NavLink> */}
-              {this.checkIfHomePath(
-                "#educational-resources-section",
-                "Educational Resources"
-              )}
-              {this.checkIfHomePath(
-                "#about-financial-services-professional",
-                "About Professional"
-              )}
-              {this.checkIfHomePath("#schedule-call-section", "Schedule Call")}
-              {this.checkIfHomePath("#sign-up-section", "Sign Up")}
-              {/* <li className="nav-dropdown-menu-list-item">Logout</li> */}
-            </ul>
-          </div>
-        </div>
       </div>
     );
   }
