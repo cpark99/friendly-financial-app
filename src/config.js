@@ -1,5 +1,5 @@
 export default {
-  API_ENDPOINT: 'http://localhost:8000/api',
+  API_ENDPOINT: 'https://lit-plateau-20514.herokuapp.com/',
   TOKEN_KEY: 'friendly-financial-client-auth-token',
 }
 
