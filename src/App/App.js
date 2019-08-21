@@ -32,7 +32,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("touchstart", function(){}, true);
+    // document.addEventListener("touchstart", function(){}, true);
   }
   
   setError = error => {

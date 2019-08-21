@@ -360,16 +360,16 @@ export default class EducationalResources extends Component {
             <h3 className="educational-resource-list-header">Helpful links:</h3>
             <ul className="list-of-educational-links">
               <li>
-                <a href="https://www.newyorklife.com/">
+                <a href="https://www.newyorklife.com/" target="_blank" rel="noopener noreferrer">
                   https://www.newyorklife.com/
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="/">other</a>
               </li>
               <li>
                 <a href="/">Links</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

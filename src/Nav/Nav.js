@@ -226,7 +226,6 @@ export default class Nav extends Component {
                   <Breakpoint xlarge up>
                     {TokenService.hasAuthToken() ? (
                       <NavLink
-                        id="nav-login-button"
                         className="nav-menu-item-link"
                         to={"/"}
                         onClick={e => {
@@ -237,7 +236,6 @@ export default class Nav extends Component {
                       </NavLink>
                     ) : (
                       <NavLink
-                        id="nav-login-button"
                         className="nav-menu-item-link"
                         to={"/login"}
                         onClick={e => {
