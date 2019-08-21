@@ -69,7 +69,7 @@ export default class Profile extends Component {
               className="profile-info-container"
             >
               <h5>Life Insurance Coverage:</h5>
-              <p>{user.life_insurance_goal || "(unset)"}</p>
+              <p>${user.life_insurance_goal || "(not set)"}</p>
             </div>
           </div>
           <NavLink to={"/life-insurance-calc"}>

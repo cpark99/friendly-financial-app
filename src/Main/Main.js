@@ -54,7 +54,8 @@ export default function Main(props) {
               <p>
                 As your New York Life agent, I can work with you to identify your
                 goals, understand your needs, and offer insurance and financial
-                products that can help you achieve peace of mind.
+                products that can help you achieve peace of mind. Check out my{' '}
+                <NavLink to="/about">about</NavLink> page.
               </p>
             </div>
             <div id="signup-contact-buttons-container" className="flex-center">
