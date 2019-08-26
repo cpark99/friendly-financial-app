@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import ResourceModal from "../ResourceModal/ResourceModal";
 import impressiveRecord from "../pdf/Impressive Record.pdf";
 import financialStrength from "../pdf/Financial Strength.pdf";
@@ -52,12 +52,10 @@ export default class EducationalResources extends Component {
         <h2>Educational Resources</h2>
         <div id="educational-resources-intro-text" className="text-container">
           <p>
-            <span className="italic">Financial strength</span> is built on{" "}
+            Financial strength is built on{" "}
             <span className="italic">integrity</span>.
           </p>
-          <p>
-            Check out these FREE financial resources!
-          </p>
+          <p>Check out these FREE financial resources!</p>
         </div>
         <div
           id="educational-resources-container"
@@ -360,7 +358,11 @@ export default class EducationalResources extends Component {
             <h3 className="educational-resource-list-header">Helpful links:</h3>
             <ul className="list-of-educational-links">
               <li>
-                <a href="https://www.newyorklife.com/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.newyorklife.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   https://www.newyorklife.com/
                 </a>
               </li>

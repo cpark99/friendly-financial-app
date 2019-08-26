@@ -25,19 +25,35 @@ export default function FinancialTools() {
           </p>
           <p>
             (Check out how{" "}
-            <a href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Disneyland
             </a>
             ,{" "}
-            <a href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               McDonald's
             </a>
             ,{" "}
-            <a href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Stanford
             </a>{" "}
             and{" "}
-            <a href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.thinkadvisor.com/2012/04/06/slideshow-6-famous-brands-started-or-saved-by-life/?slreturn=20190721002200"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               JC Penny
             </a>{" "}
             got started!)
@@ -47,8 +63,8 @@ export default function FinancialTools() {
             matter what happens.
           </p>
           <p>
-            Try our <span className="italic">free</span> life insurance
-            calculator, to see how much coverage is right for you!
+            Try our FREE life insurance calculator, to see how much coverage is
+            right for you!
           </p>
         </div>
         <NavLink to={"/life-insurance-calc"}>
