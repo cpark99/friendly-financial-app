@@ -89,6 +89,7 @@ export default class SignUp extends Component {
       <section id="sign-up-section" className="content">
         <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
+        <button onClick={this.handleDemoLogin} className="demo-login-button">Demo</button>
         <div className="text-container">
           <p id="sign-up-section-text">
             Sign up to stay <span className="italic">connected</span> with a
@@ -97,7 +98,6 @@ export default class SignUp extends Component {
             ). Stay up to date on the latest trends and policies, keeping you{" "}
             <span className="italic">prepared</span> for life.
           </p>
-          <button onClick={this.handleDemoLogin} className="demo-login-button">Demo</button>
         </div>
         <div role="alert">{error && <p className="red-font">{error}</p>}</div>
         <form onSubmit={this.handleSubmit}>
