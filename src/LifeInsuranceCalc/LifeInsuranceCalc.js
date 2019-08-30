@@ -221,7 +221,7 @@ export default class LifeInsuranceCalc extends Component {
       life_insurance_goal: this.state.amount
     })
       .then(() => {
-        // redirect to profile page
+        this.props.history.push("/profile")
       })
   };
 
