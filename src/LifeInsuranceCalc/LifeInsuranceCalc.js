@@ -217,12 +217,11 @@ export default class LifeInsuranceCalc extends Component {
 
   handleSaveButtonClick = () => { 
     const user_id = this.context.user_id;
-    console.log(`amount: ${this.state.amount}`)
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
     })
       .then(() => {
-        console.log('patch successful');
+        // redirect to profile page
       })
   };
 

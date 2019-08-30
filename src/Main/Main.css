@@ -36,6 +36,10 @@ a:hover {
   color: rgb(62, 185, 226);
 }
 
+a:visited {
+  color: blue;
+}
+
 #introduction-container {
   padding-top: 45px;
 }
@@ -103,7 +107,7 @@ a:hover {
 @media (max-width: 375px) 
 and (orientation: portrait) {
   #about-professional-image {
-    width: 82px;
+    width: 95px;
     border-radius: 50%;
   }
 

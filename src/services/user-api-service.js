@@ -26,8 +26,6 @@ const UserApiService = {
       )
   },
   updateLifeInsuranceGoal(user_id, user) {
-    console.log('user', user)
-
     return fetch(`${config.API_ENDPOINT}/users/${user_id}`, {
       method:'PATCH',
       headers: {

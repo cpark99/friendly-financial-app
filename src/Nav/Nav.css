@@ -98,7 +98,7 @@ nav {
 }
 
 .nav-menu-item-link:visited {
-  color: black;
+  color: white;
 }
 
 .hidden {
@@ -109,9 +109,9 @@ nav {
   display: block;
 }
 
-.active {
+/* .active {
   color: lightblue;
-}
+} */
 
 @media (min-width: 1200px) {
   nav {
