@@ -45,18 +45,18 @@ export default class Login extends Component {
       });
   };
 
-  handleSubmitBasicAuth = ev => {
-    ev.preventDefault();
-    const { email, password } = ev.target;
+  // handleSubmitBasicAuth = ev => {
+  //   ev.preventDefault();
+  //   const { email, password } = ev.target;
 
-    TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(email.value, password.value)
-    );
+  //   TokenService.saveAuthToken(
+  //     TokenService.makeBasicAuthToken(email.value, password.value)
+  //   );
 
-    email.value = "";
-    password.value = "";
-    this.handleLoginSuccess();
-  };
+  //   email.value = "";
+  //   password.value = "";
+  //   this.handleLoginSuccess();
+  // };
 
   render() {
     const { error } = this.state;

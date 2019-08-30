@@ -116,20 +116,21 @@ and (orientation: portrait) {
     border: none;
   }
 
-  .homepage-button {
+  .homepage-button, 
+  .profile-button {
     border: 1px solid lightblue;
   }
 
   #to-schedule-consultation-button {
     border: none;
-    background: lightblue;
+    background: rgb(199, 235, 247);
     color: white;
   }
 
   #to-schedule-consultation-button:hover {
-    border: none;
-    background: rgb(199, 235, 247);
+    border: 2px solid rgb(2, 97, 174);
     color: rgb(2, 97, 174);
+    background: rgb(174, 225, 241);
   }
 
   #introduction-business-info {

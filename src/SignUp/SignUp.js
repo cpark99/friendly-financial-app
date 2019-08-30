@@ -2,9 +2,41 @@ import React, { Component } from "react";
 import AuthApiService from "../services/auth-api-service";
 import "./SignUp.css";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
+import TokenService from "../services/token-service";
+import UserContext from "../FriendlyFinancialContext";
 
 export default class SignUp extends Component {
+  static contextType = UserContext;
+  
   state = { error: null };
+
+  handleLoginSuccess = payload => {
+    const { history } = this.props;
+    const destination = (history.location.state || {}).from || "/profile";
+    this.context.setUserId(payload.user_id)
+    history.push(destination);
+  };
+
+  handleDemoLogin = ev => {
+    ev.preventDefault();
+    this.setState({ error: null });
+    let email = "demo@demo.com";
+    let password = "password";
+
+    AuthApiService.postLogin({
+      email: email,
+      password: password
+    })
+      .then(res => {
+        email = "";
+        password = "";
+        TokenService.saveAuthToken(res.authToken);
+        this.handleLoginSuccess(res.payload);
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
+  };
 
   handleRegistrationSuccess = user => {
     if (this.props.history.location.pathname === "/life-insurance-calc") {
@@ -65,6 +97,7 @@ export default class SignUp extends Component {
             ). Stay up to date on the latest trends and policies, keeping you{" "}
             <span className="italic">prepared</span> for life.
           </p>
+          <button onClick={this.handleDemoLogin} className="demo-login-button">Demo</button>
         </div>
         <div role="alert">{error && <p className="red-font">{error}</p>}</div>
         <form onSubmit={this.handleSubmit}>
