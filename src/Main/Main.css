@@ -4,7 +4,7 @@ main {
 
 section,
 #introduction-container {
-  background: rgb(241, 241, 241);
+  background: white;
   padding-top: 35px;
   padding-bottom: 30px;
   margin-bottom: 15px;
@@ -98,6 +98,39 @@ a:hover {
 .flex-center {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media (max-width: 375px) 
+and (orientation: portrait) {
+  #about-professional-image {
+    width: 82px;
+    border-radius: 50%;
+  }
+
+  .headshot-container {
+    border-radius: 50%;
+    border: none;
+  }
+
+  .homepage-button {
+    border: 1px solid lightblue;
+  }
+
+  #to-schedule-consultation-button {
+    border: none;
+    background: lightblue;
+    color: white;
+  }
+
+  #to-schedule-consultation-button:hover {
+    border: none;
+    background: rgb(199, 235, 247);
+    color: rgb(2, 97, 174);
+  }
+
+  #introduction-business-info {
+    margin: 20px 0;
+  }
 }
 
 @media (min-width: 375px) 

@@ -17,7 +17,13 @@ export default function Main(props) {
           id="main-flex-container"
           className="flex-responsive-mobile-desktop"
         >
-          <Headshot />
+          <div className="flex-column-center">
+            <Headshot />
+            <div id="introduction-business-info">
+              <h5>Call Now: <a href="tel:+1-818-731-8616">(818) 731-8616</a></h5>
+              <h5>Hours: 9:00 AM - 9:00 PM (PST)</h5>
+            </div>
+          </div>
           <div
             id="introduction-text-container"
             className="flex-object-vertical-horizontal"

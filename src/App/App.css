@@ -1,4 +1,4 @@
-html, body, #root, .App, #container {
+html, body, #root, .App {
   height: 100%;
 }
 
@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: aliceblue;
 }
 
 #nav-container {

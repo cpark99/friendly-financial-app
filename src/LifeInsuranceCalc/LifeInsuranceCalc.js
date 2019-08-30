@@ -127,7 +127,7 @@ export default class LifeInsuranceCalc extends Component {
   validateProtect() {
     const protect = this.state.protect.value.trim();
     if (protect.length === 0) {
-      return "*Numebr of years is required";
+      return "*Number of years is required";
     }
     if (protect <= 0) {
       return "*Valid number of years is required";
@@ -216,16 +216,10 @@ export default class LifeInsuranceCalc extends Component {
   };
 
   handleSaveButtonClick = () => { 
-    const user_id = this.context.user.id;
+    const user_id = this.context.user_id;
+    console.log(`amount: ${this.state.amount}`)
     UserApiService.updateLifeInsuranceGoal(user_id, {
-      name: this.context.user.name,
-      email: this.context.user.email,
-      phone: this.context.user.phone,
-      life_insurance_goal: this.state.amount,
-      get_email: this.context.user.get_email,
-      get_call: this.context.user.get_call,
-      get_newsletter: this.context.user.get_newsletter,
-      date_created: this.context.user.date_created
+      life_insurance_goal: this.state.amount
     })
       .then(() => {
         console.log('patch successful');
@@ -472,7 +466,7 @@ export default class LifeInsuranceCalc extends Component {
               />
             )}
             {/* <button id="reset-life-calc-results-button" onClick={e => {this.handleFormReset();}}>Reset</button> */}
-            {/* {TokenService.hasAuthToken() && (
+            {TokenService.hasAuthToken() && (
               <button
                 id="save-life-calc-results-button"
                 onClick={e => {
@@ -486,7 +480,7 @@ export default class LifeInsuranceCalc extends Component {
               <p className="informative-text">
                 *Results will save for only "Person 1".
               </p>
-            )} */}
+            )}
           </div>
         )}
       </section>
