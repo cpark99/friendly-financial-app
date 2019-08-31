@@ -17,6 +17,8 @@ import FinancialTools from '../FinancialTools/FinancialTools';
 import ScheduleConsultation from '../ScheduleConsultation/ScheduleConsultation';
 import AboutProfessional from '../AboutProfessional/AboutProfessional';
 import Contact from '../Contact/Contact';
+import UserApiService from '../services/user-api-service';
+import TokenService from '../services/token-service';
 
 export default class App extends Component {
   state = {
@@ -32,7 +34,18 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("touchstart", function(){}, true);
+    // document.addEventListener("touchstart", function(){}, true);
+
+    if (TokenService.hasAuthToken()) {
+      UserApiService.getUser("1") // NEED to make dynamic
+        .then(this.setUser)
+        .then(this.getUserId)
+        .catch(this.setError);
+    }
+  }
+
+  getUserId = user => {
+    this.setState({ user_id: this.state.user.id })
   }
   
   setError = error => {
