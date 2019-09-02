@@ -19,6 +19,7 @@ import AboutProfessional from '../AboutProfessional/AboutProfessional';
 import Contact from '../Contact/Contact';
 import UserApiService from '../services/user-api-service';
 import TokenService from '../services/token-service';
+import AuthApiService from '../services/auth-api-service';
 
 export default class App extends Component {
   state = {
@@ -37,14 +38,17 @@ export default class App extends Component {
     // document.addEventListener("touchstart", function(){}, true);
 
     if (TokenService.hasAuthToken()) {
-      UserApiService.getUser("1") // NEED to make dynamic
-        .then(this.setUser)
-        .then(this.getUserId)
-        .catch(this.setError);
+      AuthApiService.getUserId()
+        .then(res => {
+          UserApiService.getUser(res.id)
+            .then(this.setUser)
+            .then(this.setUserId)
+            .catch(this.setError);
+        })
     }
   }
 
-  getUserId = user => {
+  setUserId = () => {
     this.setState({ user_id: this.state.user.id })
   }
   
@@ -65,9 +69,9 @@ export default class App extends Component {
     this.setUser(UserContext.nullUser)
   }
 
-  setUserId = (user_id) => {
-    this.setState({ user_id: user_id })
-  }
+  // setUserId = (user_id) => {
+  //   this.setState({ user_id: user_id })
+  // }
 
   updateUser = () => {
 
