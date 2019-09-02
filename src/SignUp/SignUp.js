@@ -20,7 +20,7 @@ export default class SignUp extends Component {
   handleDemoLogin = ev => {
     ev.preventDefault();
     this.setState({ error: null });
-    let email = "demo@demo.com";
+    let email = "MakeMeMoney@ff.com";
     let password = "password";
 
     AuthApiService.postLogin({
