@@ -42,13 +42,13 @@ export default class App extends Component {
         .then(res => {
           UserApiService.getUser(res.id)
             .then(this.setUser)
-            .then(this.setUserId)
+            .then(this.getUserId)
             .catch(this.setError);
         })
     }
   }
 
-  setUserId = () => {
+  getUserId = user => {
     this.setState({ user_id: this.state.user.id })
   }
   
@@ -69,9 +69,9 @@ export default class App extends Component {
     this.setUser(UserContext.nullUser)
   }
 
-  // setUserId = (user_id) => {
-  //   this.setState({ user_id: user_id })
-  // }
+  setUserId = (user_id) => {
+    this.setState({ user_id: user_id })
+  }
 
   updateUser = () => {
 
