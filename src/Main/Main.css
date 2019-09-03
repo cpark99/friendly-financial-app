@@ -114,10 +114,6 @@ a:visited {
   border: 2px solid white;
 }
 
-/* .blue-border {
-  border: 2px solid rgb(2, 97, 174);
-} */
-
 .flex-center {
   display: flex;
   justify-content: space-evenly;
@@ -129,7 +125,7 @@ a:visited {
   align-items: center;
 }
 
-.phone-icon {
+.contact-icon {
   width: 24px;
   margin-right: 5px;
 }

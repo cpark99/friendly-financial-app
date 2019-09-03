@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import SignUp from "../SignUp/SignUp";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import Headshot from "../Utils/Headshot";
-import phone from "../img/phone.png";
+import phone from "../img/phone-navy.png";
 import "./Main.css";
 
 export default function Main(props) {
@@ -21,7 +21,7 @@ export default function Main(props) {
           <div className="flex-column-center">
             <Headshot />
             <div id="introduction-business-info">
-              <h5><a href="tel:+1-818-731-8616" id="phone-link-main" className="flex-center-center"><img src={phone} className="phone-icon" alt="black telephone icon" />(818) 731-8616</a></h5>
+              <h5><a href="tel:+1-818-731-8616" id="phone-link-main" className="flex-center-center"><img src={phone} className="phone-icon contact-icon" alt="navy telephone icon" />(818) 731-8616</a></h5>
               <h5>Hours: 9:00 AM - 5:00 PM (PST)</h5>
             </div>
           </div>
