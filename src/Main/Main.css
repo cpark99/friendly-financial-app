@@ -12,6 +12,15 @@ section,
   min-height: 96vh;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h5 {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
 p {
   line-height: 25px;
 }
@@ -20,7 +29,7 @@ button {
   height: 40px;
   min-width: 100px;
   border: 2px solid #4FB0FF;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   background: white;
   border-radius: 5px;
@@ -46,8 +55,8 @@ a:visited {
 }
 
 #about-professional-image {
-  width: 200px;
-  margin: 3px 3px 0 3px;
+  width: 80px;
+  border-radius: 50%;
 }
 
 #homepage-buttons-container {
@@ -72,7 +81,7 @@ a:visited {
 }
 
 #introduction-business-info {
-  margin: 20px 0;
+  margin: 15px 0 0 0;
 }
 
 #to-financial-tools-button {
@@ -81,7 +90,7 @@ a:visited {
 }
 
 #introduction-text {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 #main-flex-container {
@@ -94,6 +103,19 @@ a:visited {
 
 #phone-link-main {
   padding-right: 15px;
+}
+
+#main-linkedin-icon {
+  margin: 0 20px 0 10px;
+}
+
+#main-facebook-icon {
+  margin-right: 0;
+}
+
+#dropdown-location-address p {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .flex-column-center {
@@ -125,8 +147,15 @@ a:visited {
   align-items: center;
 }
 
-.contact-icon {
+.contact-icon, 
+.details-header-icon {
   width: 24px;
+  margin-right: 10px;
+}
+
+.address-ping-icon {
+  position: relative;
+  top: 6px;
   margin-right: 5px;
 }
 
@@ -135,44 +164,82 @@ a:visited {
   color: white;
 }
 
-@media (max-width: 414px) 
-and (orientation: portrait) {
-  #about-professional-image {
-    width: 95px;
-    border-radius: 50%;
+.location-address-container {
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.location-address p {
+  font-size: 14px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.dropdown-arrow-container {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.dropdown-arrow-container:hover {
+  cursor: pointer;
+  border: 1px solid #FF9C03;
+}
+
+.dropdown-arrow-container:hover 
+.dropdown-arrow-text {
+  color: lightblue;
+}
+
+.dropdown-arrow-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  color: #FF9C03;
+}
+
+.dropdown-arrow {
+  width: 20px;
+}
+
+.dropdown-content {
+  background: aliceblue;
+  padding: 20px 10px 10px;
+}
+
+.available-hours {
+  margin-bottom: 0;
+}
+
+.timezone {
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+.contact-icons-container {
+  margin-bottom: 20px;
+}
+
+.location-map {
+  width: 200px;
+  margin-top: 16px;
+  border: 4px solid white;
+}
+
+.dropdown-section {
+  margin-top: 35px;
+}
+
+@media (min-width: 375px) {
+  .location-address p {
+    font-size: 16px;
   }
-
-  .headshot-container {
-    border-radius: 50%;
-    border: none;
-  }
-
-  /* .homepage-button, 
-  .profile-button {
-    border: 1px solid lightblue;
-  } */
-
-  /* #to-schedule-consultation-button {
-    border: none;
-    background: rgb(199, 235, 247);
-    color: white;
-  } */
-
-  /* #to-schedule-consultation-button:hover {
-    border: 2px solid rgb(2, 97, 174);
-    color: rgb(2, 97, 174);
-    background: rgb(174, 225, 241);
-  } */
-
-  /* #introduction-business-info {
-    margin: 20px 0;
-  } */
 }
 
 @media (min-width: 375px) 
 and (orientation: portrait) {
   #about-professional-image {
-    width: 220px;
+    width: 90px;
   }
 
   .homepage-button {
@@ -195,7 +262,7 @@ and (min-height: 812px) {
 @media (min-width: 414px) 
 and (orientation: portrait) {
   #about-professional-image {
-    width: 240px;
+    width: 105px;
   }
 
   .headshot-container {
@@ -220,7 +287,11 @@ and (orientation: landscape) {
   }
 
   #about-professional-image {
-    width: 210px;
+    width: 90px;
+  }
+
+  #main-flex-top-right {
+    width: 265px;
   }
 
   .flex-responsive-mobile-desktop {
@@ -241,9 +312,28 @@ and (orientation: landscape) {
   }
 }
 
+@media (min-width: 667px) 
+and (orientation: landscape) {
+  #main-flex-top-right {
+    width: 300px;
+  }
+  
+  #about-professional-image {
+    width: 95px;
+  }
+
+  .location-map {
+    width: 220px;
+  }
+}
+
 @media (min-width: 736px) {
   h2 {
     font-size: 28px;
+  }
+
+  #about-professional-image {
+    width: 100px;
   }
 }
 
@@ -260,10 +350,6 @@ and (orientation: landscape) {
     font-size: 30px;
   }
 
-  h5 {
-    font-size: 16px;
-  }
-
   #introduction-container {
     padding-top: 85px;
   }
@@ -276,17 +362,39 @@ and (orientation: landscape) {
 
   #introduction-text {
     font-size: 28px;
+    margin-top: 25px;
   }
 
   #signup-contact-buttons-container {
     width: 250px;
+  }
+
+  #phone-link-main {
+    font-size: 18px;
+  }
+
+  #introduction-business-info {
+    margin-top: 5px;
+  }
+
+  .location-address-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .location-address-container p {
+    font-size: 18px;
+  }
+
+  .dropdown-arrow-text {
+    font-size: 15px;
   }
 }
 
 @media (min-width: 768px) 
 and (orientation: portrait) {
   #about-professional-image {
-    width: 270px;
+    width: 162px;
   }
 
   #introduction-text-container p {
@@ -302,7 +410,7 @@ and (orientation: portrait) {
   }
 
   #homepage-buttons-container button {
-    width: 180px;
+    width: 198px;
   }
 
   #to-financial-tools-button {
@@ -310,20 +418,31 @@ and (orientation: portrait) {
     margin-right: 30px;
   }
 
+  #details-hours-dropdown-content {
+    width: 400px;
+  }
+
   .headshot-container {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+  }
+
+  .location-map {
+    width: 240px;
   }
 }
 
 @media (min-width: 1000px) {
   #main-flex-container {
     flex-direction: row-reverse;
-    align-items: center;
     margin-top: 35px;
   }
 
+  #main-flex-top-right {
+    width: 400px;
+  }
+
   #about-professional-image {
-    width: 290px;
+    width: 180px;
   }
 
   #homepage-buttons-container button {
@@ -336,6 +455,10 @@ and (orientation: portrait) {
     max-width: 360px;
   }
 
+  #details-hours-dropdown-content {
+    width: 395px;
+  }
+
   .flex-responsive-mobile-desktop {
     display: flex;
     flex-direction: row;
@@ -345,6 +468,10 @@ and (orientation: portrait) {
   .headshot-container {
     margin-top: 30px;
   }
+
+  .location-map {
+    width: 300px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -352,7 +479,27 @@ and (orientation: portrait) {
     padding-top: 75px;
   }
 
+  #main-flex-container {
+    justify-content: center;
+  }
+
+  #main-flex-top-right {
+    width: 600px;
+  }
+
+  #introduction-text-container {
+    width: 500px;
+  }
+
   #about-professional-image {
-    width: 340px;
+    width: 200px;
+  }
+
+  #details-hours-dropdown-content {
+    width: 580px;
+  }
+
+  .location-map {
+    width: 400px;
   }
 }

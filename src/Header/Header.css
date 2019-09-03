@@ -4,6 +4,7 @@ header {
 
 header h5 {
   color: rgb(97, 97, 97);
+  font-size: 15px;
 }
 
 h1 {
@@ -15,4 +16,10 @@ h1 {
 
 h5 {
   margin-top: 10px;
+}
+
+@media (min-width: 375px) {
+  header h5 {
+    font-size: 16px;
+  }
 }

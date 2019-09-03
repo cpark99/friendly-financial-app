@@ -44,7 +44,7 @@
 .educational-resource {
   text-decoration: underline;
   color: blue;
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .list-of-educational-links a {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .resource-description-text {
@@ -75,7 +75,7 @@
   }
 
   #educational-resources-container p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .educational-resource {

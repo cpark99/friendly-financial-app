@@ -62,7 +62,7 @@ export default function AboutProfessional() {
           </p>
           <p>
             <a href="mailto:nspark@ft.newyorklife.com">
-              nspark@ft.newyorklife.com
+              NSParkft.newyorklife.com
             </a>
           </p>
           <p>
