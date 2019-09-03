@@ -19,17 +19,18 @@ p {
 button {
   height: 40px;
   min-width: 100px;
-  border: 2px solid black;
+  border: 2px solid #4FB0FF;
   font-size: 14px;
   font-weight: bold;
   background: white;
+  border-radius: 5px;
 }
 
 button:hover {
   cursor: pointer;
   color: rgb(2, 97, 174);
   background: white;
-  border: 2px solid grey;
+  border: 2px solid rgb(2, 97, 174);
 }
 
 a:hover {
@@ -60,6 +61,20 @@ a:visited {
   max-width: 270px;
 }
 
+#to-schedule-consultation-button {
+  border: none;
+}
+
+#to-schedule-consultation-button:hover {
+  border: 2px solid rgb(2, 97, 174);
+  color: rgb(2, 97, 174);
+  background: rgb(174, 225, 241);
+}
+
+#introduction-business-info {
+  margin: 20px 0;
+}
+
 #to-financial-tools-button {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -75,6 +90,10 @@ a:visited {
 
 #signup-contact-buttons-container {
   margin-top: 10px;
+}
+
+#phone-link-main {
+  padding-right: 15px;
 }
 
 .flex-column-center {
@@ -95,16 +114,32 @@ a:visited {
   border: 2px solid white;
 }
 
-.blue-border {
+/* .blue-border {
   border: 2px solid rgb(2, 97, 174);
-}
+} */
 
 .flex-center {
   display: flex;
   justify-content: space-evenly;
 }
 
-@media (max-width: 375px) 
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-icon {
+  width: 24px;
+  margin-right: 5px;
+}
+
+.blue-button {
+  background: #4FB0FF;
+  color: white;
+}
+
+@media (max-width: 414px) 
 and (orientation: portrait) {
   #about-professional-image {
     width: 95px;
@@ -116,26 +151,26 @@ and (orientation: portrait) {
     border: none;
   }
 
-  .homepage-button, 
+  /* .homepage-button, 
   .profile-button {
     border: 1px solid lightblue;
-  }
+  } */
 
-  #to-schedule-consultation-button {
+  /* #to-schedule-consultation-button {
     border: none;
     background: rgb(199, 235, 247);
     color: white;
-  }
+  } */
 
-  #to-schedule-consultation-button:hover {
+  /* #to-schedule-consultation-button:hover {
     border: 2px solid rgb(2, 97, 174);
     color: rgb(2, 97, 174);
     background: rgb(174, 225, 241);
-  }
+  } */
 
-  #introduction-business-info {
+  /* #introduction-business-info {
     margin: 20px 0;
-  }
+  } */
 }
 
 @media (min-width: 375px) 
@@ -222,7 +257,7 @@ and (orientation: landscape) {
   }
 
   h1 {
-    font-size: 34px;
+    font-size: 40px;
   }
 
   h2 {

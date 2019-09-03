@@ -14,9 +14,8 @@ export default class ScheduleConsultation extends Component {
         <h2>Schedule a Consultation</h2>
         <div id="schedule-call-text" className="text-container">
           <p>
-            Get your finances <span className="italic">secured</span>, and{" "}
-            <span className="italic">start</span> planning for a brighter future
-            TODAY. Got any questions or concerns?
+            Get your finances <span className="italic">secured</span>, and start
+            planning for a brighter future TODAY. Got any questions or concerns?
           </p>
           <p>Talk to a certified financial services professional for FREE!</p>
         </div>

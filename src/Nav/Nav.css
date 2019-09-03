@@ -48,7 +48,7 @@ nav {
 #nav-dropdown-menu-container {
   text-align: left;
   background: white;
-  width: 200px;
+  width: 220px;
   position: absolute;
   right: 0;
   top: 27px;
@@ -70,7 +70,7 @@ nav {
 
 .nav-item:hover {
   cursor: pointer;
-  color: lightgray;
+  color: aliceblue;
 }
 
 .nav-item:visited {
@@ -81,6 +81,7 @@ nav {
   padding: 5px 0 5px 20px;
   border-top: 4px solid rgb(0, 67, 121);
   background: gray;
+  font-weight: bold;
 }
 
 .nav-dropdown-menu-list-item:hover {

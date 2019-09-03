@@ -179,11 +179,11 @@ export default class SignUp extends Component {
             <p className="checkbox-text">I agree to receive newsletters</p>
           </div>
           {this.props.history.location.pathname === "/" ? (
-            <button id="sign-up-form-button" type="submit">
+            <button id="sign-up-form-button" className="blue-button" type="submit">
               Sign up
             </button>
           ) : (
-            <button id="sign-up-form-button" type="submit">
+            <button id="sign-up-form-button" className="blue-button" type="submit">
               Save Results
             </button>
           )}

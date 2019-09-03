@@ -16,6 +16,11 @@
   margin-bottom: 10px;
 }
 
+#schedule-meeting-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 #schedule-meeting-container h5 {
   padding-left: 15px;
   padding-right: 15px;
@@ -28,13 +33,13 @@
   margin-top: 20px;
   padding: 0 10px 20px 10px;
   width: 90%;
-  border: 1px solid black;
-  background: floralwhite;
+  background: aliceblue;
 }
 
 .schedule-button-container button {
   margin-top: 20px;
   width: 200px;
+  border: 2px solid #4FB0FF;
 }
 
 .gray-button {
