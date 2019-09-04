@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Tooltip from './Tooltip';
 
-it.only('renders without crashing', () => {
+it('renders without crashing', () => {
   const props = {
     children: "",
     message: "message"

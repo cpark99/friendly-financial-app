@@ -10,7 +10,6 @@ import Login from '../Login/Login';
 import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 import Profile from '../Profile/Profile';
 import UserContext from '../FriendlyFinancialContext';
-import './App.css';
 import SignUp from '../SignUp/SignUp';
 import EducationalResources from '../EducationalResources/EducationalResources';
 import FinancialTools from '../FinancialTools/FinancialTools';
@@ -20,6 +19,7 @@ import Contact from '../Contact/Contact';
 import UserApiService from '../services/user-api-service';
 import TokenService from '../services/token-service';
 import AuthApiService from '../services/auth-api-service';
+import './App.css';
 
 export default class App extends Component {
   state = {
