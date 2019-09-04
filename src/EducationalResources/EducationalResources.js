@@ -23,8 +23,9 @@ import reasonsForLifeInsuranceRetirement from "../pdf/Reasons For Life Insurance
 import reasonsForRetirementRollovers from "../pdf/Reasons for Retirement Rollovers.pdf";
 import retirementRolloverOptions from "../pdf/Retirement Rollover Options.pdf";
 import productDesignTree from "../pdf/Product Decision Tree.pdf";
-import "./EducationalResources.css";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
+import "./EducationalResources.css";
+import Tooltip from "../Tooltip/Tooltip";
 
 export default class EducationalResources extends Component {
   state = {
@@ -39,12 +40,12 @@ export default class EducationalResources extends Component {
       resourceSrc: src,
       resourceTitle: title
     });
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   handleClose = e => {
     this.setState({ showModal: false });
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   render() {
@@ -215,8 +216,15 @@ export default class EducationalResources extends Component {
                 id="life-insurance-resources-text"
                 className="resource-description-text"
               >
-                Our full array of products includes whole life, term, universal,
-                and variable universal life. With a variety of products and
+                Our full array of products includes whole life, term,{" "}
+                <Tooltip
+                  message={
+                    "Issued by New York Life Insurance and Annuity Corporation, a wholly owned subsisiary of New York Life."
+                  }
+                >
+                  universal
+                </Tooltip>
+                , and variable universal life. With a variety of products and
                 riders to choose from, we can recommend a{" "}
                 <span className="italic">customized solution</span> for almost{" "}
                 <span className="italic">any</span> need you may have.

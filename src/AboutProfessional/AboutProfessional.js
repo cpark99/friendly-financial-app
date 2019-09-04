@@ -40,8 +40,11 @@ export default function AboutProfessional() {
             </p>
             <p>
               At New York Life, every decision we make, every action we take,
-              has one overriding purpose: To be here when you, our policy owners{" "}
-              need us. That's how we help you be good at life.
+              has one overriding purpose:{" "}
+              <span className="italic">
+                To be here when you, our policy owners need us.
+              </span>{" "}
+              That's how we help you be good at life.
             </p>
             <p>
               I can help you ensure a sound financial future for you, your
@@ -77,7 +80,7 @@ export default function AboutProfessional() {
                 className="email-icon contact-icon"
                 alt="navy envelope icon"
               />
-              NSParkft.newyorklife.com
+              NSPark@ft.newyorklife.com
             </a>
           </p>
           <p>

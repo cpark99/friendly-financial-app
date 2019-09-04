@@ -30,7 +30,7 @@ export default function Contact() {
                 className="email-icon contact-icon"
                 alt="navy envelope icon"
               />
-              nspark@ft.newyorklife.com
+              NSPark@ft.newyorklife.com
             </a>
           </p>
           <p>

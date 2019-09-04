@@ -256,7 +256,8 @@ export default class LifeInsuranceCalc extends Component {
                   name="life-name-one"
                   id="life-name-one"
                   className="registration-control name-input"
-                  placeholder="John Doe"
+                  placeholder={this.context.user ? this.context.user.name : "Jane Doe"}
+                  value={this.context.user ? this.context.user.name : ""}
                   required
                   onChange={e => {
                     this.updateName(e.target.value);
@@ -273,7 +274,7 @@ export default class LifeInsuranceCalc extends Component {
                   name="life-name-two"
                   id="life-name-two"
                   className="registration-control name-input"
-                  placeholder="Sally Doe"
+                  placeholder="John Doe"
                   onChange={e => {
                     this.updateNameTwo(e.target.value);
                   }}
@@ -464,6 +465,7 @@ export default class LifeInsuranceCalc extends Component {
               <SignUp
                 lifeInsuranceGoal={this.state.amount}
                 history={this.props.history}
+                name={this.state.name}
               />
             )}
             {/* <button id="reset-life-calc-results-button" onClick={e => {this.handleFormReset();}}>Reset</button> */}
