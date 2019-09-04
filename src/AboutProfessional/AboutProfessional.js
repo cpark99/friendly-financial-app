@@ -84,7 +84,7 @@ export default function AboutProfessional() {
             </a>
           </p>
           <p>
-            <a href="https://www.linkedin.com/in/nickparknyl">
+            <a href="https://www.linkedin.com/in/nickparknyl"  target="_blank" rel="noopener noreferrer">
               <img
                 src={linkedin}
                 className="linkedin-icon contact-icon"
@@ -94,7 +94,7 @@ export default function AboutProfessional() {
             </a>
           </p>
           <p>
-            <a href="https://www.facebook.com/2.NPark">
+            <a href="https://www.facebook.com/2.NPark" target="_blank" rel="noopener noreferrer">
               <img
                 src={facebook}
                 className="facebook-icon contact-icon"
