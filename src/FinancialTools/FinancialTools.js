@@ -68,7 +68,7 @@ export default function FinancialTools() {
           </p>
         </div>
         <NavLink to={"/life-insurance-calc"}>
-          <button className="life-insurance-calculator-button">
+          <button className="life-insurance-calculator-button orange-button">
             Click to Calculate
           </button>
         </NavLink>

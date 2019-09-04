@@ -2,6 +2,10 @@ import React from "react";
 import { Breakpoint } from "react-socks";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import Headshot from "../Utils/Headshot";
+import phone from "../img/phone-navy.png";
+import email from "../img/email.png";
+import linkedin from "../img/linkedin.png";
+import facebook from "../img/facebook.png";
 import "./AboutProfessional.css";
 
 export default function AboutProfessional() {
@@ -55,21 +59,46 @@ export default function AboutProfessional() {
         </div>
       </div>
       <div id="about-contact-info-container" className="left-align-container">
-        <h4 id="contact-info-title">Contact:</h4>
         <div>
           <p>
-            <a href="tel:+1-818-731-8616">(818) 731-8616</a>
+            <a href="tel:+1-818-731-8616">
+              <img
+                src={phone}
+                className="phone-icon contact-icon"
+                alt="navy telephone icon"
+              />
+              (818) 731-8616
+            </a>
           </p>
           <p>
             <a href="mailto:nspark@ft.newyorklife.com">
+              <img
+                src={email}
+                className="email-icon contact-icon"
+                alt="navy envelope icon"
+              />
               NSParkft.newyorklife.com
             </a>
           </p>
           <p>
-            <a href="https://www.linkedin.com/in/nickparknyl">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/nickparknyl">
+              <img
+                src={linkedin}
+                className="linkedin-icon contact-icon"
+                alt="navy linkedin icon"
+              />
+              LinkedIn
+            </a>
           </p>
           <p>
-            <a href="https://www.facebook.com/2.NPark">Facebook</a>
+            <a href="https://www.facebook.com/2.NPark">
+              <img
+                src={facebook}
+                className="facebook-icon contact-icon"
+                alt="navy facebook icon"
+              />
+              Facebook
+            </a>
           </p>
         </div>
       </div>

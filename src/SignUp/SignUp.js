@@ -89,7 +89,7 @@ export default class SignUp extends Component {
       <section id="sign-up-section" className="content">
         <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
-        <button onClick={this.handleDemoLogin} className="demo-login-button">Demo</button>
+        <button onClick={this.handleDemoLogin} className="demo-login-button orange-button">Demo</button>
         <div className="text-container">
           <p id="sign-up-section-text">
             Sign up to stay <span className="italic">connected</span> with a
@@ -179,11 +179,11 @@ export default class SignUp extends Component {
             <p className="checkbox-text">I agree to receive newsletters</p>
           </div>
           {this.props.history.location.pathname === "/" ? (
-            <button id="sign-up-form-button" className="blue-button" type="submit">
+            <button id="sign-up-form-button" className="orange-button" type="submit">
               Sign up
             </button>
           ) : (
-            <button id="sign-up-form-button" className="blue-button" type="submit">
+            <button id="sign-up-form-button" className="orange-button" type="submit">
               Save Results
             </button>
           )}

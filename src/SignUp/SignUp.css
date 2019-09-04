@@ -68,9 +68,6 @@ label {
 
 .demo-login-button {
   margin: 0 0 20px 0;
-  border: none;
-  background: #4FB0FF;
-  color: white;
   height: 30px;
   min-width: 70px;
 }

@@ -10,18 +10,18 @@
 
 #life-insurance-calc-form {
   text-align: left;
-  border: 1px solid black;
+  border: 2px solid rgb(0, 67, 121);
 }
 
 #life-insurance-modal {
-  background: lightgrey;
+  background: rgb(233, 231, 231);
   border: 1px solid black;
   position: fixed;
   top: 32px;
   left: 2vw;
   text-align: center;
   width: 95vw;
-  padding-bottom: 20px;
+  padding: 10px;
   max-height: 88vh;
   overflow-y: scroll;
 }
@@ -122,6 +122,10 @@
   #life-insurance-calc-form {
     width: 300px;
   }
+
+  #life-insurance-modal {
+    padding: 15px;
+  }
 }
 
 @media (min-width: 414px) {
@@ -145,6 +149,10 @@
 @media (min-width: 768px) {
   #life-insurance-calc-form {
     width: 520px;
+  }
+
+  #life-insurance-modal {
+    padding: 20px;
   }
 }
 

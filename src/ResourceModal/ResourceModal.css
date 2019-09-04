@@ -1,7 +1,7 @@
 .modal-frame {
   width: 95vw;
-  max-height: 93vh;
-  background: lightgrey;
+  max-height: 91vh;
+  background: rgb(233, 231, 231);
   border: 1px solid black;
   position: fixed;
   top: 6vh;
@@ -76,7 +76,7 @@ and (min-height: 800px) {
 @media (min-width: 375px) 
 and (orientation: landscape) {
   .modal-frame {
-    max-height: 87vh;
+    max-height: 84vh;
     top: 12vh;
   }
 
@@ -98,28 +98,32 @@ and (orientation: landscape) {
 @media (min-width: 568px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 170px;
+    min-height: 160px;
   }
 }
 
   @media (min-width: 667px) 
   and (orientation: landscape) {
   .pdf-document {
-    min-height: 215px;
+    min-height: 205px;
   }
 }
 
 @media (min-width: 736px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 245px;
+    min-height: 235px;
   }
 }
 
 @media (min-width: 768px) 
 and (orientation: portrait) {
   .pdf-document {
-    min-height: 750px;
+    min-height: 730px;
+  }
+
+  .close-button {
+    top: 6vh;
   }
 }
 
@@ -132,18 +136,22 @@ and (orientation: landscape) {
   }
 
   .close-button {
-    top: 8vh;
+    top: 9vh;
     right: 5vw;
   }
 
   .pdf-document {
-    min-height: 550px;
+    min-height: 530px;
   }
 }
 
 @media (min-width: 1200px) 
 and (orientation: landscape) {
   .pdf-document {
-    min-height: 560px;
+    min-height: 540px;
+  }
+
+  .close-button {
+    right: 6vw;
   }
 }

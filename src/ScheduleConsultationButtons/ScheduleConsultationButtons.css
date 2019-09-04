@@ -33,13 +33,12 @@
   margin-top: 20px;
   padding: 0 10px 20px 10px;
   width: 90%;
-  background: aliceblue;
+  border: 2px solid rgb(0, 67, 121);
 }
 
 .schedule-button-container button {
   margin-top: 20px;
   width: 200px;
-  border: 2px solid #4FB0FF;
 }
 
 .gray-button {

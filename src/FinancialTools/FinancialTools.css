@@ -8,9 +8,13 @@ h4 {
 }
 
 #life-insurance-calculator-tool-section {
-  background: aliceblue;
+  border: 2px solid rgb(0, 67, 121);
   padding: 20px 0;
   max-width: 90vw;
+}
+
+#life-insurance-calculator-tool-section h4 {
+  font-size: 18px;
 }
 
 #life-insurance-calculator-intro-text {
@@ -25,4 +29,10 @@ h4 {
 
 .italic {
   font-style: italic;
+}
+
+@media (min-width: 768px) {
+  #life-insurance-calculator-tool-section h4 {
+    font-size: 22px;
+  }
 }

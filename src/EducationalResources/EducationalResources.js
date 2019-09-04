@@ -39,10 +39,12 @@ export default class EducationalResources extends Component {
       resourceSrc: src,
       resourceTitle: title
     });
+    document.body.style.overflow = 'hidden';
   };
 
   handleClose = e => {
     this.setState({ showModal: false });
+    document.body.style.overflow = 'unset';
   };
 
   render() {

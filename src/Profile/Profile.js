@@ -73,7 +73,7 @@ export default class Profile extends Component {
             </div>
           </div>
           <NavLink to={"/life-insurance-calc"}>
-            <button className="life-insurance-calculator-button profile-button">
+            <button className="life-insurance-calculator-button profile-button orange-button">
               Click to Calculate
             </button>
           </NavLink>
@@ -85,7 +85,7 @@ export default class Profile extends Component {
           <NavLink to="/schedule">
             <button
               id="to-schedule-consultation-button-profile"
-              className="homepage-button profile-button"
+              className="homepage-button profile-button orange-button"
             >
               Click to Schedule
             </button>

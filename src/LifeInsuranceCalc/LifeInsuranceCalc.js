@@ -196,6 +196,7 @@ export default class LifeInsuranceCalc extends Component {
         this.setState({ amountTwo: amountTwo });
       }
     }
+    document.body.style.overflow = 'hidden';
   };
 
   handleSubmit = e => {
@@ -209,6 +210,7 @@ export default class LifeInsuranceCalc extends Component {
 
   handleClose = () => {
     this.setState({ showResults: false });
+    document.body.style.overflow = 'unset';
   };
 
   handleFormReset = () => {
@@ -422,21 +424,21 @@ export default class LifeInsuranceCalc extends Component {
             <div className="form-buttons">
               <button
                 type="reset"
-                className="registration-button"
+                className="registration-button orange-button"
                 onClick={() => {
                   this.props.history.goBack();
                 }}
               >
                 Go back
               </button>
-              <button type="submit" className="registration-button">
+              <button type="submit" className="registration-button orange-button">
                 Submit
               </button>
             </div>
           </div>
         </form>
         {this.state.showResults && (
-          <div id="life-insurance-modal">
+          <div id="life-insurance-modal" className="flex-column-center">
             <div
               id="life-calc-close-button"
               onClick={e => {
@@ -468,6 +470,7 @@ export default class LifeInsuranceCalc extends Component {
             {TokenService.hasAuthToken() && (
               <button
                 id="save-life-calc-results-button"
+                className="orange-button" 
                 onClick={e => {
                   this.handleSaveButtonClick();
                 }}

@@ -7,8 +7,8 @@ import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import Headshot from "../Utils/Headshot";
 import phone from "../img/phone-navy.png";
 import ping from "../img/ping.png";
-import downArrow from "../img/orange-down-arrow.png";
-import upArrow from "../img/orange-up-arrow.png";
+import downArrow from "../img/gray-down-arrow.png";
+import upArrow from "../img/gray-up-arrow.png";
 import email from "../img/email.png";
 import linkedin from "../img/linkedin.png";
 import facebook from "../img/facebook.png";
@@ -87,13 +87,13 @@ export default class Main extends Component {
                     <img
                       src={upArrow}
                       className="up-arrow dropdown-arrow"
-                      alt="orange down arrow"
+                      alt="gray up arrow"
                     />
                   ) : (
                     <img
                       src={downArrow}
                       className="down-arrow dropdown-arrow"
-                      alt="orange down arrow"
+                      alt="gray down arrow"
                     />
                   )}
                 </div>
@@ -197,7 +197,7 @@ export default class Main extends Component {
                 <NavLink to="/schedule">
                   <button
                     id="to-schedule-consultation-button"
-                    className="homepage-button blue-button"
+                    className="homepage-button orange-button"
                   >
                     Free Consultation
                   </button>

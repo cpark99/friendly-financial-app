@@ -9,7 +9,6 @@
 }
 
 #about-contact-info-container {
-  display: flex;
   margin-left: 10px;
 }
 
@@ -24,8 +23,10 @@
 @media (min-width: 1000px) {
   #about-contact-info-container {
     width: 90vw;
-    justify-content: flex-start;
     margin-top: 30px;
+    position: relative;
+    bottom: 200px;
+    margin-left: 40px;
   }
 
   .flex-responsive-tablet-desktop {
@@ -39,5 +40,6 @@
 @media (min-width: 1200px) {
   #about-contact-info-container {
     width: 80vw;
+    margin-left: 50px;
   }
 }
