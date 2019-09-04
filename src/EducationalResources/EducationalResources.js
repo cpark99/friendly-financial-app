@@ -217,17 +217,26 @@ export default class EducationalResources extends Component {
                 className="resource-description-text"
               >
                 Our full array of products includes whole life, term,{" "}
+                <span className="italic">universal</span>
                 <Tooltip
                   message={
                     "Issued by New York Life Insurance and Annuity Corporation, a wholly owned subsisiary of New York Life."
                   }
                 >
-                  universal
+                  <sup>1</sup>
                 </Tooltip>
-                , and variable universal life. With a variety of products and
-                riders to choose from, we can recommend a{" "}
+                , and <span className="italic">variable</span>
+                <Tooltip
+                  message={
+                    "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
+                  }
+                >
+                  <sup>2</sup>
+                </Tooltip>{" "}
+                universal life. With a variety of products and riders to choose
+                from, we can recommend a{" "}
                 <span className="italic">customized solution</span> for almost{" "}
-                <span className="italic">any</span> need you may have.
+                any need you may have.
               </p>
               <ul className="list-of-educational-resources">
                 <li
@@ -289,14 +298,43 @@ export default class EducationalResources extends Component {
               id="retirement-resources-text"
               className="resource-description-text"
             >
-              We offer fixed and variable deferred annuities for the
-              accumulation stage of retirement, as well as guaranteed future or
-              immediate lifetime income annuities (fixed income annuities) that
-              can help you turn savings into an{" "}
-              <span className="italic">income</span> stream that will last a{" "}
-              <span className="italic">lifetime</span>. With a registered
-              representative, we can offer mutual funds that may help meet your{" "}
-              <span className="italic">long-term</span> financial goals.
+              We offer <span className="italic">fixed</span>
+              <Tooltip
+                message={
+                  "Issued by New York Life Insurance Company or New York Life Insurance and Annuity Corporation , a wholly owned subsidiary of New Yortk Life."
+                }
+              >
+                <sup>3</sup>
+              </Tooltip>{" "}
+              and <span className="italic">variable</span>
+              <Tooltip
+                message={
+                  "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
+                }
+              >
+                <sup>2</sup>
+              </Tooltip>{" "}
+              deferred annuities for the accumulation stage of retirement, as
+              well as <span className="italic">guaranteed</span>
+              <Tooltip
+                message={
+                  "Guarantees backed by the claims-paying ability of the issuer."
+                }
+              >
+                <sup>4</sup>
+              </Tooltip>{" "}
+              future or immediate lifetime income annuities (fixed income
+              annuities) that can help you turn savings into an income stream
+              that will last a lifetime. With a registered representative, we
+              can offer mutual <span className="italic">funds</span>
+              <Tooltip
+                message={
+                  "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
+                }
+              >
+                <sup>2</sup>
+              </Tooltip>{" "}
+              that may help meet your long-term financial goals.
             </p>
             <ul className="list-of-educational-resources">
               <li

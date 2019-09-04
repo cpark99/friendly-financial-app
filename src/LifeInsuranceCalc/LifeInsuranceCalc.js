@@ -257,7 +257,7 @@ export default class LifeInsuranceCalc extends Component {
                   id="life-name-one"
                   className="registration-control name-input"
                   placeholder={this.context.user ? this.context.user.name : "Jane Doe"}
-                  value={this.context.user ? this.context.user.name : ""}
+                  value={this.context.user ? this.context.user.name : null}
                   required
                   onChange={e => {
                     this.updateName(e.target.value);

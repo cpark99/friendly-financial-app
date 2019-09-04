@@ -80,7 +80,7 @@ export default class Login extends Component {
             <label htmlFor="password">Password:</label>
             <input type="password" name="password" id="password" required />
           </div>
-          <button id="login-form-button">Login</button>
+          <button id="login-form-button" className="orange-button">Login</button>
         </form>
         <p>
           New user? <NavLink to={"/signup"}>Sign up</NavLink>
