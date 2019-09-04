@@ -147,11 +147,16 @@ and (orientation: landscape) {
 
 @media (min-width: 1200px) 
 and (orientation: landscape) {
+  .modal-frame {
+    width: 700px;
+    left: calc(50vw - 350px);
+  }
+
   .pdf-document {
     min-height: 540px;
   }
 
   .close-button {
-    right: 6vw;
+    left: calc(50vw + 270px);
   }
 }
