@@ -219,6 +219,7 @@ export default class LifeInsuranceCalc extends Component {
 
   handleSaveButtonClick = () => { 
     const user_id = this.context.user_id;
+    document.body.style.overflow = 'unset';
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
     })
@@ -226,6 +227,10 @@ export default class LifeInsuranceCalc extends Component {
         this.props.history.push("/profile")
       })
   };
+
+  componentWillUnmount() {
+    document.body.style.overflow = 'unset';
+  }
 
   render() {
     const nameError = this.validateName();

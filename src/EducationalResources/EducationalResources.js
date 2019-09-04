@@ -34,6 +34,10 @@ export default class EducationalResources extends Component {
     resourceTitle: ""
   };
 
+  componentWillUnmount() {
+    document.body.style.overflow = 'unset';
+  }
+
   handleResourceClick = (src, title) => {
     this.setState({
       showModal: true,
