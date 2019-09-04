@@ -34,7 +34,7 @@ export default function Contact() {
             </a>
           </p>
           <p>
-            <a href="https://www.linkedin.com/in/nickparknyl" className="flex-center-center">
+            <a href="https://www.linkedin.com/in/nickparknyl" className="flex-center-center" target="_blank" rel="noopener noreferrer">
               <img
                 src={linkedin}
                 className="linkedin-icon contact-icon"
@@ -44,7 +44,7 @@ export default function Contact() {
             </a>
           </p>
           <p>
-            <a href="https://www.facebook.com/2.NPark" className="flex-center-center">
+            <a href="https://www.facebook.com/2.NPark" className="flex-center-center" target="_blank" rel="noopener noreferrer">
               <img
                 src={facebook}
                 className="facebook-icon contact-icon"

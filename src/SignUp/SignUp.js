@@ -1,19 +1,20 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import AuthApiService from "../services/auth-api-service";
-import "./SignUp.css";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import TokenService from "../services/token-service";
 import UserContext from "../FriendlyFinancialContext";
+import "./SignUp.css";
 
 export default class SignUp extends Component {
   static contextType = UserContext;
-  
+
   state = { error: null };
 
   handleLoginSuccess = payload => {
     const { history } = this.props;
     const destination = (history.location.state || {}).from || "/profile";
-    this.context.setUserId(payload.user_id)
+    this.context.setUserId(payload.user_id);
     history.push(destination);
   };
 
@@ -42,7 +43,7 @@ export default class SignUp extends Component {
     if (this.props.history.location.pathname === "/life-insurance-calc") {
       return this.props.history.push("/login");
     } else {
-    return this.props.history.push("/login");
+      return this.props.history.push("/login");
     }
   };
 
@@ -89,12 +90,18 @@ export default class SignUp extends Component {
       <section id="sign-up-section" className="content">
         <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
-        <button onClick={this.handleDemoLogin} className="demo-login-button orange-button">Demo</button>
+        <button
+          onClick={this.handleDemoLogin}
+          className="demo-login-button orange-button"
+        >
+          Demo
+        </button>
         <div className="text-container">
           <p id="sign-up-section-text">
             Sign up to stay <span className="italic">connected</span> with a
             financial services professional, while keeping track of your
-            financial goals (<span className="italic">ie. life insurance</span>
+            financial goals (ie.{" "}
+            <NavLink to="/financial-tools">life insurance</NavLink>
             ). Stay up to date on the latest trends and policies, keeping you{" "}
             <span className="italic">prepared</span> for life.
           </p>
@@ -179,11 +186,19 @@ export default class SignUp extends Component {
             <p className="checkbox-text">I agree to receive newsletters</p>
           </div>
           {this.props.history.location.pathname === "/" ? (
-            <button id="sign-up-form-button" className="orange-button" type="submit">
+            <button
+              id="sign-up-form-button"
+              className="orange-button"
+              type="submit"
+            >
               Sign up
             </button>
           ) : (
-            <button id="sign-up-form-button" className="orange-button" type="submit">
+            <button
+              id="sign-up-form-button"
+              className="orange-button"
+              type="submit"
+            >
               Save Results
             </button>
           )}

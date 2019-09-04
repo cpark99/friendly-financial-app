@@ -61,6 +61,7 @@ export default class Main extends Component {
                   <a
                     href="https://www.google.com/maps/place/New+York+Life/@34.1582344,-118.2578968,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c04d9e3ed059:0x1eec029bfd7eb087!8m2!3d34.15823!4d-118.2557081"
                     className="new-york-life-glendale-address location-address"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     <p>
                       <img
@@ -111,7 +112,7 @@ export default class Main extends Component {
                           alt="navy envelope icon"
                         />
                       </a>
-                      <a href="https://www.linkedin.com/in/nickparknyl">
+                      <a href="https://www.linkedin.com/in/nickparknyl" target="_blank" rel="noopener noreferrer">
                         <img
                           src={linkedin}
                           id="main-linkedin-icon"
@@ -119,7 +120,7 @@ export default class Main extends Component {
                           alt="navy linkedin icon"
                         />
                       </a>
-                      <a href="https://www.facebook.com/2.NPark">
+                      <a href="https://www.facebook.com/2.NPark" target="_blank" rel="noopener noreferrer">
                         <img
                           src={facebook}
                           id="main-facebook-icon"
@@ -156,6 +157,7 @@ export default class Main extends Component {
                       <a
                         href="https://www.google.com/maps/place/New+York+Life/@34.1582344,-118.2578968,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c04d9e3ed059:0x1eec029bfd7eb087!8m2!3d34.15823!4d-118.2557081"
                         className="new-york-life-glendale-map"
+                        target="_blank" rel="noopener noreferrer"
                       >
                         <img
                           src={map}
@@ -167,6 +169,7 @@ export default class Main extends Component {
                         <a
                           href="https://www.google.com/maps/place/New+York+Life/@34.1582344,-118.2578968,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c04d9e3ed059:0x1eec029bfd7eb087!8m2!3d34.15823!4d-118.2557081"
                           className="new-york-life-glendale-address location-address"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           <p>801 North Brand Blvd, Penthouse,</p>
                           <p>Glendale, CA 91203</p>
