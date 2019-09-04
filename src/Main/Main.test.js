@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Main from './Main';
 
+window.scrollTo = jest.fn();
+
 it('renders without crashing', () => {
+  window.scrollTo.mockClear();
+
   const props = {
     history: {
       location: {

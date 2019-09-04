@@ -6,7 +6,7 @@ export default function Tooltip(props) {
     // <Breakpoint xlarge up>
       <span className="Tooltip">
         <span className="Tooltip-content">{props.children}</span>
-        <div className="Tooltip-message">{props.message}</div>
+        <span className="Tooltip-message">{props.message}</span>
       </span>
     // </Breakpoint>
   );
