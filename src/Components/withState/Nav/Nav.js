@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Breakpoint } from "react-socks";
-import TokenService from "../services/token-service";
+import TokenService from "../../../services/token-service";
 import "./Nav.css";
 
 export default class Nav extends Component {

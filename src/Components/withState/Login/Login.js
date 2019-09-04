@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import TokenService from "../services/token-service";
-import AuthApiService from "../services/auth-api-service";
+import TokenService from "../../../services/token-service";
+import AuthApiService from "../../../services/auth-api-service";
 import "./Login.css";
-import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
-import UserContext from "../FriendlyFinancialContext";
+import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
+import UserContext from "../../../FriendlyFinancialContext";
 
 export default class Login extends Component {
   static defaultProps = {

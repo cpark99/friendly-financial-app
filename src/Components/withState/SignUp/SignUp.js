@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import AuthApiService from "../services/auth-api-service";
-import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
-import TokenService from "../services/token-service";
-import UserContext from "../FriendlyFinancialContext";
+import AuthApiService from "../../../services/auth-api-service";
+import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
+import TokenService from "../../../services/token-service";
+import UserContext from "../../../FriendlyFinancialContext";
 import "./SignUp.css";
 
 export default class SignUp extends Component {

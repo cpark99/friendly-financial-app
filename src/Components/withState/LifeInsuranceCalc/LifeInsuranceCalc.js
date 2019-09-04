@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Results from "../LifeCalcResults/LifeCalcResults";
-import ValidationError from "../ValidationError/ValidationError";
-import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
+import Results from "../../withoutState/LifeCalcResults/LifeCalcResults";
+import ValidationError from "../../withoutState/ValidationError/ValidationError";
+import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
 import "./LifeInsuranceCalc.css";
 import SignUp from "../SignUp/SignUp";
-import TokenService from "../services/token-service";
-import UserApiService from "../services/user-api-service";
-import UserContext from "../FriendlyFinancialContext";
+import TokenService from "../../../services/token-service";
+import UserApiService from "../../../services/user-api-service";
+import UserContext from "../../../FriendlyFinancialContext";
 
 export default class LifeInsuranceCalc extends Component {
   static contextType = UserContext;

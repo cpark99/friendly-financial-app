@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { setDefaultBreakpoints } from 'react-socks';
 import Nav from '../Nav/Nav';
-import PrivateRoute from '../Utils/PrivateRoute'
-import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
+import PrivateRoute from '../../withoutState/Utils/PrivateRoute'
+import PublicOnlyRoute from '../../withoutState/Utils/PublicOnlyRoute'
 import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
+import Footer from '../../withoutState/Footer/Footer';
 import Login from '../Login/Login';
 import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
 import Profile from '../Profile/Profile';
-import UserContext from '../FriendlyFinancialContext';
+import UserContext from '../../../FriendlyFinancialContext';
 import SignUp from '../SignUp/SignUp';
 import EducationalResources from '../EducationalResources/EducationalResources';
-import FinancialTools from '../FinancialTools/FinancialTools';
-import ScheduleConsultation from '../ScheduleConsultation/ScheduleConsultation';
-import AboutProfessional from '../AboutProfessional/AboutProfessional';
-import Contact from '../Contact/Contact';
-import UserApiService from '../services/user-api-service';
-import TokenService from '../services/token-service';
-import AuthApiService from '../services/auth-api-service';
+import FinancialTools from '../../withoutState/FinancialTools/FinancialTools';
+import ScheduleConsultation from '../../withoutState/ScheduleConsultation/ScheduleConsultation';
+import AboutProfessional from '../../withoutState/AboutProfessional/AboutProfessional';
+import Contact from '../../withoutState/Contact/Contact';
+import UserApiService from '../../../services/user-api-service';
+import TokenService from '../../../services/token-service';
+import AuthApiService from '../../../services/auth-api-service';
 import './App.css';
 
 export default class App extends Component {

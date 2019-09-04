@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from "../img/headshot-np.jpg"; 
+import headshot from "../../../img/headshot-np.jpg"; 
 
 export default function Headshot() {
   return (

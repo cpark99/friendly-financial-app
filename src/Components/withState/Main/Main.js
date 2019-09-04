@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import TokenService from "../services/token-service";
-import Header from "../Header/Header";
+import TokenService from "../../../services/token-service";
+import Header from "../../withoutState/Header/Header";
 import SignUp from "../SignUp/SignUp";
-import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
-import Headshot from "../Utils/Headshot";
-import phone from "../img/phone-navy.png";
-import ping from "../img/ping.png";
-import downArrow from "../img/gray-down-arrow.png";
-import upArrow from "../img/gray-up-arrow.png";
-import email from "../img/email.png";
-import linkedin from "../img/linkedin.png";
-import facebook from "../img/facebook.png";
-import map from "../img/nyl-location-map.jpeg";
-import clock from "../img/clock.png";
-import license from "../img/license.png";
+import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
+import Headshot from "../../withoutState/Utils/Headshot";
+import phone from "../../../img/phone-navy.png";
+import ping from "../../../img/ping.png";
+import downArrow from "../../../img/gray-down-arrow.png";
+import upArrow from "../../../img/gray-up-arrow.png";
+import email from "../../../img/email.png";
+import linkedin from "../../../img/linkedin.png";
+import facebook from "../../../img/facebook.png";
+import map from "../../../img/nyl-location-map.jpeg";
+import clock from "../../../img/clock.png";
+import license from "../../../img/license.png";
 import "./Main.css";
 
 export default class Main extends Component {
