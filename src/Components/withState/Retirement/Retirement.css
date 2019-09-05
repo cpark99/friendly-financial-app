@@ -1,0 +1,9 @@
+@media (max-width: 320px) {
+  #retirement-content {
+    width: 95%;
+  }
+
+  .list-of-educational-resources {
+    width: 85vw;
+  }
+}

@@ -197,6 +197,7 @@ export default class LifeInsuranceCalc extends Component {
       }
     }
     document.body.style.overflow = 'hidden';
+    document.body.style.position = "fixed";
   };
 
   handleSubmit = e => {
@@ -211,6 +212,7 @@ export default class LifeInsuranceCalc extends Component {
   handleClose = () => {
     this.setState({ showResults: false });
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
   };
 
   handleFormReset = () => {
@@ -220,6 +222,7 @@ export default class LifeInsuranceCalc extends Component {
   handleSaveButtonClick = () => { 
     const user_id = this.context.user_id;
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
     })
@@ -230,6 +233,7 @@ export default class LifeInsuranceCalc extends Component {
 
   componentWillUnmount() {
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
   }
 
   render() {
@@ -262,7 +266,7 @@ export default class LifeInsuranceCalc extends Component {
                   id="life-name-one"
                   className="registration-control name-input"
                   placeholder={this.context.user ? this.context.user.name : "Jane Doe"}
-                  value={this.context.user ? this.context.user.name : null}
+                  value={this.context.user ? this.context.user.name : undefined}
                   required
                   onChange={e => {
                     this.updateName(e.target.value);
@@ -447,6 +451,7 @@ export default class LifeInsuranceCalc extends Component {
           <div id="life-insurance-modal" className="flex-column-center">
             <div
               id="life-calc-close-button"
+              className="close-button"
               onClick={e => {
                 this.handleClose(e);
               }}
@@ -486,7 +491,7 @@ export default class LifeInsuranceCalc extends Component {
               </button>
             )}
             {this.state.amountTwo && (
-              <p className="informative-text">
+              <p className="for-questions-text">
                 *Results will save for only "Person 1".
               </p>
             )}

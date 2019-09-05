@@ -2,10 +2,7 @@ import React from "react";
 import { Breakpoint } from "react-socks";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import Headshot from "../Utils/Headshot";
-import phone from "../../../img/phone-navy.png";
-import email from "../../../img/email.png";
-import linkedin from "../../../img/linkedin.png";
-import facebook from "../../../img/facebook.png";
+import ContactInfo from "../ContactInfo/ContactInfo";
 import "./AboutProfessional.css";
 
 export default function AboutProfessional() {
@@ -61,50 +58,7 @@ export default function AboutProfessional() {
           </div>
         </div>
       </div>
-      <div id="about-contact-info-container" className="left-align-container">
-        <div>
-          <p>
-            <a href="tel:+1-818-731-8616">
-              <img
-                src={phone}
-                className="phone-icon contact-icon"
-                alt="navy telephone icon"
-              />
-              (818) 731-8616
-            </a>
-          </p>
-          <p>
-            <a href="mailto:nspark@ft.newyorklife.com">
-              <img
-                src={email}
-                className="email-icon contact-icon"
-                alt="navy envelope icon"
-              />
-              NSPark@ft.newyorklife.com
-            </a>
-          </p>
-          <p>
-            <a href="https://www.linkedin.com/in/nickparknyl"  target="_blank" rel="noopener noreferrer">
-              <img
-                src={linkedin}
-                className="linkedin-icon contact-icon"
-                alt="navy linkedin icon"
-              />
-              LinkedIn
-            </a>
-          </p>
-          <p>
-            <a href="https://www.facebook.com/2.NPark" target="_blank" rel="noopener noreferrer">
-              <img
-                src={facebook}
-                className="facebook-icon contact-icon"
-                alt="navy facebook icon"
-              />
-              Facebook
-            </a>
-          </p>
-        </div>
-      </div>
+      <ContactInfo id={"about-contact-info-container"} />
     </section>
   );
 }
