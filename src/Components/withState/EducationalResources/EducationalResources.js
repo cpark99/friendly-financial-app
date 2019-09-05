@@ -26,6 +26,7 @@ import productDesignTree from "../../../pdf/Product Decision Tree.pdf";
 import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
 import "./EducationalResources.css";
 import Tooltip from "../../withoutState/Tooltip/Tooltip";
+import ForQuestions from "../../withoutState/ForQuestions/ForQuestions";
 
 export default class EducationalResources extends Component {
   state = {
@@ -427,12 +428,7 @@ export default class EducationalResources extends Component {
             </ul>
           </div>
         </div>
-        <div id="for-questions-text" className="informative-text">
-          <p>
-            Any questions or concerns? Contact a{" "}
-            <NavLink to="/about">professional</NavLink>.
-          </p>
-        </div>
+        <ForQuestions />
       </section>
     );
   }

@@ -31,10 +31,6 @@
   color: black;
 }
 
-#for-questions-text {
-  text-align: center;
-}
-
 .left-align-container {
   text-align: left;
   padding: 0 20px;
@@ -62,11 +58,6 @@
 
 .resource-description-text {
   font-size: 12px;
-}
-
-.informative-text {
-  font-size: 10px;
-  font-style: italic;
 }
 
 @media (min-width: 414px) {

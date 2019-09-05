@@ -20,6 +20,11 @@ import UserApiService from '../../../services/user-api-service';
 import TokenService from '../../../services/token-service';
 import AuthApiService from '../../../services/auth-api-service';
 import './App.css';
+import AboutNewYorkLife from '../AboutNewYorkLife/AboutNewYorkLife';
+import LifePlans from '../LifePlans/LifePlans';
+import CollegePlanning from '../CollegePlanning/CollegePlanning';
+import LifeInsurance from '../LifeInsurance/LifeInsurance';
+import Retirement from '../Retirement/Retirement';
 
 export default class App extends Component {
   state = {
@@ -113,6 +118,11 @@ export default class App extends Component {
             <Route exact path="/financial-tools" component={FinancialTools} />
             <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
             <Route exact path="/educational-resources" component={EducationalResources} />
+            <Route exact path="/educational-resources/about-new-york-life" component={AboutNewYorkLife} />
+            <Route exact path="/educational-resources/life-plans" component={LifePlans} />
+            <Route exact path="/educational-resources/college-planning" component={CollegePlanning} />
+            <Route exact path="/educational-resources/life-insurance" component={LifeInsurance} />
+            <Route exact path="/educational-resources/retirement" component={Retirement} />
             <Footer />
           </UserContext.Provider>
         </div>
