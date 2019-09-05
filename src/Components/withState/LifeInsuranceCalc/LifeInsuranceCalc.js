@@ -197,6 +197,7 @@ export default class LifeInsuranceCalc extends Component {
       }
     }
     document.body.style.overflow = 'hidden';
+    document.body.style.position = "fixed";
   };
 
   handleSubmit = e => {
@@ -211,6 +212,7 @@ export default class LifeInsuranceCalc extends Component {
   handleClose = () => {
     this.setState({ showResults: false });
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
   };
 
   handleFormReset = () => {
@@ -220,6 +222,7 @@ export default class LifeInsuranceCalc extends Component {
   handleSaveButtonClick = () => { 
     const user_id = this.context.user_id;
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
     })
@@ -230,6 +233,7 @@ export default class LifeInsuranceCalc extends Component {
 
   componentWillUnmount() {
     document.body.style.overflow = 'unset';
+    document.body.style.position = "initial";
   }
 
   render() {

@@ -5,6 +5,7 @@ import { Breakpoint } from "react-socks";
 export default class ResourceModal extends Component {
   componentWillUnmount() {
     document.body.style.overflow = "unset";
+    document.body.style.position = "initial";
   }
 
   render() {

@@ -24,11 +24,13 @@ export default class LifeInsurance extends Component {
       resourceTitle: title
     });
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
   };
 
   handleClose = e => {
     this.setState({ showModal: false });
     document.body.style.overflow = "unset";
+    document.body.style.position = "initial";
   };
 
   renderResources = resources => {
