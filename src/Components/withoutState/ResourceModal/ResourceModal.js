@@ -21,7 +21,7 @@ export default function ResourceModal(props) {
       {/* <div className="caption">
         {props.clickedImageName}
       </div> */}
-      <div className="button-container">
+      <div className="link-container">
         <Breakpoint small down>
           <a href={props.src} id="download-pdf-button" download>View full PDF</a>
         </Breakpoint>

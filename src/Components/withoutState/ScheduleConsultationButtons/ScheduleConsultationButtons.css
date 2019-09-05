@@ -26,7 +26,7 @@
   padding-right: 15px;
 }
 
-.schedule-button-container {
+.button-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -36,7 +36,8 @@
   border: 2px solid rgb(0, 67, 121);
 }
 
-.schedule-button-container button {
+#schedule-call-container button, 
+#schedule-meeting-container button {
   margin-top: 20px;
   width: 200px;
 }
@@ -61,7 +62,8 @@ and (orientation: landscape) {
     flex-direction: row;
   }
 
-  .schedule-button-container {
+  #schedule-call-container, 
+  #schedule-meeting-container {
     width: 45%;
   }
 }
@@ -82,7 +84,8 @@ and (orientation: landscape) {
     margin-top: 50px;
   }
   
-  .schedule-button-container {
+  #schedule-call-container, 
+  #schedule-meeting-container {
     width: 45%;
   }
 }

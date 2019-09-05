@@ -4,7 +4,7 @@ import "./ForQuestions.css";
 
 export default function ForQuestions() {
   return (
-    <div id="for-questions-text" className="informative-text">
+    <div className="for-questions-text">
       <p>
         Any questions or concerns? Contact a{" "}
         <NavLink to="/about">professional</NavLink>.

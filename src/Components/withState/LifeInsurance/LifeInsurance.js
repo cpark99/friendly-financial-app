@@ -7,6 +7,8 @@ import wholeLife from "../../../pdf/Whole Life Brochure.pdf";
 import wholeLifeDecisionTree from "../../../pdf/Whole Life Decision Tree.pdf";
 import termPostcard from "../../../pdf/Term Postcard.pdf";
 import ForQuestions from "../../withoutState/ForQuestions/ForQuestions";
+import NavButton from "../../withoutState/Utils/NavButton";
+import Tooltip from "../../withoutState/Tooltip/Tooltip";
 
 export default class LifeInsurance extends Component {
   state = {
@@ -51,10 +53,36 @@ export default class LifeInsurance extends Component {
       { src: termPostcard, title: "Term Postcard", key: 5 }
     ];
     return (
-      <section id="life-insurance-section" className="content">
+      <section id="life-insurance-section" className="content flex-column-center">
         <ScrollToTopOnMount />
-        <h2>About New York Life</h2>
-        <div id="life-insurance-content">
+        <h2>Life Insurance</h2>
+        <div id="life-insurance-content" className="resource-container text-container">
+        <p
+                id="life-insurance-resources-text"
+                className="resource-description-text"
+              >
+                Our full array of products includes whole life, term,{" "}
+                <span className="italic">universal</span>
+                <Tooltip
+                  message={
+                    "Issued by New York Life Insurance and Annuity Corporation, a wholly owned subsisiary of New York Life."
+                  }
+                >
+                  <sup>1</sup>
+                </Tooltip>
+                , and <span className="italic">variable</span>
+                <Tooltip
+                  message={
+                    "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
+                  }
+                >
+                  <sup>2</sup>
+                </Tooltip>{" "}
+                universal life. With a variety of products and riders to choose
+                from, we can recommend a{" "}
+                <span className="italic">customized solution</span> for almost{" "}
+                any need you may have.
+              </p>
           <ul className="list-of-educational-resources">
             {resources && this.renderResources(resources)}
           </ul>
@@ -68,6 +96,7 @@ export default class LifeInsurance extends Component {
             src={this.state.resourceSrc}
           />
         )}
+        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
         <ForQuestions />
       </section>
     );

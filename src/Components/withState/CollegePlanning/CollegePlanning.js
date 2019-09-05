@@ -6,6 +6,7 @@ import collegePlanUSC from "../../../pdf/USC Sample Planning Station.pdf";
 import wellRoundedCollege from "../../../pdf/Well Rounded College Funding.pdf";
 import collegeCosts from "../../../pdf/College Costs.pdf";
 import ForQuestions from "../../withoutState/ForQuestions/ForQuestions";
+import NavButton from "../../withoutState/Utils/NavButton";
 
 export default class CollegePlanning extends Component {
   state = {
@@ -49,9 +50,9 @@ export default class CollegePlanning extends Component {
       { src: collegePlanUSC, title: "USC Sample Planning Station", key: 4 }
     ];
     return (
-      <section id="college-planning-section" className="content">
+      <section id="college-planning-section" className="content flex-column-center">
         <ScrollToTopOnMount />
-        <h2>About New York Life</h2>
+        <h2>College Planning</h2>
         <div id="college-planning-content">
           <ul className="list-of-educational-resources">
             {resources && this.renderResources(resources)}
@@ -66,6 +67,7 @@ export default class CollegePlanning extends Component {
             src={this.state.resourceSrc}
           />
         )}
+        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
         <ForQuestions />
       </section>
     );

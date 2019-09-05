@@ -6,6 +6,7 @@ import costOfWaiting from "../../../pdf/Cost of Waiting.pdf";
 import newBeginnings from "../../../pdf/New Beginnings Brochure.pdf";
 import taxDiversification from "../../../pdf/Tax Diversification Brochure.pdf";
 import ForQuestions from "../../withoutState/ForQuestions/ForQuestions";
+import NavButton from "../../withoutState/Utils/NavButton";
 
 export default class LifePlans extends Component {
   state = {
@@ -43,13 +44,17 @@ export default class LifePlans extends Component {
 
   render() {
     const resources = [
-      { src: thingsFinancialLiteracy, title: "5 Things Financial Literacy", key: 1 },
+      {
+        src: thingsFinancialLiteracy,
+        title: "5 Things Financial Literacy",
+        key: 1
+      },
       { src: costOfWaiting, title: "Cost of Waiting", key: 2 },
       { src: newBeginnings, title: "New Beginnings Brochure", key: 3 },
       { src: taxDiversification, title: "Tax Diversification Brochure", key: 4 }
     ];
     return (
-      <section id="life-plans-section" className="content">
+      <section id="life-plans-section" className="content flex-column-center">
         <ScrollToTopOnMount />
         <h2>Life Plans</h2>
         <div id="life-plans-content">
@@ -66,6 +71,7 @@ export default class LifePlans extends Component {
             src={this.state.resourceSrc}
           />
         )}
+        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
         <ForQuestions />
       </section>
     );

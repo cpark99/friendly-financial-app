@@ -5,7 +5,10 @@
 }
 
 #educational-resources-container {
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
 }
 
 #educational-resources-container ul {
@@ -19,6 +22,11 @@
 
 #educational-resources-intro-text p {
   margin-top: 5px;
+}
+
+#educational-resources-container button {
+  background: #FF9C03;
+  color: white;
 }
 
 #educational-resources-intro-text p:first-child {
@@ -52,12 +60,30 @@
   margin-bottom: 10px;
 }
 
+.list-of-educational-links {
+  padding-left: 5px;
+}
+
 .list-of-educational-links a {
   font-size: 16px;
 }
 
-.resource-description-text {
-  font-size: 12px;
+.educational-resource-container {
+  border: 2px solid rgb(0, 67, 121);
+}
+
+.flex-responsive-column-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media (orientation: landscape) {
+  #educational-resources-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 414px) {
@@ -76,40 +102,16 @@
 
 @media (min-width: 768px) {
   #educational-resources-container {
-    width: initial;
-    display: flex;
-    justify-content: space-evenly;
+    margin-top: 20px;
   }
 
   #educational-resources-container h3 {
     font-size: 22px;
   } 
-
-  .tablet-column-left,
-  .flex-tablet-column-right {
-    width: 40%;
-  }
-
-  .informative-text {
-    font-size: 12px;
-  }
 }
 
 @media (min-width: 1200px) {
   #educational-resources-container h3 {
     font-size: 24px;
-  } 
-
-  .tablet-column-left {
-    width: 65%;
-    display: flex;
-  }
-
-  .flex-tablet-column-right {
-    width: 25%;
-  }
-
-  .flex-desktop-column {
-    width: 45%;
   }
 }

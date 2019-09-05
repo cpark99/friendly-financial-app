@@ -1,20 +1,18 @@
-#for-questions-text {
+.for-questions-text {
   text-align: center;
-}
-
-.informative-text {
-  font-size: 10px;
+  font-size: 12px;
   font-style: italic;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-  .informative-text {
-    font-size: 12px;
+  .for-questions-text {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1200px) {
-  .informative-text {
-    font-size: 14px;
+  .for-questions-text {
+    font-size: 16px;
   }
 }
