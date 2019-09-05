@@ -22,11 +22,10 @@
 
 @media (min-width: 1000px) {
   #about-contact-info-container {
-    width: 90vw;
     margin-top: 30px;
     position: relative;
-    bottom: 200px;
-    margin-left: 40px;
+    bottom: 210px;
+    right: 325px;
   }
 
   .flex-responsive-tablet-desktop {
@@ -39,7 +38,8 @@
 
 @media (min-width: 1200px) {
   #about-contact-info-container {
-    width: 80vw;
     margin-left: 50px;
+    right: 430px;
+    bottom: 200px;
   }
 }

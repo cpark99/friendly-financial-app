@@ -58,7 +58,7 @@ export default class EducationalResources extends Component {
             </p>
             <NavButton
               destination={"/educational-resources/about-new-york-life"}
-              id={"to-about-new-york-life-button"}
+              class={"to-about-new-york-life-button orange-button"}
               text={"Click to learn more"}
             />
           </div>
@@ -75,7 +75,7 @@ export default class EducationalResources extends Component {
             </p>
             <NavButton
               destination={"/educational-resources/life-plans"}
-              id={"to-life-plans-button"}
+              class={"to-life-plans-button orange-button"}
               text={"Click to learn more"}
             />
           </div>
@@ -97,7 +97,7 @@ export default class EducationalResources extends Component {
             </p>
             <NavButton
               destination={"/educational-resources/college-planning"}
-              id={"to-college-planning-button"}
+              class={"to-college-planning-button orange-button"}
               text={"Click to learn more"}
             />
           </div>
@@ -118,7 +118,7 @@ export default class EducationalResources extends Component {
             </p>
             <NavButton
               destination={"/educational-resources/life-insurance"}
-              id={"to-life-insurance-button"}
+              class={"to-life-insurance-button orange-button"}
               text={"Click to learn more"}
             />
           </div>
@@ -135,7 +135,7 @@ export default class EducationalResources extends Component {
             </p>
             <NavButton
               destination={"/educational-resources/retirement"}
-              id={"to-retirement-button"}
+              class={"to-retirement-button orange-button"}
               text={"Click to learn more"}
             />
           </div>

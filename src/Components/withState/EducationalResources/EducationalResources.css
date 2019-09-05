@@ -24,11 +24,6 @@
   margin-top: 5px;
 }
 
-#educational-resources-container button {
-  background: #FF9C03;
-  color: white;
-}
-
 #educational-resources-intro-text p:first-child {
   margin-top: 0;
   margin-bottom: 0;
@@ -37,12 +32,6 @@
 #college-planning-list-header {
   margin: 10px 0;
   color: black;
-}
-
-.left-align-container {
-  text-align: left;
-  padding: 0 20px;
-  margin-left: 20px;
 }
 
 .educational-resource {
