@@ -1,34 +1,42 @@
-import React from 'react';
-import './ResourceModal.css';
-import { Breakpoint } from 'react-socks';
+import React, { Component } from "react";
+import "./ResourceModal.css";
+import { Breakpoint } from "react-socks";
 
-export default function ResourceModal(props) {
-  return (
-    <div className="modal-frame">
-      <div
-        className="close-button"
-        onClick={e => {
-          props.handleClose(e);
-        }}
-      >
-        <p className="close-button-text"><span className="italic">close</span></p>
-        <span className="close-button-symbol">&times;</span>
+export default class ResourceModal extends Component {
+  componentWillUnmount() {
+    document.body.style.overflow = "unset";
+  }
+
+  render() {
+    return (
+      <div className="modal-frame">
+        <div
+          className="close-button"
+          onClick={e => {
+            this.props.handleClose(e);
+          }}
+        >
+          <p className="close-button-text">close</p>
+          <span className="close-button-symbol">&times;</span>
+        </div>
+        <h3 className="resourceTitle">{this.props.title}</h3>
+        <embed className="pdf-document" src={this.props.src} />
+        {/* <div className="caption">
+          {this.props.clickedImageName}
+        </div> */}
+        <div className="link-container">
+          <Breakpoint tabletLandscape down>
+            <a href={this.props.src} id="download-pdf-button" download>
+              View full PDF
+            </a>
+          </Breakpoint>
+          <Breakpoint xlarge up>
+            <a href={this.props.src} id="download-pdf-button" download>
+              Download
+            </a>
+          </Breakpoint>
+        </div>
       </div>
-      <h3 className="resourceTitle">
-        {props.title}
-      </h3>
-      <embed className="pdf-document" src={props.src} />
-      {/* <div className="caption">
-        {props.clickedImageName}
-      </div> */}
-      <div className="link-container">
-        <Breakpoint small down>
-          <a href={props.src} id="download-pdf-button" download>View full PDF</a>
-        </Breakpoint>
-        <Breakpoint medium up>
-          <a href={props.src} id="download-pdf-button" download>Download</a>
-        </Breakpoint>
-      </div>
-    </div>
-  );
+    );
+  }
 }

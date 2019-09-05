@@ -2,12 +2,8 @@ import React from "react";
 import { Breakpoint } from "react-socks";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
 import Headshot from "../Utils/Headshot";
-import phone from "../../../img/phone-navy.png";
-import email from "../../../img/email.png";
-import linkedin from "../../../img/linkedin.png";
-import facebook from "../../../img/facebook.png";
-import "./AboutProfessional.css";
 import ContactInfo from "../ContactInfo/ContactInfo";
+import "./AboutProfessional.css";
 
 export default function AboutProfessional() {
   return (

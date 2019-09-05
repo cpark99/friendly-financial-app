@@ -262,7 +262,7 @@ export default class LifeInsuranceCalc extends Component {
                   id="life-name-one"
                   className="registration-control name-input"
                   placeholder={this.context.user ? this.context.user.name : "Jane Doe"}
-                  value={this.context.user ? this.context.user.name : null}
+                  value={this.context.user ? this.context.user.name : undefined}
                   required
                   onChange={e => {
                     this.updateName(e.target.value);
@@ -447,6 +447,7 @@ export default class LifeInsuranceCalc extends Component {
           <div id="life-insurance-modal" className="flex-column-center">
             <div
               id="life-calc-close-button"
+              className="close-button"
               onClick={e => {
                 this.handleClose(e);
               }}

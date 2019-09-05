@@ -103,7 +103,7 @@ export default class Retirement extends Component {
               future or immediate lifetime income annuities (fixed income
               annuities) that can help you turn savings into an income stream
               that will last a lifetime. With a registered representative, we
-              can offer mutual <span className="italic">funds</span>
+              can offer <span className="italic">mutual funds</span>
               <Tooltip
                 message={
                   "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
