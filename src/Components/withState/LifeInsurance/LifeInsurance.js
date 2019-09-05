@@ -25,6 +25,7 @@ export default class LifeInsurance extends Component {
     });
     document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
+    document.body.style.width = "100%";
   };
 
   handleClose = e => {
