@@ -30,9 +30,8 @@
   margin-bottom: 0;
 }
 
-#college-planning-list-header {
-  margin: 10px 0;
-  color: black;
+#helpful-links-container h3 {
+  margin-bottom: 30px;
 }
 
 .educational-resource {
@@ -55,11 +54,7 @@
 }
 
 .list-of-educational-links a {
-  font-size: 16px;
-}
-
-.educational-resource-container {
-  border: 2px solid rgb(0, 67, 121);
+  font-size: 15px;
 }
 
 .flex-responsive-column-row {
@@ -70,9 +65,20 @@
 }
 
 @media (orientation: landscape) {
-  #educational-resources-container {
+  #helpful-links-container {
+    justify-content: flex-start;
+  }
+
+  .flex-responsive-column-row {
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .flex-responsive-column-row div {
+    width: 45%;
+    height: 310px;
+    justify-content: space-between;
   }
 }
 
@@ -86,6 +92,12 @@
   }
 
   .educational-resource {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 667px) {
+  .list-of-educational-links a {
     font-size: 16px;
   }
 }

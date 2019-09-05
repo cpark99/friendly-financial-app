@@ -491,7 +491,7 @@ export default class LifeInsuranceCalc extends Component {
               </button>
             )}
             {this.state.amountTwo && (
-              <p className="informative-text">
+              <p className="for-questions-text">
                 *Results will save for only "Person 1".
               </p>
             )}

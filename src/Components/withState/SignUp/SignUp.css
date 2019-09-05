@@ -71,3 +71,8 @@ label {
   height: 30px;
   min-width: 70px;
 }
+
+.information-text {
+  font-size: 12px;
+  width: 93%;
+}
