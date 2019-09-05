@@ -7,7 +7,7 @@ export default function ForQuestions() {
     <div className="for-questions-text">
       <p>
         Any questions or concerns? Contact a{" "}
-        <NavLink to="/about">professional</NavLink>.
+        <NavLink to="/contact">professional</NavLink>.
       </p>
     </div>
   );
