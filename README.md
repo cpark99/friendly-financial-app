@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Friendly Financial
 
-## Available Scripts
+### Live:
+[Link](https://friendlyfinancial-app.now.sh/)
+___
 
-In the project directory, you can run:
+### Summary:
+Friendly Financial is a modern way for users to get started on securing their finances. This app provides users with free financial tools and educational resources, covering various topics like life insurance, retirement, and college planning, while directly connecting those who are interested to a certified financial services professional. While utilizing a responsive, mobile-first design, users can both learn about and calculate their own financial goals, while being introduced to a professional that they can trust and work with directly.
+___
 
-### `npm start`
+### Motivation:
+A surpringly large number of people do not have any financial security, let alone know where to start. On the other hand, financial serives professionals struggle with generating "quality" leads, as most of them come from face-to-face interactions, as well as over the phone. Friendly Financial aims to connect both parties, online, by providing free educational material and financial tools, while allowing users to connect directly with a certified financial services professional, by scheduling a free consultation or registering for an account.
+___
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technologies Used:
+* JavaScript
+* React
+* Node.js
+* Express.js
+* PostgreSQL
+* CSS3
+* HTML5
+___
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### API Documentation:
 
-### `npm test`
+  * Base URL
+    *https://lit-plateau-20514.herokuapp.com/api*
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Login
+___
+Returns authentication token and corresponding user_id for valid requests
+  * URL
+    */auth/login*
 
-### `npm run build`
+  * Method
+    POST
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * URL Params
+    ##### Required:
+    email=[string]
+    password=[string]
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  * Data Params
+    {
+      "email": "email",
+      "password": "password"
+    }
 
-### `npm run eject`
+  * Success Response:
+    * **Code:** 200
+      **Content:** { 
+                      authToken: $gdskfglkslj445tjo4t, 
+                      payload: { user_id: 1} 
+                   }
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  * Error Response:
+    * **Code:** 400 BAD REQUEST
+      **Content:** { error: `Missing '${key}' in request body` }
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+      OR
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    * **Code:** 400 BAD REQUEST
+      **Content:**    { error: 'Incorrect email or password' }
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  * Sample Call:
+      fetch(`${config.API_ENDPOINT}/auth/login`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(credentials)
+      }).then(res =>
+        !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+        );
+___
 
-## Learn More
+### Screenshots:
+##### Desktop:
+![Desktop Screenshot](https://raw.githubusercontent.com/cpark99/friendly-financial-app/master/src/img/screenshots/friendlyfinancial-desktop-screenshot.png)
+___
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+##### Tablet:
+![Tablet Screenshot](https://raw.githubusercontent.com/cpark99/friendly-financial-app/master/src/img/screenshots/friendlyfinancial-tablet-screenshot.png)
+___
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+##### Mobile:
+![Mobile Screenshot](https://raw.githubusercontent.com/cpark99/friendly-financial-app/master/src/img/screenshots/friendlyfinancial-mobile-screenshot.png)
+___
