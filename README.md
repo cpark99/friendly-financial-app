@@ -30,41 +30,41 @@ ___
 #### Login
 ___
 Returns authentication token and corresponding user_id for valid requests
-  * URL
+  * **URL**
     */auth/login*
 
-  * Method
-    POST
+  * **Method**
+    `POST`
 
-  * URL Params
+  * **URL Params**
     ##### Required:
-    email=[string]
-    password=[string]
+    `email=[string]`
+    `password=[string]`
 
 
-  * Data Params
-    {
-      "email": "email",
-      "password": "password"
-    }
+  * **Data Params**
+    `{`
+      `"email": "email",`
+      `"password": "password"`
+    `}`
 
-  * Success Response:
+  * **Success Response:**
     * **Code:** 200
-      **Content:** { 
-                      authToken: $gdskfglkslj445tjo4t, 
-                      payload: { user_id: 1} 
-                   }
+      **Content:** `{` 
+                      `authToken: $gdskfglkslj445tjo4t, `
+                      `payload: { user_id: 1} `
+                   `}`
 
-  * Error Response:
+  * **Error Response:**
     * **Code:** 400 BAD REQUEST
-      **Content:** { error: `Missing '${key}' in request body` }
+      **Content:** `{ error: "Missing '${key}' in request body" }`
 
       OR
 
     * **Code:** 400 BAD REQUEST
-      **Content:**    { error: 'Incorrect email or password' }
+      **Content:** `{ error: "Incorrect email or password" }`
 
-  * Sample Call:
+  * **Sample Call:**
       fetch(`${config.API_ENDPOINT}/auth/login`, {
         method: "POST",
         headers: {
@@ -73,7 +73,7 @@ Returns authentication token and corresponding user_id for valid requests
         body: JSON.stringify(credentials)
       }).then(res =>
         !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-        );
+        );```
 ___
 
 ### Screenshots:
