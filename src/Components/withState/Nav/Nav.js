@@ -2,9 +2,12 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Breakpoint } from "react-socks";
 import TokenService from "../../../services/token-service";
+import UserContext, { nullUser } from "../../../FriendlyFinancialContext";
 import "./Nav.css";
 
 export default class Nav extends Component {
+  static contextType = UserContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -32,6 +35,7 @@ export default class Nav extends Component {
 
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
+    this.context.user = nullUser;
     this.closeNavMenu();
   };
 
