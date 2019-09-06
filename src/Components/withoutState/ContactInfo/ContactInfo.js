@@ -43,7 +43,7 @@ export default function ContactInfo(props) {
               className="linkedin-icon contact-icon"
               alt="navy linkedin icon"
             />
-            nickparknyl
+            NickParkNYL
           </a>
         </p>
         <p>
