@@ -12,6 +12,10 @@ ___
 A surpringly large number of people do not have any financial security, let alone know where to start. On the other hand, financial serives professionals struggle with generating "quality" leads, as most of them come from face-to-face interactions, as well as over the phone. Friendly Financial aims to connect both parties, online, by providing free educational material and financial tools, while allowing users to connect directly with a certified financial services professional, by scheduling a free consultation or registering for an account.
 ___
 
+### API Documentation:
+[Link](https://github.com/cpark99/friendly-financial-server/blob/master/README.md)
+___
+
 ### Technologies Used:
 * JavaScript
 * React
