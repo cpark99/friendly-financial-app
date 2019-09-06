@@ -9,8 +9,6 @@ import UserContext from "../../../FriendlyFinancialContext";
 import "./LifeInsuranceCalc.css";
 
 export default class LifeInsuranceCalc extends Component {
-  static contextType = UserContext;
-
   state = {
     name: {
       value: "",
@@ -64,6 +62,8 @@ export default class LifeInsuranceCalc extends Component {
     },
     showResults: false
   };
+
+  static contextType = UserContext;
 
   updateName(name) {
     this.setState({ name: { value: name, touched: true } });
@@ -186,10 +186,11 @@ export default class LifeInsuranceCalc extends Component {
     const replace = this.state.replace.value;
     const protect = this.state.protect.value;
     const amount = ((income * replace) / 100) * protect;
-    this.setState({ amount: amount, showResults: true });
     const incomeTwo = this.state.incomeTwo.value;
     const replaceTwo = this.state.replaceTwo.value;
     const protectTwo = this.state.protectTwo.value;
+
+    this.setState({ amount: amount, showResults: true });
     if (incomeTwo !== "" && replaceTwo !== "") {
       if (protectTwo !== "") {
         const amountTwo = ((incomeTwo * replaceTwo) / 100) * protectTwo;
@@ -214,10 +215,6 @@ export default class LifeInsuranceCalc extends Component {
     this.setState({ showResults: false });
     document.body.style.overflow = "unset";
     document.body.style.position = "initial";
-  };
-
-  handleFormReset = () => {
-    this.props.history.go("/life-insurance-calc");
   };
 
   handleSaveButtonClick = () => {
@@ -266,10 +263,7 @@ export default class LifeInsuranceCalc extends Component {
                   name="life-name-one"
                   id="life-name-one"
                   className="registration-control name-input"
-                  placeholder={
-                    this.context.user ? this.context.user.name : "Jane Doe"
-                  }
-                  value={this.context.user ? this.context.user.name : undefined}
+                  placeholder="Jane Doe"
                   required
                   onChange={e => {
                     this.updateName(e.target.value);
@@ -484,7 +478,6 @@ export default class LifeInsuranceCalc extends Component {
                 name={this.state.name}
               />
             )}
-            {/* <button id="reset-life-calc-results-button" onClick={e => {this.handleFormReset();}}>Reset</button> */}
             {TokenService.hasAuthToken() && (
               <button
                 id="save-life-calc-results-button"
