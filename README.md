@@ -38,25 +38,30 @@ Returns authentication token and corresponding user_id for valid requests
 
   * **URL Params**
     ##### Required:
-    `email=[string]`
+    `email=[string]` <br />
     `password=[string]`
 
 
   * **Data Params**
-    `{`
-      `"email": "email",`
-      `"password": "password"`
-    `}`
+    ```javascript
+    {
+      "email": "email",
+      "password": "password"
+    }
+    ```
 
   * **Success Response:**
-    * **Code:** 200
-      **Content:** `{` 
-                      `authToken: $gdskfglkslj445tjo4t, `
-                      `payload: { user_id: 1} `
-                   `}`
+    * **Code:** 200 <br />
+      **Content:** 
+      ```javascript
+      {
+        "authToken": "$gdskfglkslj445tjo4t", 
+        "payload": { user_id: 1} 
+      }
+      ```
 
   * **Error Response:**
-    * **Code:** 400 BAD REQUEST
+    * **Code:** 400 BAD REQUEST <br />
       **Content:** `{ error: "Missing '${key}' in request body" }`
 
       OR
@@ -65,6 +70,7 @@ Returns authentication token and corresponding user_id for valid requests
       **Content:** `{ error: "Incorrect email or password" }`
 
   * **Sample Call:**
+    ```javascript
       fetch(`${config.API_ENDPOINT}/auth/login`, {
         method: "POST",
         headers: {
@@ -73,8 +79,10 @@ Returns authentication token and corresponding user_id for valid requests
         body: JSON.stringify(credentials)
       }).then(res =>
         !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
-        );```
+        );
+    ```
 ___
+
 
 ### Screenshots:
 ##### Desktop:
