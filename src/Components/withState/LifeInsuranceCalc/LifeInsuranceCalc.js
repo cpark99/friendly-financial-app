@@ -196,7 +196,7 @@ export default class LifeInsuranceCalc extends Component {
         this.setState({ amountTwo: amountTwo });
       }
     }
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     document.body.style.position = "fixed";
     document.body.style.width = "100%";
   };
@@ -212,7 +212,7 @@ export default class LifeInsuranceCalc extends Component {
 
   handleClose = () => {
     this.setState({ showResults: false });
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
     document.body.style.position = "initial";
   };
 
@@ -220,21 +220,21 @@ export default class LifeInsuranceCalc extends Component {
     this.props.history.go("/life-insurance-calc");
   };
 
-  handleSaveButtonClick = () => { 
+  handleSaveButtonClick = () => {
     const user_id = this.context.user_id;
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
     document.body.style.position = "initial";
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
-    })
-      .then(() => {
-        this.props.history.push("/profile")
-      })
+    }).then(() => {
+      this.props.history.push("/profile");
+    });
   };
 
   componentWillUnmount() {
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
     document.body.style.position = "initial";
+    this.setState({ name: { value: "", touched: false } });
   }
 
   render() {
@@ -266,7 +266,9 @@ export default class LifeInsuranceCalc extends Component {
                   name="life-name-one"
                   id="life-name-one"
                   className="registration-control name-input"
-                  placeholder={this.context.user ? this.context.user.name : "Jane Doe"}
+                  placeholder={
+                    this.context.user ? this.context.user.name : "Jane Doe"
+                  }
                   value={this.context.user ? this.context.user.name : undefined}
                   required
                   onChange={e => {
@@ -442,7 +444,10 @@ export default class LifeInsuranceCalc extends Component {
               >
                 Go back
               </button>
-              <button type="submit" className="registration-button orange-button">
+              <button
+                type="submit"
+                className="registration-button orange-button"
+              >
                 Submit
               </button>
             </div>
@@ -483,7 +488,7 @@ export default class LifeInsuranceCalc extends Component {
             {TokenService.hasAuthToken() && (
               <button
                 id="save-life-calc-results-button"
-                className="orange-button" 
+                className="orange-button"
                 onClick={e => {
                   this.handleSaveButtonClick();
                 }}
