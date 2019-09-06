@@ -74,7 +74,11 @@ export default class LifePlans extends Component {
             src={this.state.resourceSrc}
           />
         )}
-        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
+        <NavButton
+          destination={"/educational-resources"}
+          id={"back-to-educational-resources-button"}
+          text={"Go back"}
+        />
         <ForQuestions />
       </section>
     );

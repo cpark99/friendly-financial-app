@@ -3,11 +3,9 @@ import "./Tooltip.css";
 
 export default function Tooltip(props) {
   return (
-    // <Breakpoint xlarge up>
-      <span className="Tooltip">
-        <span className="Tooltip-content">{props.children}</span>
-        <span className="Tooltip-message">{props.message}</span>
-      </span>
-    // </Breakpoint>
+    <span className="Tooltip">
+      <span className="Tooltip-content">{props.children}</span>
+      <span className="Tooltip-message">{props.message}</span>
+    </span>
   );
 }

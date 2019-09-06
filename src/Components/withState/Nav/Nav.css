@@ -112,10 +112,6 @@ nav {
   display: block;
 }
 
-/* .active {
-  color: lightblue;
-} */
-
 @media (min-width: 1200px) {
   nav {
     height: 41px;

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./FinancialTools.css";
 import ScrollToTopOnMount from "../ScrollToTopOnMount/ScrollToTopOnMount";
+import "./FinancialTools.css";
 
 export default function FinancialTools() {
   return (

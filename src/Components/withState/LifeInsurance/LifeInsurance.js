@@ -49,43 +49,53 @@ export default class LifeInsurance extends Component {
 
   render() {
     const resources = [
-      { src: lifeFullOfOptions, title: "Life is Full of Options Brochure", key: 1 },
+      {
+        src: lifeFullOfOptions,
+        title: "Life is Full of Options Brochure",
+        key: 1
+      },
       { src: whichTermisRight, title: "Which Term is Right For You", key: 2 },
       { src: wholeLife, title: "Whole Life Brochure", key: 3 },
       { src: wholeLifeDecisionTree, title: "Whole Life Decision Tree", key: 4 },
       { src: termPostcard, title: "Term Postcard", key: 5 }
     ];
     return (
-      <section id="life-insurance-section" className="content flex-column-center">
+      <section
+        id="life-insurance-section"
+        className="content flex-column-center"
+      >
         <ScrollToTopOnMount />
         <h2>Life Insurance</h2>
-        <div id="life-insurance-content" className="resource-container text-container">
-        <p
-                id="life-insurance-resources-text"
-                className="resource-description-text"
-              >
-                Our full array of products includes whole life, term,{" "}
-                <span className="italic">universal</span>
-                <Tooltip
-                  message={
-                    "Issued by New York Life Insurance and Annuity Corporation, a wholly owned subsisiary of New York Life."
-                  }
-                >
-                  <sup>1</sup>
-                </Tooltip>
-                , and <span className="italic">variable</span>
-                <Tooltip
-                  message={
-                    "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
-                  }
-                >
-                  <sup>2</sup>
-                </Tooltip>{" "}
-                universal life. With a variety of products and riders to choose
-                from, we can recommend a{" "}
-                <span className="italic">customized solution</span> for almost{" "}
-                any need you may have.
-              </p>
+        <div
+          id="life-insurance-content"
+          className="resource-container text-container"
+        >
+          <p
+            id="life-insurance-resources-text"
+            className="resource-description-text"
+          >
+            Our full array of products includes whole life, term,{" "}
+            <span className="italic">universal</span>
+            <Tooltip
+              message={
+                "Issued by New York Life Insurance and Annuity Corporation, a wholly owned subsisiary of New York Life."
+              }
+            >
+              <sup>1</sup>
+            </Tooltip>
+            , and <span className="italic">variable</span>
+            <Tooltip
+              message={
+                "Offered through NYLIFESecurities LLC (member FINRA/SIPC), a Licensed Insurance Agency."
+              }
+            >
+              <sup>2</sup>
+            </Tooltip>{" "}
+            universal life. With a variety of products and riders to choose
+            from, we can recommend a{" "}
+            <span className="italic">customized solution</span> for almost any
+            need you may have.
+          </p>
           <ul className="list-of-educational-resources">
             {resources && this.renderResources(resources)}
           </ul>
@@ -99,7 +109,11 @@ export default class LifeInsurance extends Component {
             src={this.state.resourceSrc}
           />
         )}
-        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
+        <NavButton
+          destination={"/educational-resources"}
+          id={"back-to-educational-resources-button"}
+          text={"Go back"}
+        />
         <ForQuestions />
       </section>
     );

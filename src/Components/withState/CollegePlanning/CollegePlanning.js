@@ -47,13 +47,20 @@ export default class CollegePlanning extends Component {
 
   render() {
     const resources = [
-      { src: wellRoundedCollege, title: "Well Rounded College Funding", key: 1 },
+      {
+        src: wellRoundedCollege,
+        title: "Well Rounded College Funding",
+        key: 1
+      },
       { src: collegeCosts, title: "College Costs", key: 2 },
-      { src: collegePlanUCLA, title: "UCLA Sample Planning Station", key: 3},
+      { src: collegePlanUCLA, title: "UCLA Sample Planning Station", key: 3 },
       { src: collegePlanUSC, title: "USC Sample Planning Station", key: 4 }
     ];
     return (
-      <section id="college-planning-section" className="content flex-column-center">
+      <section
+        id="college-planning-section"
+        className="content flex-column-center"
+      >
         <ScrollToTopOnMount />
         <h2>College Planning</h2>
         <div id="college-planning-content">
@@ -70,7 +77,11 @@ export default class CollegePlanning extends Component {
             src={this.state.resourceSrc}
           />
         )}
-        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
+        <NavButton
+          destination={"/educational-resources"}
+          id={"back-to-educational-resources-button"}
+          text={"Go back"}
+        />
         <ForQuestions />
       </section>
     );

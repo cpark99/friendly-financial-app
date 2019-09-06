@@ -16,22 +16,22 @@ export default class Nav extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleOutsideClick, false);
-    document.addEventListener('touchstart', this.handleOutsideClick, false);
+    document.addEventListener("mousedown", this.handleOutsideClick, false);
+    document.addEventListener("touchstart", this.handleOutsideClick, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleOutsideClick, false);
-    document.removeEventListener('touchstart', this.handleOutsideClick, false);
+    document.removeEventListener("mousedown", this.handleOutsideClick, false);
+    document.removeEventListener("touchstart", this.handleOutsideClick, false);
   }
 
-  handleOutsideClick = (e) => {
+  handleOutsideClick = e => {
     if (this.node.contains(e.target)) {
       return;
     }
     // outside
     this.closeNavMenu();
-  }
+  };
 
   handleLogoutClick = () => {
     TokenService.clearAuthToken();
@@ -82,7 +82,7 @@ export default class Nav extends Component {
     return (
       <div id="nav-container">
         <nav role="navigation">
-          <div id="nav-bar-container" ref={node => this.node = node}>
+          <div id="nav-bar-container" ref={node => (this.node = node)}>
             <Breakpoint tabletLandscape down>
               {TokenService.hasAuthToken() ? (
                 <NavLink

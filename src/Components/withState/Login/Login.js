@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import TokenService from "../../../services/token-service";
 import AuthApiService from "../../../services/auth-api-service";
-import "./Login.css";
 import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
 import UserContext from "../../../FriendlyFinancialContext";
+import "./Login.css";
 
 export default class Login extends Component {
   static defaultProps = {
@@ -21,7 +21,7 @@ export default class Login extends Component {
   handleLoginSuccess = payload => {
     const { location, history } = this.props;
     const destination = (location.state || {}).from || "/profile";
-    this.context.setUserId(payload.user_id)
+    this.context.setUserId(payload.user_id);
     history.push(destination);
   };
 
@@ -45,19 +45,6 @@ export default class Login extends Component {
       });
   };
 
-  // handleSubmitBasicAuth = ev => {
-  //   ev.preventDefault();
-  //   const { email, password } = ev.target;
-
-  //   TokenService.saveAuthToken(
-  //     TokenService.makeBasicAuthToken(email.value, password.value)
-  //   );
-
-  //   email.value = "";
-  //   password.value = "";
-  //   this.handleLoginSuccess();
-  // };
-
   render() {
     const { error } = this.state;
     return (
@@ -80,7 +67,9 @@ export default class Login extends Component {
             <label htmlFor="password">Password:</label>
             <input type="password" name="password" id="password" required />
           </div>
-          <button id="login-form-button" className="orange-button">Login</button>
+          <button id="login-form-button" className="orange-button">
+            Login
+          </button>
         </form>
         <p>
           New user? <NavLink to={"/signup"}>Sign up</NavLink>

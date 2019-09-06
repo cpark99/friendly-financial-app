@@ -19,10 +19,6 @@ export default class Profile extends Component {
       .catch(this.context.setError);
   }
 
-  componentWillUnmount() {
-    // this.context.clearUser();
-  }
-
   render() {
     const { error, user = nullUser } = this.context;
     let content;

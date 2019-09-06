@@ -54,7 +54,10 @@ export default class AboutNewYorkLife extends Component {
       { src: mutualityMeans, title: "Mutuality Means", key: 4 }
     ];
     return (
-      <section id="about-new-york-life-section" className="content flex-column-center">
+      <section
+        id="about-new-york-life-section"
+        className="content flex-column-center"
+      >
         <ScrollToTopOnMount />
         <h2>About New York Life</h2>
         <div id="about-new-york-life-content">
@@ -71,7 +74,11 @@ export default class AboutNewYorkLife extends Component {
             src={this.state.resourceSrc}
           />
         )}
-        <NavButton destination={"/educational-resources"} id={"back-to-educational-resources-button"} text={"Go back"} />
+        <NavButton
+          destination={"/educational-resources"}
+          id={"back-to-educational-resources-button"}
+          text={"Go back"}
+        />
         <ForQuestions />
       </section>
     );

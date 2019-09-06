@@ -26,6 +26,12 @@
   padding-right: 15px;
 }
 
+#schedule-call-container button, 
+#schedule-meeting-container button {
+  margin-top: 20px;
+  width: 200px;
+}
+
 .button-container {
   display: flex;
   flex-direction: column;
@@ -35,12 +41,6 @@
   padding: 0 10px 20px 10px;
   width: 90%;
   border: 2px solid rgb(0, 67, 121);
-}
-
-#schedule-call-container button, 
-#schedule-meeting-container button {
-  margin-top: 20px;
-  width: 200px;
 }
 
 .gray-button {
