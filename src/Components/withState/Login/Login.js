@@ -7,6 +7,8 @@ import UserContext from "../../../FriendlyFinancialContext";
 import "./Login.css";
 
 export default class Login extends Component {
+  state = { error: null };
+
   static defaultProps = {
     location: {},
     history: {
@@ -15,8 +17,6 @@ export default class Login extends Component {
   };
 
   static contextType = UserContext;
-
-  state = { error: null };
 
   handleLoginSuccess = payload => {
     const { location, history } = this.props;

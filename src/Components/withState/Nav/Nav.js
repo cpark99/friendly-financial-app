@@ -6,14 +6,14 @@ import UserContext, { nullUser } from "../../../FriendlyFinancialContext";
 import "./Nav.css";
 
 export default class Nav extends Component {
-  static contextType = UserContext;
-
   constructor(props) {
     super(props);
     this.state = {
       showNavMenu: false
     };
   }
+
+  static contextType = UserContext;
 
   componentDidMount() {
     document.addEventListener("mousedown", this.handleOutsideClick, false);

@@ -40,8 +40,6 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    // document.addEventListener("touchstart", function(){}, true);
-
     if (TokenService.hasAuthToken()) {
       AuthApiService.getUserId().then(res => {
         UserApiService.getUser(res.id)

@@ -174,12 +174,6 @@ export default class EducationalResources extends Component {
                     https://www.newyorklife.com/
                   </a>
                 </li>
-                {/* <li>
-                <a href="/">other</a>
-              </li>
-              <li>
-                <a href="/">Links</a>
-              </li> */}
               </ul>
             </div>
           </div>

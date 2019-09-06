@@ -7,9 +7,9 @@ import UserContext from "../../../FriendlyFinancialContext";
 import "./SignUp.css";
 
 export default class SignUp extends Component {
-  static contextType = UserContext;
-
   state = { error: null };
+
+  static contextType = UserContext;
 
   handleLoginSuccess = payload => {
     const { history } = this.props;
