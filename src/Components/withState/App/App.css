@@ -63,14 +63,28 @@ p {
 
 @supports (-ms-ime-align: auto) {
   /* Microsoft EdgeV13&14 CSS styles go here */
-  .edge1314 {
-    background: green;
+  #nav-dropdown-menu-container {
+    width: inherit; /* adjust for no max-content */
+  }
+
+  .flex-responsive-column-row, 
+  .form-buttons,
+  .flex-center,
+  .flex-responsive-mobile-desktop {
+    justify-content: space-around; /* adjust for no space-evenly */
   }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* IE10 & IE11 CSS styles go here */
-  .ie1011 {
-    background: green;
+  #nav-dropdown-menu-container {
+    width: inherit; /* adjust for no max-content */
+  }
+
+  .flex-responsive-column-row, 
+  .form-buttons,
+  .flex-center,
+  .flex-responsive-mobile-desktop {
+    justify-content: space-around; /* adjust for no space-evenly */
   }
 }
