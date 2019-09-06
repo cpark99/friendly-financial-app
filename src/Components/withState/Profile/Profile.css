@@ -1,0 +1,40 @@
+#profile-page-container {
+  width: 100%;
+}
+
+#profile-page-container p {
+  margin-left: 10px;
+}
+
+#basic-profile-container {
+  padding-top: 45px;
+}
+
+#profile-preferences-content {
+  padding-right: 100px;
+}
+
+.profile-info-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.profile-section-header {
+  padding-top: 30px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: initial;
+}
+
+.schedule-meeting-call-calendar-container {
+  margin-top: 20px;
+}
+
+.profile-button {
+  margin-top: 30px;
+  width: 200px;
+}

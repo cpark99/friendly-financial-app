@@ -1,0 +1,78 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 280px;
+}
+
+label {
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 16px;
+}
+
+#sign-up-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sign-up-section-text {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+#sign-up-form-button {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.age-verification-field {
+  margin-top: 5px;
+}
+
+.form-field {
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+.form-field input {
+  border: 1px solid lightgrey;
+}
+
+.form-checkbox {
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 11px;
+  margin-left: 88px;
+}
+
+.privacy-notice {
+  font-size: 10px;
+  margin-top: 0;
+}
+
+.contact-notice {
+  margin-top: 20px;
+}
+
+.checkbox-text {
+  margin: 0 0 0 5px;
+}
+
+.home-page-only {
+  padding-top: 0;
+}
+
+.demo-login-button {
+  margin: 0 0 20px 0;
+  height: 30px;
+  min-width: 70px;
+}
+
+.information-text {
+  font-size: 12px;
+  width: 93%;
+}

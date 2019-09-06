@@ -1,0 +1,129 @@
+#educational-resources-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#educational-resources-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+}
+
+#educational-resources-container ul {
+  margin-top: 0;
+}
+
+#educational-resources-container li {
+  padding-bottom: 5px;
+  color: rgb(97, 97, 97);
+  max-width: 90%;
+}
+
+#educational-resources-intro-text p {
+  margin-top: 5px;
+}
+
+#educational-resources-intro-text p:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#helpful-links-container h3 {
+  margin-bottom: 30px;
+}
+
+.educational-resource {
+  text-decoration: underline;
+  color: rgb(2, 97, 174);
+  font-size: 16px;
+  margin: 0;
+}
+
+.educational-resource:hover {
+  color: rgb(62, 185, 226);
+}
+
+.educational-resource-list-header {
+  margin-bottom: 10px;
+}
+
+.list-of-educational-links {
+  padding-left: 5px;
+}
+
+.list-of-educational-links a {
+  font-size: 15px;
+}
+
+.flex-responsive-column-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media (orientation: landscape) {
+  #helpful-links-container {
+    justify-content: flex-start;
+  }
+
+  .flex-responsive-column-row {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  .flex-responsive-column-row div {
+    width: 45%;
+    height: 310px;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 414px) {
+  #educational-resources-container h3 {
+    font-size: 20px;
+  }
+
+  #educational-resources-container p {
+    font-size: 16px;
+  }
+
+  .educational-resource {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 667px) {
+  .list-of-educational-links a {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  #educational-resources-container {
+    margin-top: 20px;
+  }
+
+  #educational-resources-container h3 {
+    font-size: 22px;
+  } 
+}
+
+@media (min-width: 1000px) {
+  .flex-responsive-column-row div {
+    height: 260px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #educational-resources-container h3 {
+    font-size: 24px;
+  }
+
+  .flex-responsive-column-row div {
+    height: 240px;
+  }
+}

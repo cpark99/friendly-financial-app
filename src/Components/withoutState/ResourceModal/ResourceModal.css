@@ -1,0 +1,161 @@
+.modal-frame {
+  width: 95vw;
+  max-height: 91vh;
+  background: rgb(233, 231, 231);
+  border: 1px solid black;
+  position: fixed;
+  top: 6vh;
+  left: 3vw;
+  z-index: 3;
+  padding: 30px 15px 15px;
+  overflow-y: scroll;
+}
+
+.close-button {
+  z-index: 4;
+  position: fixed;
+  right: 3vw;
+  top: 6vh;
+  color: rgb(94, 92, 92);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  color: rgb(62, 185, 226);
+}
+
+.close-button-text {
+  margin: 0;
+}
+
+.close-button-symbol {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.caption {
+  margin: 10px 10px 0 10px;
+}
+
+.pdf-document-container {
+  background: white;
+}
+
+.pdf-document {
+  width: 90%;
+  height: 380px;
+  margin-bottom: 5px;
+}
+
+.resourceTitle {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.link-container {
+  text-align: center;
+}
+
+@media (min-width: 375px) {
+  .pdf-document {
+    height: 420px;
+  }
+}
+
+@media (min-width: 375px) 
+and (height: 800px) {
+  .pdf-document {
+    height: 450px;
+  }
+}
+
+@media (min-width: 375px) 
+and (orientation: landscape) {
+  .modal-frame {
+    max-height: 84vh;
+    top: 12vh;
+  }
+
+  .close-button {
+    top: 11vh;
+  }
+
+  .pdf-document {
+    height: 150px;
+  }
+}
+
+@media (min-width: 414px) {
+  .pdf-document {
+    height: 450px;
+  }
+}
+
+@media (min-width: 568px) 
+and (orientation: landscape) {
+  .pdf-document {
+    height: 140px;
+    width: 130px;
+  }
+}
+
+  @media (min-width: 667px) 
+  and (orientation: landscape) {
+  .pdf-document {
+    height: 185px;
+    width: 150px;
+  }
+}
+
+@media (min-width: 768px) 
+and (orientation: portrait) {
+  .pdf-document {
+    height: 710px;
+  }
+
+  .close-button {
+    top: 6vh;
+  }
+}
+
+@media (min-width: 1000px) 
+and (orientation: landscape) {
+  .modal-frame {
+    top: 9vh;
+    left: 5vw;
+    width: 90vw;
+  }
+
+  .close-button {
+    top: 9vh;
+    right: 5vw;
+  }
+
+  .pdf-document {
+    height: 520px;
+    width: 440px;
+  }
+}
+
+@media (min-width: 1200px) 
+and (orientation: landscape) {
+  .modal-frame {
+    width: 700px;
+    left: calc(50vw - 350px);
+  }
+
+  .pdf-document {
+    height: 530px;
+  }
+
+  .close-button {
+    left: calc(50vw + 270px);
+  }
+}

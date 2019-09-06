@@ -1,0 +1,45 @@
+#about-financial-services-professional {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-financial-services-professional h5 {
+  margin-top: 20px;
+}
+
+#about-contact-info-container {
+  margin-left: 10px;
+}
+
+#contact-info-title {
+  margin-right: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  #about-contact-info-container {
+    margin-top: 30px;
+    position: relative;
+    bottom: 210px;
+    right: 325px;
+  }
+
+  .flex-responsive-tablet-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about-contact-info-container {
+    margin-left: 50px;
+    right: 430px;
+    bottom: 200px;
+  }
+}

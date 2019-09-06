@@ -5,12 +5,13 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "react-socks": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "CI=true react-scripts test --colors --passWithNoTests",
+    "prebuild": "CI=true react-scripts test --colors",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -35,6 +36,6 @@
   },
   "devDependencies": {
     "jwt-decode": "^2.2.0",
-    "react-router-dom": "^5.0.1"
+    "react-test-renderer": "^16.9.0"
   }
 }
