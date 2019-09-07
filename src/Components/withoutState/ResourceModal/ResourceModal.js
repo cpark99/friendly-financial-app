@@ -21,7 +21,9 @@ export default class ResourceModal extends Component {
           <span className="close-button-symbol">&times;</span>
         </div>
         <h3 className="resourceTitle">{this.props.title}</h3>
-        <embed className="pdf-document" src={this.props.src} />
+        <div className="pdf-document-container">
+          <embed className="pdf-document" src={this.props.src} />
+        </div>
         <div className="link-container">
           <Breakpoint tabletLandscape down>
             <a href={this.props.src} id="download-pdf-button" download>
