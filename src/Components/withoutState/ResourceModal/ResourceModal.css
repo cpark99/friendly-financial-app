@@ -45,11 +45,12 @@
 
 .pdf-document-container {
   background: white;
+  margin-bottom: 10px;
 }
 
 .pdf-document {
-  width: 90%;
-  height: 380px;
+  width: 88%;
+  height: 360px;
   margin-bottom: 5px;
 }
 
@@ -65,14 +66,14 @@
 
 @media (min-width: 375px) {
   .pdf-document {
-    height: 420px;
+    height: 400px;
   }
 }
 
 @media (min-width: 375px) 
 and (height: 800px) {
   .pdf-document {
-    height: 450px;
+    height: 430px;
   }
 }
 
@@ -94,7 +95,7 @@ and (orientation: landscape) {
 
 @media (min-width: 414px) {
   .pdf-document {
-    height: 450px;
+    height: 430px;
   }
 }
 
@@ -117,7 +118,7 @@ and (orientation: landscape) {
 @media (min-width: 768px) 
 and (orientation: portrait) {
   .pdf-document {
-    height: 710px;
+    height: 690px;
   }
 
   .close-button {
