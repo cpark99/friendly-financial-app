@@ -10,7 +10,7 @@ it('renders without crashing', () => {
 
   const props = {
     location: {
-      pathname: "/"
+      pathname: '/'
     }
   };
   const div = document.createElement('div');

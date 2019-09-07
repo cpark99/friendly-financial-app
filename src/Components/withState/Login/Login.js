@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import TokenService from "../../../services/token-service";
-import AuthApiService from "../../../services/auth-api-service";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import UserContext from "../../../FriendlyFinancialContext";
-import "./Login.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import TokenService from '../../../services/token-service';
+import AuthApiService from '../../../services/auth-api-service';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import UserContext from '../../../FriendlyFinancialContext';
+import './Login.css';
 
 export default class Login extends Component {
   state = { error: null };
@@ -20,7 +20,7 @@ export default class Login extends Component {
 
   handleLoginSuccess = payload => {
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || "/profile";
+    const destination = (location.state || {}).from || '/profile';
     this.context.setUserId(payload.user_id);
     history.push(destination);
   };
@@ -35,8 +35,8 @@ export default class Login extends Component {
       password: password.value
     })
       .then(res => {
-        email.value = "";
-        password.value = "";
+        email.value = '';
+        password.value = '';
         TokenService.saveAuthToken(res.authToken);
         this.handleLoginSuccess(res.payload);
       })
@@ -55,13 +55,7 @@ export default class Login extends Component {
         <form onSubmit={this.handleSubmitJwtAuth}>
           <div className="form-field">
             <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="jdoe@gmail.com"
-              required
-            />
+            <input type="email" name="email" id="email" placeholder="jdoe@gmail.com" required />
           </div>
           <div className="form-field">
             <label htmlFor="password">Password:</label>
@@ -72,7 +66,7 @@ export default class Login extends Component {
           </button>
         </form>
         <p>
-          New user? <NavLink to={"/signup"}>Sign up</NavLink>
+          New user? <NavLink to={'/signup'}>Sign up</NavLink>
         </p>
       </section>
     );

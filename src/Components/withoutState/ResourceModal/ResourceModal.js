@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Breakpoint } from "react-socks";
-import "./ResourceModal.css";
+import React, { Component } from 'react';
+import { Breakpoint } from 'react-socks';
+import './ResourceModal.css';
 
 export default class ResourceModal extends Component {
   componentWillUnmount() {
-    document.body.style.overflow = "unset";
-    document.body.style.position = "initial";
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'initial';
   }
 
   render() {

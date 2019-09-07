@@ -7,7 +7,7 @@ window.scrollTo = jest.fn();
 
 it('renders without crashing', () => {
   window.scrollTo.mockClear();
-  
+
   const div = document.createElement('div');
   ReactDOM.render(
     <BrowserRouter>

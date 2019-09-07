@@ -8,9 +8,6 @@ it('renders without crashing', () => {
   window.scrollTo.mockClear();
 
   const div = document.createElement('div');
-  ReactDOM.render(
-      <LifeInsuranceCalc />,
-    div
-  );
+  ReactDOM.render(<LifeInsuranceCalc />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

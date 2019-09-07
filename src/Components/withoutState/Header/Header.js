@@ -1,5 +1,5 @@
-import React from 'react'
-import './Header.css'
+import React from 'react';
+import './Header.css';
 
 export default function Header() {
   return (
@@ -7,5 +7,5 @@ export default function Header() {
       <h1>Nicholas S. Park, MBA</h1>
       <h5>Certified Financial Services Professional</h5>
     </header>
-  )
+  );
 }

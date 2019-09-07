@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import UserContext, { nullUser } from "../../../FriendlyFinancialContext";
-import UserApiService from "../../../services/user-api-service";
-import "./Profile.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import UserContext, { nullUser } from '../../../FriendlyFinancialContext';
+import UserApiService from '../../../services/user-api-service';
+import './Profile.css';
 
 export default class Profile extends Component {
   static defaultProps = {
@@ -39,36 +39,27 @@ export default class Profile extends Component {
           <div className="profile-content-container">
             <div id="profile-name-container" className="profile-info-container">
               <h5>Name:</h5>
-              <p>{user.name || "NA"}</p>
+              <p>{user.name || 'NA'}</p>
             </div>
-            <div
-              id="profile-email-container"
-              className="profile-info-container"
-            >
+            <div id="profile-email-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>{user.email || "NA"}</p>
+              <p>{user.email || 'NA'}</p>
             </div>
-            <div
-              id="profile-phone-container"
-              className="profile-info-container"
-            >
+            <div id="profile-phone-container" className="profile-info-container">
               <h5>Phone:</h5>
-              <p id="profile-phone-number">{user.phone || "NA"}</p>
+              <p id="profile-phone-number">{user.phone || 'NA'}</p>
             </div>
           </div>
         </section>
         <section className="profile-section">
           <h3 className="profile-section-header">Financial Goals</h3>
           <div className="profile-content-container">
-            <div
-              id="profile-life-insurance-container"
-              className="profile-info-container"
-            >
+            <div id="profile-life-insurance-container" className="profile-info-container">
               <h5>Life Insurance Coverage:</h5>
-              <p>${user.life_insurance_goal || "(not set)"}</p>
+              <p>${user.life_insurance_goal || '(not set)'}</p>
             </div>
           </div>
-          <NavLink to={"/life-insurance-calc"}>
+          <NavLink to={'/life-insurance-calc'}>
             <button className="life-insurance-calculator-button profile-button orange-button">
               Click to Calculate
             </button>
@@ -89,30 +80,18 @@ export default class Profile extends Component {
         </section>
         <section className="profile-section">
           <h3 className="profile-section-header">Preferences</h3>
-          <div
-            id="profile-preferences-content"
-            className="profile-content-container"
-          >
-            <div
-              id="profile-email-preference-container"
-              className="profile-info-container"
-            >
+          <div id="profile-preferences-content" className="profile-content-container">
+            <div id="profile-email-preference-container" className="profile-info-container">
               <h5>Email:</h5>
-              <p>{user.get_email === false ? "No" : "Yes"}</p>
+              <p>{user.get_email === false ? 'No' : 'Yes'}</p>
             </div>
-            <div
-              id="profile-phone-preference-container"
-              className="profile-info-container"
-            >
+            <div id="profile-phone-preference-container" className="profile-info-container">
               <h5>Call:</h5>
-              <p>{user.get_call === false ? "No" : "Yes"}</p>
+              <p>{user.get_call === false ? 'No' : 'Yes'}</p>
             </div>
-            <div
-              id="profile-newsletter-preference-container"
-              className="profile-info-container"
-            >
+            <div id="profile-newsletter-preference-container" className="profile-info-container">
               <h5>Newsletter:</h5>
-              <p>{user.get_newsletter === false ? "No" : "Yes"}</p>
+              <p>{user.get_newsletter === false ? 'No' : 'Yes'}</p>
             </div>
           </div>
         </section>

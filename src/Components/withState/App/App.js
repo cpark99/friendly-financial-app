@@ -1,35 +1,35 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import { setDefaultBreakpoints } from "react-socks";
-import Nav from "../Nav/Nav";
-import PrivateRoute from "../../withoutState/Utils/PrivateRoute";
-import PublicOnlyRoute from "../../withoutState/Utils/PublicOnlyRoute";
-import Main from "../Main/Main";
-import Footer from "../../withoutState/Footer/Footer";
-import Login from "../Login/Login";
-import LifeInsuranceCalc from "../LifeInsuranceCalc/LifeInsuranceCalc";
-import Profile from "../Profile/Profile";
-import UserContext from "../../../FriendlyFinancialContext";
-import SignUp from "../SignUp/SignUp";
-import EducationalResources from "../EducationalResources/EducationalResources";
-import FinancialTools from "../../withoutState/FinancialTools/FinancialTools";
-import ScheduleConsultation from "../../withoutState/ScheduleConsultation/ScheduleConsultation";
-import AboutProfessional from "../../withoutState/AboutProfessional/AboutProfessional";
-import Contact from "../../withoutState/Contact/Contact";
-import UserApiService from "../../../services/user-api-service";
-import TokenService from "../../../services/token-service";
-import AuthApiService from "../../../services/auth-api-service";
-import AboutNewYorkLife from "../AboutNewYorkLife/AboutNewYorkLife";
-import LifePlans from "../LifePlans/LifePlans";
-import CollegePlanning from "../CollegePlanning/CollegePlanning";
-import LifeInsurance from "../LifeInsurance/LifeInsurance";
-import Retirement from "../Retirement/Retirement";
-import "./App.css";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { setDefaultBreakpoints } from 'react-socks';
+import Nav from '../Nav/Nav';
+import PrivateRoute from '../../withoutState/Utils/PrivateRoute';
+import PublicOnlyRoute from '../../withoutState/Utils/PublicOnlyRoute';
+import Main from '../Main/Main';
+import Footer from '../../withoutState/Footer/Footer';
+import Login from '../Login/Login';
+import LifeInsuranceCalc from '../LifeInsuranceCalc/LifeInsuranceCalc';
+import Profile from '../Profile/Profile';
+import UserContext from '../../../FriendlyFinancialContext';
+import SignUp from '../SignUp/SignUp';
+import EducationalResources from '../EducationalResources/EducationalResources';
+import FinancialTools from '../../withoutState/FinancialTools/FinancialTools';
+import ScheduleConsultation from '../../withoutState/ScheduleConsultation/ScheduleConsultation';
+import AboutProfessional from '../../withoutState/AboutProfessional/AboutProfessional';
+import Contact from '../../withoutState/Contact/Contact';
+import UserApiService from '../../../services/user-api-service';
+import TokenService from '../../../services/token-service';
+import AuthApiService from '../../../services/auth-api-service';
+import AboutNewYorkLife from '../AboutNewYorkLife/AboutNewYorkLife';
+import LifePlans from '../LifePlans/LifePlans';
+import CollegePlanning from '../CollegePlanning/CollegePlanning';
+import LifeInsurance from '../LifeInsurance/LifeInsurance';
+import Retirement from '../Retirement/Retirement';
+import './App.css';
 
 export default class App extends Component {
   state = {
     user: UserContext.nullUser,
-    user_id: "",
+    user_id: '',
     error: null,
     hasError: false
   };
@@ -102,9 +102,7 @@ export default class App extends Component {
         <div id="container">
           <UserContext.Provider value={value}>
             <Route path="/" component={Nav} />
-            {this.state.hasError && (
-              <p className="red-font">There was an error! Oh no!</p>
-            )}
+            {this.state.hasError && <p className="red-font">There was an error! Oh no!</p>}
             <Route exact path="/" component={Main} />
             <PublicOnlyRoute exact path="/login" component={Login} />
             <PublicOnlyRoute exact path="/signup" component={SignUp} />
@@ -113,41 +111,21 @@ export default class App extends Component {
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/schedule" component={ScheduleConsultation} />
             <Route exact path="/financial-tools" component={FinancialTools} />
-            <Route
-              exact
-              path="/life-insurance-calc"
-              component={LifeInsuranceCalc}
-            />
-            <Route
-              exact
-              path="/educational-resources"
-              component={EducationalResources}
-            />
+            <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
+            <Route exact path="/educational-resources" component={EducationalResources} />
             <Route
               exact
               path="/educational-resources/about-new-york-life"
               component={AboutNewYorkLife}
             />
-            <Route
-              exact
-              path="/educational-resources/life-plans"
-              component={LifePlans}
-            />
+            <Route exact path="/educational-resources/life-plans" component={LifePlans} />
             <Route
               exact
               path="/educational-resources/college-planning"
               component={CollegePlanning}
             />
-            <Route
-              exact
-              path="/educational-resources/life-insurance"
-              component={LifeInsurance}
-            />
-            <Route
-              exact
-              path="/educational-resources/retirement"
-              component={Retirement}
-            />
+            <Route exact path="/educational-resources/life-insurance" component={LifeInsurance} />
+            <Route exact path="/educational-resources/retirement" component={Retirement} />
             <Footer />
           </UserContext.Provider>
         </div>

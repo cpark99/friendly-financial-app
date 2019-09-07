@@ -1,64 +1,64 @@
-import React, { Component } from "react";
-import Results from "../../withoutState/LifeCalcResults/LifeCalcResults";
-import ValidationError from "../../withoutState/ValidationError/ValidationError";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import SignUp from "../SignUp/SignUp";
-import TokenService from "../../../services/token-service";
-import UserApiService from "../../../services/user-api-service";
-import UserContext from "../../../FriendlyFinancialContext";
-import "./LifeInsuranceCalc.css";
+import React, { Component } from 'react';
+import Results from '../../withoutState/LifeCalcResults/LifeCalcResults';
+import ValidationError from '../../withoutState/ValidationError/ValidationError';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import SignUp from '../SignUp/SignUp';
+import TokenService from '../../../services/token-service';
+import UserApiService from '../../../services/user-api-service';
+import UserContext from '../../../FriendlyFinancialContext';
+import './LifeInsuranceCalc.css';
 
 export default class LifeInsuranceCalc extends Component {
   state = {
     name: {
-      value: "",
+      value: '',
       touched: false
     },
     income: {
-      value: "",
+      value: '',
       touched: false
     },
     replace: {
-      value: "",
+      value: '',
       touched: false
     },
     protect: {
-      value: "",
+      value: '',
       touched: false
     },
-    amount: "",
+    amount: '',
     nameTwo: {
-      value: "Person 2",
+      value: 'Person 2',
       touched: false
     },
     incomeTwo: {
-      value: "",
+      value: '',
       touched: false
     },
     replaceTwo: {
-      value: "",
+      value: '',
       touched: false
     },
     protectTwo: {
-      value: "",
+      value: '',
       touched: false
     },
-    amountTwo: "",
+    amountTwo: '',
     nameTwoError: {
       value: false,
-      message: ""
+      message: ''
     },
     incomeTwoError: {
       value: false,
-      message: ""
+      message: ''
     },
     replaceTwoError: {
       value: false,
-      message: ""
+      message: ''
     },
     protectTwoError: {
       value: false,
-      message: ""
+      message: ''
     },
     showResults: false
   };
@@ -100,37 +100,37 @@ export default class LifeInsuranceCalc extends Component {
   validateName() {
     const name = this.state.name.value.trim();
     if (name.length === 0) {
-      return "*Name is required";
+      return '*Name is required';
     }
   }
 
   validateIncome() {
     const income = this.state.income.value.trim();
     if (income.length === 0) {
-      return "*Income is required";
+      return '*Income is required';
     }
     if (income <= 0) {
-      return "*Valid income is required";
+      return '*Valid income is required';
     }
   }
 
   validateReplace() {
     const replace = this.state.replace.value.trim();
     if (replace.length === 0) {
-      return "*Percentage is required";
+      return '*Percentage is required';
     }
     if (replace <= 0 || replace > 100) {
-      return "*Valid percentage is required";
+      return '*Valid percentage is required';
     }
   }
 
   validateProtect() {
     const protect = this.state.protect.value.trim();
     if (protect.length === 0) {
-      return "*Number of years is required";
+      return '*Number of years is required';
     }
     if (protect <= 0) {
-      return "*Valid number of years is required";
+      return '*Valid number of years is required';
     }
   }
 
@@ -138,7 +138,7 @@ export default class LifeInsuranceCalc extends Component {
     const name = this.state.nameTwo.value.trim();
     if (name.length !== 0) {
       this.setState({ nameTwo: { value: name, touched: true } });
-      return "";
+      return '';
     }
   }
 
@@ -148,10 +148,10 @@ export default class LifeInsuranceCalc extends Component {
       this.setState({ incomeTwo: { value: income, touched: true } });
     }
     if (income <= 0) {
-      const message = "*Must be valid for second result";
+      const message = '*Must be valid for second result';
       this.setState({ incomeTwoError: { value: true, message: message } });
     } else {
-      this.setState({ incomeTwoError: { value: false, message: "" } });
+      this.setState({ incomeTwoError: { value: false, message: '' } });
     }
   }
 
@@ -160,10 +160,10 @@ export default class LifeInsuranceCalc extends Component {
     if (replace.length !== 0) {
       this.setState({ replaceTwo: { value: replace, touched: true } });
       if (replace <= 0 || replace > 100) {
-        const message = "*Must be valid for second result";
+        const message = '*Must be valid for second result';
         this.setState({ replaceTwoError: { value: true, message: message } });
       } else {
-        this.setState({ replaceTwoError: { value: false, message: "" } });
+        this.setState({ replaceTwoError: { value: false, message: '' } });
       }
     }
   }
@@ -173,10 +173,10 @@ export default class LifeInsuranceCalc extends Component {
     if (protect.length !== 0) {
       this.setState({ protectTwo: { value: protect, touched: true } });
       if (protect <= 0) {
-        const message = "*Must be valid for second result";
+        const message = '*Must be valid for second result';
         this.setState({ protectTwoError: { value: true, message: message } });
       } else {
-        this.setState({ protectTwoError: { value: false, message: "" } });
+        this.setState({ protectTwoError: { value: false, message: '' } });
       }
     }
   }
@@ -191,15 +191,15 @@ export default class LifeInsuranceCalc extends Component {
     const protectTwo = this.state.protectTwo.value;
 
     this.setState({ amount: amount, showResults: true });
-    if (incomeTwo !== "" && replaceTwo !== "") {
-      if (protectTwo !== "") {
+    if (incomeTwo !== '' && replaceTwo !== '') {
+      if (protectTwo !== '') {
         const amountTwo = ((incomeTwo * replaceTwo) / 100) * protectTwo;
         this.setState({ amountTwo: amountTwo });
       }
     }
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.width = "100%";
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   };
 
   handleSubmit = e => {
@@ -213,25 +213,25 @@ export default class LifeInsuranceCalc extends Component {
 
   handleClose = () => {
     this.setState({ showResults: false });
-    document.body.style.overflow = "unset";
-    document.body.style.position = "initial";
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'initial';
   };
 
   handleSaveButtonClick = () => {
     const user_id = this.context.user_id;
-    document.body.style.overflow = "unset";
-    document.body.style.position = "initial";
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'initial';
     UserApiService.updateLifeInsuranceGoal(user_id, {
       life_insurance_goal: this.state.amount
     }).then(() => {
-      this.props.history.push("/profile");
+      this.props.history.push('/profile');
     });
   };
 
   componentWillUnmount() {
-    document.body.style.overflow = "unset";
-    document.body.style.position = "initial";
-    this.setState({ name: { value: "", touched: false } });
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'initial';
+    this.setState({ name: { value: '', touched: false } });
   }
 
   render() {
@@ -269,9 +269,7 @@ export default class LifeInsuranceCalc extends Component {
                     this.updateName(e.target.value);
                   }}
                 />
-                {this.state.name.touched && (
-                  <ValidationError message={nameError} />
-                )}
+                {this.state.name.touched && <ValidationError message={nameError} />}
               </div>
               <div className="input-field">
                 <label htmlFor="life-name-two">&nbsp;Person 2: </label>
@@ -287,13 +285,11 @@ export default class LifeInsuranceCalc extends Component {
                 />
                 {this.state.nameTwoError.value && (
                   <ValidationError message={this.state.nameTwoError.message} />
-                )}{" "}
+                )}{' '}
               </div>
             </div>
             <label htmlFor="life-annual-income">
-              <h3 className="field-header">
-                What is your current annual income?
-              </h3>
+              <h3 className="field-header">What is your current annual income?</h3>
             </label>
             <div className="input-area" id="life-annual-income">
               <div className="input-field">
@@ -308,14 +304,10 @@ export default class LifeInsuranceCalc extends Component {
                     this.updateIncome(e.target.value);
                   }}
                 />
-                {this.state.income.touched && (
-                  <ValidationError message={incomeError} />
-                )}
+                {this.state.income.touched && <ValidationError message={incomeError} />}
               </div>
               <div className="input-field">
-                <label htmlFor="life-annual-income-two">
-                  &nbsp;Person 2: $
-                </label>
+                <label htmlFor="life-annual-income-two">&nbsp;Person 2: $</label>
                 <input
                   type="number"
                   name="life-annual-income-two"
@@ -325,18 +317,14 @@ export default class LifeInsuranceCalc extends Component {
                     this.updateIncomeTwo(e.target.value);
                   }}
                 />
-                {this.state.incomeTwo.touched &&
-                  this.state.incomeTwoError.value && (
-                    <ValidationError
-                      message={this.state.incomeTwoError.message}
-                    />
-                  )}
+                {this.state.incomeTwo.touched && this.state.incomeTwoError.value && (
+                  <ValidationError message={this.state.incomeTwoError.message} />
+                )}
               </div>
             </div>
             <label htmlFor="life-replace-income">
               <h3 className="field-header">
-                How much of your annual income would you like to replace should
-                you pass away?
+                How much of your annual income would you like to replace should you pass away?
               </h3>
             </label>
             <div className="input-area" id="life-replace-income">
@@ -352,15 +340,10 @@ export default class LifeInsuranceCalc extends Component {
                     this.updateReplace(e.target.value);
                   }}
                 />
-                %
-                {this.state.replace.touched && (
-                  <ValidationError message={replaceError} />
-                )}
+                %{this.state.replace.touched && <ValidationError message={replaceError} />}
               </div>
               <div className="input-field">
-                <label htmlFor="life-replace-income-two">
-                  &nbsp;Person 2:{" "}
-                </label>
+                <label htmlFor="life-replace-income-two">&nbsp;Person 2: </label>
                 <input
                   type="number"
                   name="life-replace-income-two"
@@ -372,10 +355,8 @@ export default class LifeInsuranceCalc extends Component {
                 />
                 %
                 {this.state.replaceTwoError.value && (
-                  <ValidationError
-                    message={this.state.replaceTwoError.message}
-                  />
-                )}{" "}
+                  <ValidationError message={this.state.replaceTwoError.message} />
+                )}{' '}
               </div>
             </div>
             <label htmlFor="life-years-protect-income">
@@ -388,9 +369,7 @@ export default class LifeInsuranceCalc extends Component {
             </label>
             <div className="input-area" id="life-years-protect-income">
               <div className="input-field">
-                <label htmlFor="life-years-protect-income-one">
-                  *Person 1:{" "}
-                </label>
+                <label htmlFor="life-years-protect-income-one">*Person 1: </label>
                 <input
                   type="number"
                   name="life-years-protect-income-one"
@@ -402,14 +381,10 @@ export default class LifeInsuranceCalc extends Component {
                   }}
                 />
                 (years)
-                {this.state.protect.touched && (
-                  <ValidationError message={protectError} />
-                )}
+                {this.state.protect.touched && <ValidationError message={protectError} />}
               </div>
               <div className="input-field">
-                <label htmlFor="life-years-protect-income-two">
-                  &nbsp;Person 2:{" "}
-                </label>
+                <label htmlFor="life-years-protect-income-two">&nbsp;Person 2: </label>
                 <input
                   type="number"
                   name="life-years-protect-income-two"
@@ -421,10 +396,8 @@ export default class LifeInsuranceCalc extends Component {
                 />
                 (years)
                 {this.state.protectTwoError.value && (
-                  <ValidationError
-                    message={this.state.protectTwoError.message}
-                  />
-                )}{" "}
+                  <ValidationError message={this.state.protectTwoError.message} />
+                )}{' '}
               </div>
             </div>
             <p className="form-submission-note">(* valid input required)</p>
@@ -438,10 +411,7 @@ export default class LifeInsuranceCalc extends Component {
               >
                 Go back
               </button>
-              <button
-                type="submit"
-                className="registration-button orange-button"
-              >
+              <button type="submit" className="registration-button orange-button">
                 Submit
               </button>
             </div>
@@ -460,15 +430,11 @@ export default class LifeInsuranceCalc extends Component {
               <span id="life-calc-close-button-symbol">&times;</span>
             </div>
             <h2 id="life-result-header">Results:</h2>
-            {this.state.amount && (
-              <Results name={this.state.name} data={this.state.amount} />
-            )}
+            {this.state.amount && <Results name={this.state.name} data={this.state.amount} />}
             {this.state.amountTwo && (
               <Results name={this.state.nameTwo} data={this.state.amountTwo} />
             )}
-            {!TokenService.hasAuthToken() && (
-              <p>Sign up for FREE to save your results!</p>
-            )}
+            {!TokenService.hasAuthToken() && <p>Sign up for FREE to save your results!</p>}
             {TokenService.hasAuthToken() ? (
               <></>
             ) : (
@@ -490,9 +456,7 @@ export default class LifeInsuranceCalc extends Component {
               </button>
             )}
             {this.state.amountTwo && (
-              <p className="for-questions-text">
-                *Results will save for only "Person 1".
-              </p>
+              <p className="for-questions-text">*Results will save for only "Person 1".</p>
             )}
           </div>
         )}

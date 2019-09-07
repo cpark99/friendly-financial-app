@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import ResourceModal from "../../withoutState/ResourceModal/ResourceModal";
-import impressiveRecord from "../../../pdf/Impressive Record.pdf";
-import financialStrength from "../../../pdf/Financial Strength.pdf";
-import impactOnCA from "../../../pdf/Impact on California.pdf";
-import mutualityMeans from "../../../pdf/Mutuality Means.pdf";
-import ForQuestions from "../../withoutState/ForQuestions/ForQuestions";
-import NavButton from "../../withoutState/Utils/NavButton";
-import "./AboutNewYorkLife.css";
+import React, { Component } from 'react';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import ResourceModal from '../../withoutState/ResourceModal/ResourceModal';
+import impressiveRecord from '../../../pdf/Impressive Record.pdf';
+import financialStrength from '../../../pdf/Financial Strength.pdf';
+import impactOnCA from '../../../pdf/Impact on California.pdf';
+import mutualityMeans from '../../../pdf/Mutuality Means.pdf';
+import ForQuestions from '../../withoutState/ForQuestions/ForQuestions';
+import NavButton from '../../withoutState/Utils/NavButton';
+import './AboutNewYorkLife.css';
 
 export default class AboutNewYorkLife extends Component {
   state = {
     showModal: false,
-    resourceSrc: "",
-    resourceTitle: ""
+    resourceSrc: '',
+    resourceTitle: ''
   };
 
   handleResourceClick = (src, title) => {
@@ -22,15 +22,15 @@ export default class AboutNewYorkLife extends Component {
       resourceSrc: src,
       resourceTitle: title
     });
-    document.body.style.overflow = "hidden";
-    document.body.style.position = "fixed";
-    document.body.style.width = "100%";
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   };
 
   handleClose = e => {
     this.setState({ showModal: false });
-    document.body.style.overflow = "unset";
-    document.body.style.position = "initial";
+    document.body.style.overflow = 'unset';
+    document.body.style.position = 'initial';
   };
 
   renderResources = resources => {
@@ -48,16 +48,13 @@ export default class AboutNewYorkLife extends Component {
 
   render() {
     const resources = [
-      { src: impressiveRecord, title: "Impressive Record", key: 1 },
-      { src: financialStrength, title: "Financial Strength", key: 2 },
-      { src: impactOnCA, title: "Impact on California", key: 3 },
-      { src: mutualityMeans, title: "Mutuality Means", key: 4 }
+      { src: impressiveRecord, title: 'Impressive Record', key: 1 },
+      { src: financialStrength, title: 'Financial Strength', key: 2 },
+      { src: impactOnCA, title: 'Impact on California', key: 3 },
+      { src: mutualityMeans, title: 'Mutuality Means', key: 4 }
     ];
     return (
-      <section
-        id="about-new-york-life-section"
-        className="content flex-column-center"
-      >
+      <section id="about-new-york-life-section" className="content flex-column-center">
         <ScrollToTopOnMount />
         <h2>About New York Life</h2>
         <div id="about-new-york-life-content">
@@ -75,9 +72,9 @@ export default class AboutNewYorkLife extends Component {
           />
         )}
         <NavButton
-          destination={"/educational-resources"}
-          id={"back-to-educational-resources-button"}
-          text={"Go back"}
+          destination={'/educational-resources'}
+          id={'back-to-educational-resources-button'}
+          text={'Go back'}
         />
         <ForQuestions />
       </section>

@@ -5,8 +5,8 @@ import ResourceModal from './ResourceModal';
 
 it('renders without crashing', () => {
   const props = {
-    title: "title",
-    src: "src"
+    title: 'title',
+    src: 'src'
   };
   const div = document.createElement('div');
   ReactDOM.render(

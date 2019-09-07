@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import TokenService from "../../../services/token-service";
-import Header from "../../withoutState/Header/Header";
-import SignUp from "../SignUp/SignUp";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import Headshot from "../../withoutState/Utils/Headshot";
-import phone from "../../../img/phone-navy.png";
-import ping from "../../../img/ping.png";
-import downArrow from "../../../img/gray-down-arrow.png";
-import upArrow from "../../../img/gray-up-arrow.png";
-import email from "../../../img/email.png";
-import linkedin from "../../../img/linkedin.png";
-import facebook from "../../../img/facebook.png";
-import map from "../../../img/nyl-location-map.jpeg";
-import clock from "../../../img/clock.png";
-import license from "../../../img/license.png";
-import "./Main.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import TokenService from '../../../services/token-service';
+import Header from '../../withoutState/Header/Header';
+import SignUp from '../SignUp/SignUp';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import Headshot from '../../withoutState/Utils/Headshot';
+import phone from '../../../img/phone-navy.png';
+import ping from '../../../img/ping.png';
+import downArrow from '../../../img/gray-down-arrow.png';
+import upArrow from '../../../img/gray-up-arrow.png';
+import email from '../../../img/email.png';
+import linkedin from '../../../img/linkedin.png';
+import facebook from '../../../img/facebook.png';
+import map from '../../../img/nyl-location-map.jpeg';
+import clock from '../../../img/clock.png';
+import license from '../../../img/license.png';
+import './Main.css';
 
 export default class Main extends Component {
   state = {
@@ -36,22 +36,12 @@ export default class Main extends Component {
         <ScrollToTopOnMount />
         <div id="introduction-container" className="flex-column-center">
           <Header />
-          <div
-            id="main-flex-container"
-            className="flex-responsive-mobile-desktop"
-          >
+          <div id="main-flex-container" className="flex-responsive-mobile-desktop">
             <div id="main-flex-top-right" className="flex-column-center">
               <Headshot />
-              <div
-                id="introduction-business-info"
-                className="flex-column-center"
-              >
+              <div id="introduction-business-info" className="flex-column-center">
                 <h5>
-                  <a
-                    href="tel:+1-818-731-8616"
-                    id="phone-link-main"
-                    className="flex-center-center"
-                  >
+                  <a href="tel:+1-818-731-8616" id="phone-link-main" className="flex-center-center">
                     <img
                       src={phone}
                       className="phone-icon contact-icon"
@@ -78,22 +68,14 @@ export default class Main extends Component {
                     <p>Glendale, CA 91203</p>
                   </a>
                 </div>
-                <div
-                  className="dropdown-arrow-container"
-                  onClick={this.toggleDropdown}
-                >
+                <div className="dropdown-arrow-container" onClick={this.toggleDropdown}>
                   <p className="dropdown-arrow-text">
                     <span className="italic">
-                      {this.state.showDropdown ? "Hide" : "View"} details and{" "}
-                      hours
+                      {this.state.showDropdown ? 'Hide' : 'View'} details and hours
                     </span>
                   </p>
                   {this.state.showDropdown ? (
-                    <img
-                      src={upArrow}
-                      className="up-arrow dropdown-arrow"
-                      alt="gray up arrow"
-                    />
+                    <img src={upArrow} className="up-arrow dropdown-arrow" alt="gray up arrow" />
                   ) : (
                     <img
                       src={downArrow}
@@ -103,10 +85,7 @@ export default class Main extends Component {
                   )}
                 </div>
                 {this.state.showDropdown && (
-                  <div
-                    id="details-hours-dropdown-content"
-                    className="dropdown-content"
-                  >
+                  <div id="details-hours-dropdown-content" className="dropdown-content">
                     <div className="contact-icons-container flex-center-center">
                       <a href="mailto:nspark@ft.newyorklife.com">
                         <img
@@ -172,16 +151,9 @@ export default class Main extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
-                          src={map}
-                          className="location-map"
-                          alt="map of part of Glendale, CA"
-                        />
+                        <img src={map} className="location-map" alt="map of part of Glendale, CA" />
                       </a>
-                      <div
-                        id="dropdown-location-address"
-                        className="location-address-container"
-                      >
+                      <div id="dropdown-location-address" className="location-address-container">
                         <a
                           href="https://www.google.com/maps/place/New+York+Life/@34.1582344,-118.2578968,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2c04d9e3ed059:0x1eec029bfd7eb087!8m2!3d34.15823!4d-118.2557081"
                           className="new-york-life-glendale-address location-address"
@@ -208,10 +180,7 @@ export default class Main extends Component {
                 )}
               </div>
             </div>
-            <div
-              id="introduction-text-container"
-              className="flex-object-vertical-horizontal"
-            >
+            <div id="introduction-text-container" className="flex-object-vertical-horizontal">
               <h3 id="introduction-text">Your financial friend.</h3>
               <div id="homepage-buttons-container">
                 <NavLink to="/schedule">
@@ -223,18 +192,12 @@ export default class Main extends Component {
                   </button>
                 </NavLink>
                 <NavLink to="/financial-tools">
-                  <button
-                    id="to-financial-tools-button"
-                    className="homepage-button"
-                  >
+                  <button id="to-financial-tools-button" className="homepage-button">
                     Financial Tools
                   </button>
                 </NavLink>
                 <NavLink to="/educational-resources">
-                  <button
-                    id="to-educational-resources-button"
-                    className="homepage-button"
-                  >
+                  <button id="to-educational-resources-button" className="homepage-button">
                     Educational Resources
                   </button>
                 </NavLink>
@@ -242,22 +205,15 @@ export default class Main extends Component {
 
               <div className="text-container">
                 <p>
-                  As your New York Life agent, I can work with you to identify
-                  your goals, understand your needs, and offer insurance and
-                  financial products that can help you achieve peace of mind.
-                  Check out my <NavLink to="/about">about</NavLink> page.
+                  As your New York Life agent, I can work with you to identify your goals,
+                  understand your needs, and offer insurance and financial products that can help
+                  you achieve peace of mind. Check out my <NavLink to="/about">about</NavLink> page.
                 </p>
               </div>
-              <div
-                id="signup-contact-buttons-container"
-                className="flex-center"
-              >
+              <div id="signup-contact-buttons-container" className="flex-center">
                 {!TokenService.hasAuthToken() && (
                   <a href="#sign-up-section">
-                    <button
-                      id="to-sign-up-form-button"
-                      className="small-button"
-                    >
+                    <button id="to-sign-up-form-button" className="small-button">
                       Sign up
                     </button>
                   </a>
@@ -271,11 +227,7 @@ export default class Main extends Component {
             </div>
           </div>
         </div>
-        {TokenService.hasAuthToken() ? (
-          <></>
-        ) : (
-          <SignUp history={this.props.history} />
-        )}
+        {TokenService.hasAuthToken() ? <></> : <SignUp history={this.props.history} />}
       </main>
     );
   }

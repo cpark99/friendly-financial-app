@@ -8,9 +8,6 @@ it('renders without crashing', () => {
   window.scrollTo.mockClear();
 
   const div = document.createElement('div');
-  ReactDOM.render(
-      <ContactInfo />,
-    div
-  );
+  ReactDOM.render(<ContactInfo />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

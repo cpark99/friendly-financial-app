@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import AuthApiService from "../../../services/auth-api-service";
-import ScrollToTopOnMount from "../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount";
-import TokenService from "../../../services/token-service";
-import UserContext from "../../../FriendlyFinancialContext";
-import "./SignUp.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import AuthApiService from '../../../services/auth-api-service';
+import ScrollToTopOnMount from '../../withoutState/ScrollToTopOnMount/ScrollToTopOnMount';
+import TokenService from '../../../services/token-service';
+import UserContext from '../../../FriendlyFinancialContext';
+import './SignUp.css';
 
 export default class SignUp extends Component {
   state = { error: null };
@@ -13,7 +13,7 @@ export default class SignUp extends Component {
 
   handleLoginSuccess = payload => {
     const { history } = this.props;
-    const destination = (history.location.state || {}).from || "/profile";
+    const destination = (history.location.state || {}).from || '/profile';
     this.context.setUserId(payload.user_id);
     history.push(destination);
   };
@@ -21,16 +21,16 @@ export default class SignUp extends Component {
   handleDemoLogin = ev => {
     ev.preventDefault();
     this.setState({ error: null });
-    let email = "MakeMeMoney@ff.com";
-    let password = "password";
+    let email = 'MakeMeMoney@ff.com';
+    let password = 'password';
 
     AuthApiService.postLogin({
       email: email,
       password: password
     })
       .then(res => {
-        email = "";
-        password = "";
+        email = '';
+        password = '';
         TokenService.saveAuthToken(res.authToken);
         this.handleLoginSuccess(res.payload);
       })
@@ -40,28 +40,20 @@ export default class SignUp extends Component {
   };
 
   handleRegistrationSuccess = user => {
-    if (this.props.history.location.pathname === "/life-insurance-calc") {
-      return this.props.history.push("/login");
+    if (this.props.history.location.pathname === '/life-insurance-calc') {
+      return this.props.history.push('/login');
     } else {
-      return this.props.history.push("/login");
+      return this.props.history.push('/login');
     }
   };
 
   handleSubmit = ev => {
     ev.preventDefault();
-    const {
-      password,
-      email,
-      name,
-      phone,
-      get_email,
-      get_call,
-      get_newsletter
-    } = ev.target;
+    const { password, email, name, phone, get_email, get_call, get_newsletter } = ev.target;
 
-    let life_insurance_goal = "";
+    let life_insurance_goal = '';
 
-    if (this.props.history.location.pathname === "/life-insurance-calc") {
+    if (this.props.history.location.pathname === '/life-insurance-calc') {
       life_insurance_goal = this.props.lifeInsuranceGoal;
     }
 
@@ -72,9 +64,9 @@ export default class SignUp extends Component {
       name: name.value,
       phone: phone.value,
       life_insurance_goal: life_insurance_goal,
-      get_email: get_email.value === "false" ? false : true,
-      get_call: get_call.value === "false" ? false : true,
-      get_newsletter: get_newsletter.value === "false" ? false : true
+      get_email: get_email.value === 'false' ? false : true,
+      get_call: get_call.value === 'false' ? false : true,
+      get_newsletter: get_newsletter.value === 'false' ? false : true
     })
       .then(user => {
         this.handleRegistrationSuccess();
@@ -90,19 +82,15 @@ export default class SignUp extends Component {
       <section id="sign-up-section" className="content">
         <ScrollToTopOnMount />
         <h2>Create a Free Account</h2>
-        <button
-          onClick={this.handleDemoLogin}
-          className="demo-login-button orange-button"
-        >
+        <button onClick={this.handleDemoLogin} className="demo-login-button orange-button">
           Demo
         </button>
         <div className="text-container">
           <p id="sign-up-section-text">
-            Sign up to stay <span className="italic">connected</span> with a
-            financial services professional, while keeping track of your
-            financial goals (ie.{" "}
+            Sign up to stay <span className="italic">connected</span> with a financial services
+            professional, while keeping track of your financial goals (ie.{' '}
             <NavLink to="/financial-tools">life insurance</NavLink>
-            ). Stay up to date on the latest trends and policies, keeping you{" "}
+            ). Stay up to date on the latest trends and policies, keeping you{' '}
             <span className="italic">prepared</span> for life.
           </p>
         </div>
@@ -110,32 +98,19 @@ export default class SignUp extends Component {
         <form onSubmit={this.handleSubmit}>
           <div className="form-field">
             <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Jane Doe"
-              required
-            />
+            <input type="text" name="name" id="name" placeholder="Jane Doe" required />
           </div>
           <div className="form-field">
             <label htmlFor="password">Password:</label>
             <input type="password" name="password" id="password" required />
           </div>
           <p id="password-information-text" className="information-text">
-            (MUST be at least 8 characters, including{" "}
-            <span className="italic">at least one</span> capital letter, number,
-            and special character)
+            (MUST be at least 8 characters, including <span className="italic">at least one</span>{' '}
+            capital letter, number, and special character)
           </p>
           <div className="form-field">
             <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="jdoe@gmail.com"
-              required
-            />
+            <input type="email" name="email" id="email" placeholder="jdoe@gmail.com" required />
           </div>
           <div className="form-field">
             <label htmlFor="phone">Phone:</label>
@@ -176,9 +151,7 @@ export default class SignUp extends Component {
               value="get_call"
               defaultChecked={true}
             />
-            <p className="checkbox-text">
-              I agree to receive a call* from a professional
-            </p>
+            <p className="checkbox-text">I agree to receive a call* from a professional</p>
           </div>
           <div className="newsletter-checkbox form-checkbox">
             <input
@@ -190,33 +163,23 @@ export default class SignUp extends Component {
             />
             <p className="checkbox-text">I agree to receive newsletters</p>
           </div>
-          {this.props.history.location.pathname === "/" ? (
-            <button
-              id="sign-up-form-button"
-              className="orange-button"
-              type="submit"
-            >
+          {this.props.history.location.pathname === '/' ? (
+            <button id="sign-up-form-button" className="orange-button" type="submit">
               Sign up
             </button>
           ) : (
-            <button
-              id="sign-up-form-button"
-              className="orange-button"
-              type="submit"
-            >
+            <button id="sign-up-form-button" className="orange-button" type="submit">
               Save Results
             </button>
           )}
           <p className="contact-notice privacy-notice">
-            *Emails and calls will <span className="italic">only</span> be for a
-            FREE consultation. You will <span className="italic">only</span> be
-            contacted by the representing certified financial services
-            professional.
+            *Emails and calls will <span className="italic">only</span> be for a FREE consultation.
+            You will <span className="italic">only</span> be contacted by the representing certified
+            financial services professional.
           </p>
           <p className="personal-information-notice privacy-notice">
-            *Personal information will NOT be shared with third-parties. By
-            clicking "Sign up", you agree to information stored solely for the
-            purpose of this app.
+            *Personal information will NOT be shared with third-parties. By clicking "Sign up", you
+            agree to information stored solely for the purpose of this app.
           </p>
         </form>
       </section>

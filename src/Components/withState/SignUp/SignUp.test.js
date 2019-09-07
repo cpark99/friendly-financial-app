@@ -11,7 +11,7 @@ it('renders without crashing', () => {
   const props = {
     history: {
       location: {
-        pathname: "/"
+        pathname: '/'
       }
     }
   };

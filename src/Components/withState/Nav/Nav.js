@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
-import { Breakpoint } from "react-socks";
-import TokenService from "../../../services/token-service";
-import UserContext, { nullUser } from "../../../FriendlyFinancialContext";
-import "./Nav.css";
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { Breakpoint } from 'react-socks';
+import TokenService from '../../../services/token-service';
+import UserContext, { nullUser } from '../../../FriendlyFinancialContext';
+import './Nav.css';
 
 export default class Nav extends Component {
   constructor(props) {
@@ -16,13 +16,13 @@ export default class Nav extends Component {
   static contextType = UserContext;
 
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleOutsideClick, false);
-    document.addEventListener("touchstart", this.handleOutsideClick, false);
+    document.addEventListener('mousedown', this.handleOutsideClick, false);
+    document.addEventListener('touchstart', this.handleOutsideClick, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleOutsideClick, false);
-    document.removeEventListener("touchstart", this.handleOutsideClick, false);
+    document.removeEventListener('mousedown', this.handleOutsideClick, false);
+    document.removeEventListener('touchstart', this.handleOutsideClick, false);
   }
 
   handleOutsideClick = e => {
@@ -57,7 +57,7 @@ export default class Nav extends Component {
   };
 
   checkIfHomePath = (target, label) => {
-    if (this.props.location.pathname === "/") {
+    if (this.props.location.pathname === '/') {
       return (
         <a
           href={target}
@@ -88,7 +88,7 @@ export default class Nav extends Component {
                 <NavLink
                   id="nav-login-button"
                   className="nav-item"
-                  to={"/"}
+                  to={'/'}
                   onClick={e => {
                     this.handleLogoutClick();
                   }}
@@ -99,7 +99,7 @@ export default class Nav extends Component {
                 <NavLink
                   id="nav-login-button"
                   className="nav-item"
-                  to={"/login"}
+                  to={'/login'}
                   onClick={e => {
                     this.closeNavMenu();
                   }}
@@ -108,7 +108,7 @@ export default class Nav extends Component {
                 </NavLink>
               )}
             </Breakpoint>
-            {this.props.location.pathname === "/" ? (
+            {this.props.location.pathname === '/' ? (
               <a
                 href="#root"
                 id="nav-logo"
@@ -123,7 +123,7 @@ export default class Nav extends Component {
               <NavLink
                 id="nav-logo"
                 className="nav-item"
-                to={"/"}
+                to={'/'}
                 onClick={e => {
                   this.closeNavMenu();
                 }}
@@ -143,13 +143,10 @@ export default class Nav extends Component {
               </div>
             </Breakpoint>
             <div id="nav-dropdown-menu-container">
-              <div
-                id="nav-dropdown-menu"
-                className={this.state.showNavMenu ? "show" : "hidden"}
-              >
+              <div id="nav-dropdown-menu" className={this.state.showNavMenu ? 'show' : 'hidden'}>
                 <ul id="nav-dropdown-menu-list">
                   <Breakpoint tabletLandscape down>
-                    {this.props.location.pathname === "/" ? (
+                    {this.props.location.pathname === '/' ? (
                       <a
                         href="#root"
                         className="nav-menu-item-link"
@@ -162,7 +159,7 @@ export default class Nav extends Component {
                     ) : (
                       <NavLink
                         className="nav-menu-item-link"
-                        to={"/"}
+                        to={'/'}
                         onClick={e => {
                           this.closeNavMenu();
                         }}
@@ -174,7 +171,7 @@ export default class Nav extends Component {
 
                   <NavLink
                     className="nav-menu-item-link"
-                    to={"/about"}
+                    to={'/about'}
                     onClick={e => {
                       this.closeNavMenu();
                     }}
@@ -183,40 +180,34 @@ export default class Nav extends Component {
                   </NavLink>
                   <NavLink
                     className="nav-menu-item-link"
-                    to={"/schedule"}
+                    to={'/schedule'}
                     onClick={e => {
                       this.closeNavMenu();
                     }}
                   >
-                    <li className="nav-dropdown-menu-list-item">
-                      Schedule Consultation
-                    </li>
+                    <li className="nav-dropdown-menu-list-item">Schedule Consultation</li>
                   </NavLink>
                   <NavLink
                     className="nav-menu-item-link"
-                    to={"/financial-tools"}
+                    to={'/financial-tools'}
                     onClick={e => {
                       this.closeNavMenu();
                     }}
                   >
-                    <li className="nav-dropdown-menu-list-item">
-                      Financial Tools
-                    </li>
+                    <li className="nav-dropdown-menu-list-item">Financial Tools</li>
                   </NavLink>
                   <NavLink
                     className="nav-menu-item-link"
-                    to={"/educational-resources"}
+                    to={'/educational-resources'}
                     onClick={e => {
                       this.closeNavMenu();
                     }}
                   >
-                    <li className="nav-dropdown-menu-list-item">
-                      Educational Resources
-                    </li>
+                    <li className="nav-dropdown-menu-list-item">Educational Resources</li>
                   </NavLink>
                   <NavLink
                     className="nav-menu-item-link"
-                    to={"/contact"}
+                    to={'/contact'}
                     onClick={e => {
                       this.closeNavMenu();
                     }}
@@ -226,7 +217,7 @@ export default class Nav extends Component {
                   {TokenService.hasAuthToken() && (
                     <NavLink
                       className="nav-menu-item-link"
-                      to={"/profile"}
+                      to={'/profile'}
                       onClick={e => {
                         this.closeNavMenu();
                       }}
@@ -237,7 +228,7 @@ export default class Nav extends Component {
                   {!TokenService.hasAuthToken() && (
                     <NavLink
                       className="nav-menu-item-link"
-                      to={"/signup"}
+                      to={'/signup'}
                       onClick={e => {
                         this.closeNavMenu();
                       }}
@@ -249,7 +240,7 @@ export default class Nav extends Component {
                     {TokenService.hasAuthToken() ? (
                       <NavLink
                         className="nav-menu-item-link"
-                        to={"/"}
+                        to={'/'}
                         onClick={e => {
                           this.handleLogoutClick();
                         }}
@@ -259,7 +250,7 @@ export default class Nav extends Component {
                     ) : (
                       <NavLink
                         className="nav-menu-item-link"
-                        to={"/login"}
+                        to={'/login'}
                         onClick={e => {
                           this.closeNavMenu();
                         }}
