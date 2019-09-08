@@ -131,7 +131,7 @@ export default class SignUp extends Component {
               value="age"
               defaultChecked={true}
             />
-            <label for="age-verification-checkbox" className="checkbox-text">
+            <label htmlFor="age-verification-checkbox" className="checkbox-text">
               I am at least 18 years old
             </label>
           </div>
@@ -143,7 +143,7 @@ export default class SignUp extends Component {
               value="get_email"
               defaultChecked={true}
             />
-            <label for="get_email" className="checkbox-text">
+            <label htmlFor="get_email" className="checkbox-text">
               I agree to receive emails*
             </label>
           </div>
@@ -155,7 +155,7 @@ export default class SignUp extends Component {
               value="get_call"
               defaultChecked={true}
             />
-            <label for="get_call" className="checkbox-text">
+            <label htmlFor="get_call" className="checkbox-text">
               I agree to receive a call* from a professional
             </label>
           </div>
@@ -167,7 +167,7 @@ export default class SignUp extends Component {
               value="get_newsletter"
               defaultChecked={true}
             />
-            <label for="get_newsletter" className="checkbox-text">
+            <label htmlFor="get_newsletter" className="checkbox-text">
               I agree to receive newsletters
             </label>
           </div>
