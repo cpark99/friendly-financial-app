@@ -10,7 +10,7 @@ export default class ResourceModal extends Component {
 
   render() {
     return (
-      <div className="modal-frame flex-column-center">
+      <div className="modal-frame flex-column-center" aria-live="polite">
         <div
           className="close-button"
           onClick={e => {

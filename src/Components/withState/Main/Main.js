@@ -85,7 +85,11 @@ export default class Main extends Component {
                   )}
                 </div>
                 {this.state.showDropdown && (
-                  <div id="details-hours-dropdown-content" className="dropdown-content">
+                  <div
+                    id="details-hours-dropdown-content"
+                    className="dropdown-content"
+                    aria-live="polite"
+                  >
                     <div className="contact-icons-container flex-center-center">
                       <a href="mailto:nspark@ft.newyorklife.com">
                         <img

@@ -418,7 +418,7 @@ export default class LifeInsuranceCalc extends Component {
           </div>
         </form>
         {this.state.showResults && (
-          <div id="life-insurance-modal" className="flex-column-center">
+          <div id="life-insurance-modal" className="flex-column-center" aria-live="polite">
             <div
               id="life-calc-close-button"
               className="close-button"

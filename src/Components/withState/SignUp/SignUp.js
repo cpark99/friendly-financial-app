@@ -131,7 +131,9 @@ export default class SignUp extends Component {
               value="age"
               defaultChecked={true}
             />
-            <p className="checkbox-text">I am at least 18 years old</p>
+            <label for="age-verification-checkbox" className="checkbox-text">
+              I am at least 18 years old
+            </label>
           </div>
           <div className="email-checkbox form-checkbox">
             <input
@@ -141,7 +143,9 @@ export default class SignUp extends Component {
               value="get_email"
               defaultChecked={true}
             />
-            <p className="checkbox-text">I agree to receive emails*</p>
+            <label for="get_email" className="checkbox-text">
+              I agree to receive emails*
+            </label>
           </div>
           <div className="call-checkbox form-checkbox">
             <input
@@ -151,7 +155,9 @@ export default class SignUp extends Component {
               value="get_call"
               defaultChecked={true}
             />
-            <p className="checkbox-text">I agree to receive a call* from a professional</p>
+            <label for="get_call" className="checkbox-text">
+              I agree to receive a call* from a professional
+            </label>
           </div>
           <div className="newsletter-checkbox form-checkbox">
             <input
@@ -161,7 +167,9 @@ export default class SignUp extends Component {
               value="get_newsletter"
               defaultChecked={true}
             />
-            <p className="checkbox-text">I agree to receive newsletters</p>
+            <label for="get_newsletter" className="checkbox-text">
+              I agree to receive newsletters
+            </label>
           </div>
           {this.props.history.location.pathname === '/' ? (
             <button id="sign-up-form-button" className="orange-button" type="submit">
