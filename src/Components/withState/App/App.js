@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { setDefaultBreakpoints } from 'react-socks';
 import Nav from '../Nav/Nav';
 import PrivateRoute from '../../withoutState/Utils/PrivateRoute';
@@ -25,6 +25,7 @@ import CollegePlanning from '../CollegePlanning/CollegePlanning';
 import LifeInsurance from '../LifeInsurance/LifeInsurance';
 import Retirement from '../Retirement/Retirement';
 import './App.css';
+import NotFound from '../../withoutState/NotFound/NotFound';
 
 export default class App extends Component {
   state = {
@@ -103,29 +104,32 @@ export default class App extends Component {
           <UserContext.Provider value={value}>
             <Route path="/" component={Nav} />
             {this.state.hasError && <p className="red-font">There was an error! Oh no!</p>}
-            <Route exact path="/" component={Main} />
-            <PublicOnlyRoute exact path="/login" component={Login} />
-            <PublicOnlyRoute exact path="/signup" component={SignUp} />
-            <PrivateRoute exact path="/profile" component={Profile} />
-            <Route exact path="/about" component={AboutProfessional} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/schedule" component={ScheduleConsultation} />
-            <Route exact path="/financial-tools" component={FinancialTools} />
-            <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
-            <Route exact path="/educational-resources" component={EducationalResources} />
-            <Route
-              exact
-              path="/educational-resources/about-new-york-life"
-              component={AboutNewYorkLife}
-            />
-            <Route exact path="/educational-resources/life-plans" component={LifePlans} />
-            <Route
-              exact
-              path="/educational-resources/college-planning"
-              component={CollegePlanning}
-            />
-            <Route exact path="/educational-resources/life-insurance" component={LifeInsurance} />
-            <Route exact path="/educational-resources/retirement" component={Retirement} />
+            <Switch>
+              <Route exact path="/" component={Main} />
+              <PublicOnlyRoute exact path="/login" component={Login} />
+              <PublicOnlyRoute exact path="/signup" component={SignUp} />
+              <PrivateRoute exact path="/profile" component={Profile} />
+              <Route exact path="/about" component={AboutProfessional} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/schedule" component={ScheduleConsultation} />
+              <Route exact path="/financial-tools" component={FinancialTools} />
+              <Route exact path="/life-insurance-calc" component={LifeInsuranceCalc} />
+              <Route exact path="/educational-resources" component={EducationalResources} />
+              <Route
+                exact
+                path="/educational-resources/about-new-york-life"
+                component={AboutNewYorkLife}
+              />
+              <Route exact path="/educational-resources/life-plans" component={LifePlans} />
+              <Route
+                exact
+                path="/educational-resources/college-planning"
+                component={CollegePlanning}
+              />
+              <Route exact path="/educational-resources/life-insurance" component={LifeInsurance} />
+              <Route exact path="/educational-resources/retirement" component={Retirement} />
+              <Route component={NotFound} />
+            </Switch>
             <Footer />
           </UserContext.Provider>
         </div>
