@@ -17,7 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(50vw + 70px);
+  width: calc(50vw + 65px);
   float: right;
 }
 
@@ -36,7 +36,6 @@ nav {
 
 #nav-logo {
   margin: 0;
-  padding-left: 10px;
   font-weight: bold;
 }
 
@@ -118,12 +117,6 @@ nav {
   display: flex;
   align-items: center;
 }
-
-/* @media (min-width: 375px) {
-  #nav-bar-container {
-    width: 70%;
-  }
-} */
 
 @media (min-width: 1200px) {
   nav {
