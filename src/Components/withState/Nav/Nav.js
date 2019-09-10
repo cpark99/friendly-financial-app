@@ -83,31 +83,6 @@ export default class Nav extends Component {
       <div id="nav-container">
         <nav role="navigation">
           <div id="nav-bar-container" ref={node => (this.node = node)}>
-            <Breakpoint tabletLandscape down>
-              {TokenService.hasAuthToken() ? (
-                <NavLink
-                  id="nav-login-button"
-                  className="nav-item"
-                  to={'/'}
-                  onClick={e => {
-                    this.handleLogoutClick();
-                  }}
-                >
-                  Logout
-                </NavLink>
-              ) : (
-                <NavLink
-                  id="nav-login-button"
-                  className="nav-item"
-                  to={'/login'}
-                  onClick={e => {
-                    this.closeNavMenu();
-                  }}
-                >
-                  Login
-                </NavLink>
-              )}
-            </Breakpoint>
             {this.props.location.pathname === '/' ? (
               <a
                 href="#root"
@@ -131,17 +106,44 @@ export default class Nav extends Component {
                 Friendly Financial
               </NavLink>
             )}
-            <Breakpoint tabletLandscape down>
-              <div
-                id="hamburger"
-                className="nav-item"
-                onClick={() => {
-                  this.handleClick();
-                }}
-              >
-                &#9776;
-              </div>
-            </Breakpoint>
+            <div className="flex-column-right">
+              <Breakpoint mobileLandscape up>
+                {TokenService.hasAuthToken() ? (
+                  <NavLink
+                    id="nav-login-button"
+                    className="nav-item"
+                    to={'/'}
+                    onClick={e => {
+                      this.handleLogoutClick();
+                    }}
+                  >
+                    Logout
+                  </NavLink>
+                ) : (
+                  <NavLink
+                    id="nav-login-button"
+                    className="nav-item"
+                    to={'/login'}
+                    onClick={e => {
+                      this.closeNavMenu();
+                    }}
+                  >
+                    Login
+                  </NavLink>
+                )}
+              </Breakpoint>
+              <Breakpoint tabletLandscape down>
+                <div
+                  id="hamburger"
+                  className="nav-item"
+                  onClick={() => {
+                    this.handleClick();
+                  }}
+                >
+                  &#9776;
+                </div>
+              </Breakpoint>
+            </div>
             <div id="nav-dropdown-menu-container">
               <div id="nav-dropdown-menu" className={this.state.showNavMenu ? 'show' : 'hidden'}>
                 <ul id="nav-dropdown-menu-list">
@@ -168,7 +170,6 @@ export default class Nav extends Component {
                       </NavLink>
                     )}
                   </Breakpoint>
-
                   <NavLink
                     className="nav-menu-item-link"
                     to={'/about'}
@@ -236,7 +237,30 @@ export default class Nav extends Component {
                       <li className="nav-dropdown-menu-list-item">Sign Up</li>
                     </NavLink>
                   )}
-                  <Breakpoint xlarge up>
+                  <Breakpoint xsmall only>
+                    {TokenService.hasAuthToken() ? (
+                      <NavLink
+                        className="nav-menu-item-link"
+                        to={'/'}
+                        onClick={e => {
+                          this.handleLogoutClick();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Logout</li>
+                      </NavLink>
+                    ) : (
+                      <NavLink
+                        className="nav-menu-item-link"
+                        to={'/login'}
+                        onClick={e => {
+                          this.closeNavMenu();
+                        }}
+                      >
+                        <li className="nav-dropdown-menu-list-item">Login</li>
+                      </NavLink>
+                    )}
+                  </Breakpoint>
+                  <Breakpoint xlarge only>
                     {TokenService.hasAuthToken() ? (
                       <NavLink
                         className="nav-menu-item-link"

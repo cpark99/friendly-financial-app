@@ -92,6 +92,7 @@ export default class App extends Component {
     };
     setDefaultBreakpoints([
       { xsmall: 0 }, // all mobile devices
+      { mobileLandscape: 415 }, // up to iphone6+
       { small: 576 }, // mobile devices (not sure which one's this big)
       { medium: 768 }, // ipad, ipad pro, ipad mini, etc
       { large: 992 }, // smaller laptops
