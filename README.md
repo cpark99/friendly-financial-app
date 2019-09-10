@@ -2,7 +2,7 @@
 
 ### Live:
 
-[Link](https://friendlyfinancial-app.now.sh/)
+[Link](https://friendlyfinancial.netlify.com/)
 
 ---
 
