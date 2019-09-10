@@ -105,8 +105,8 @@ export default class SignUp extends Component {
             <input type="password" name="password" id="password" required />
           </div>
           <p id="password-information-text" className="information-text">
-            (MUST be at least 8 characters, including <span className="italic">at least one</span>{' '}
-            capital letter, number, and special character)
+            (MUST be at least 8 characters, including 1 lower case letter, capital letter, number,
+            and special character)
           </p>
           <div className="form-field">
             <label htmlFor="email">Email:</label>
