@@ -1,8 +1,6 @@
 # Friendly Financial
 
-### Live:
-
-[Link](https://friendlyfinancial.netlify.com/)
+### Live: [Link](https://friendlyfinancial.netlify.com/)
 
 ---
 
@@ -18,9 +16,7 @@ A surpringly large number of people do not have any financial security, let alon
 
 ---
 
-### API Documentation:
-
-[Link](https://github.com/cpark99/friendly-financial-server/blob/master/README.md)
+### API Documentation: [Link](https://github.com/cpark99/friendly-financial-server/blob/master/README.md)
 
 ---
 
