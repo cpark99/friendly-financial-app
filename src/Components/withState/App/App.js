@@ -24,8 +24,8 @@ import LifePlans from '../LifePlans/LifePlans';
 import CollegePlanning from '../CollegePlanning/CollegePlanning';
 import LifeInsurance from '../LifeInsurance/LifeInsurance';
 import Retirement from '../Retirement/Retirement';
-import './App.css';
 import NotFound from '../../withoutState/NotFound/NotFound';
+import './App.css';
 
 export default class App extends Component {
   state = {
